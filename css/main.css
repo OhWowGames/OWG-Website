@@ -18,11 +18,11 @@ body * {
 #container {
     width: 100%;
 }
-#main-logo {
+#main-logo, #main-hero {
     margin: 0 auto;
     width: 100%;
-    /* max-width: 800px; */
-    padding: 50px 3%;
+    max-width:240px;
+    padding: 10px 3%;
     display: block;
 }
 #footer {
@@ -31,7 +31,6 @@ body * {
     color: #f5ee08;
     background-color: #000;
     padding: 10px 0;
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -50,4 +49,30 @@ h2 {
     color: #0abafe;
     margin: 0 0 60px;
     font-style: italic;
+}
+#bg {    
+    height: 100%;
+    opacity: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.ml-embedded{
+    margin: 15px;
+}
+.ml-form-embedHeader{
+    display: none;
+}
+.ml-form-embedWrapper{
+    outline: #d8c458 solid 1px;
+}
+
+@media only screen and (max-width: 500px) {    
+    #bg {    
+        background-size: 440px !important;
+    }
 }
