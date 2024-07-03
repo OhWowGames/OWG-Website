@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         if (theme == 'none'){
             $('#bg').hide();
             $('#main-hero').hide();
-            $('body').css({'background-color':'#fff'});
+            // $('body').css({'background-color':'#fff'});
         }
     }
 
