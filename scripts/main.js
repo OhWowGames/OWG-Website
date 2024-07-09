@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     function resizeLogo() {
         var logoHeight = $(window).outerHeight() - ($('#footer').outerHeight() + $('h2').outerHeight()) - 150;
-        $('#main-logo').height(logoHeight);
+        $('.logo-splash').height(logoHeight);
     }
     resizeLogo();
     
