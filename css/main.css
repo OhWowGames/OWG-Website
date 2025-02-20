@@ -47,7 +47,7 @@ h2 {
     font-size: 2em;
     font-weight: 100;
     color: #0abafe;
-    margin: 0 0 60px;
+    margin: 0 0 40px;
     font-style: italic;
 }
 #bg {    
@@ -71,9 +71,35 @@ h2 {
 .ml-form-embedWrapper{
     outline: #d8c458 solid 1px;
 }
+#link-gallery{
+    margin: auto;
+    display: table;
+    width: 70%;
+}
+#link-gallery div{
+    width: calc(25% - 40px);
+    margin: 20px;
+    margin-bottom: 5%;
+    display: inline-block;
+}
+#link-gallery div img{
+    width: 100%;
+    border-radius: 30px;
+}
 
 @media only screen and (max-width: 500px) {    
     #bg {    
         background-size: 440px !important;
+    }
+    #link-gallery{
+        width: 100%;
+        padding: 20px 0;
+    }
+    #link-gallery div{
+        width: calc(50% - 30px);
+        margin: 20px 20px 0;
+    }
+    #link-gallery div:nth-child(even){
+        margin-left: 0px;
     }
 }
