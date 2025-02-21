@@ -17,6 +17,8 @@ body * {
 }
 #container {
     width: 100%;
+    height: calc(100vh - 38px);
+    overflow-y: auto;
 }
 #main-logo, #main-hero {
     margin: 0 auto;
@@ -91,9 +93,12 @@ h2 {
     #bg {    
         background-size: 440px !important;
     }
+    #main-logo, #main-hero {
+        height: 270px !important;
+    }
     #link-gallery{
         width: 100%;
-        padding: 20px 0;
+        padding: 0 0 20px;
     }
     #link-gallery div{
         width: calc(50% - 30px);
