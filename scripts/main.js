@@ -7,22 +7,17 @@ function replaceText(id, text) {
 // listen to URL parameters
 const urlParameter = new URLSearchParams(window.location.search);
 
+// Dynamic logo height
+function resizeLogo() {
+    var logoHeight = $(window).outerHeight() - ($('#footer').outerHeight() + $('h2').outerHeight() + $('#link-gallery').outerHeight()) - 150;
+    $('.logo-splash').height(logoHeight);
+}
+
 // Page Load
 document.addEventListener("DOMContentLoaded", function(e) {
     // Copyright Year
     replaceText('year', new Date().getFullYear());
-
-    // Dynamic logo height
-    function resizeLogo() {
-        var logoHeight = $(window).outerHeight() - ($('#footer').outerHeight() + $('h2').outerHeight() + $('#link-gallery').outerHeight()) - 150;
-        $('.logo-splash').height(logoHeight);
-    }
     resizeLogo();
-    
-    // Window resize listener
-    $(window).on( "resize", function(e) {
-        resizeLogo();
-    } );
 
     // register sign-up themes
     if (urlParameter.has('theme')){
@@ -36,4 +31,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 });
 
-
+// Image Load
+$(window).on("load", function(e) {
+    resizeLogo();
+});
+    
+// Window resize listener
+$(window).on( "resize", function(e) {
+    resizeLogo();
+});
