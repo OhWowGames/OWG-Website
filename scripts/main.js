@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 // Image Load
 $(window).on("load", function(e) {
     resizeLogo();
+    $('#container').css({'opacity':'1'})
 });
     
 // Window resize listener

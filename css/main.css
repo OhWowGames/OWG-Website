@@ -19,6 +19,9 @@ body * {
     width: 100%;
     height: calc(100vh - 38px);
     overflow-y: auto;
+    animation-timing-function: ease-in;
+    transition: opacity 0.8s;
+    opacity: 0;
 }
 #main-logo, #main-hero {
     margin: 0 auto;
@@ -46,7 +49,7 @@ h1 {
 }
 h2 {
     text-align: center;
-    font-size: 2em;
+    font-size: 2.3em;
     font-weight: 100;
     color: #0abafe;
     margin: 0 0 40px;
@@ -77,16 +80,46 @@ h2 {
     margin: auto;
     display: table;
     width: 70%;
+    padding-bottom: 50px;
 }
 #link-gallery div{
     width: calc(25% - 40px);
     margin: 20px;
-    margin-bottom: 5%;
     display: inline-block;
 }
 #link-gallery div img{
     width: 100%;
     border-radius: 30px;
+}
+#team{
+    margin: auto;
+    display: table;
+    width: 70%;
+    padding: 50px 0;
+}
+#team .team-member{
+    width: calc(33.33% - 40px);
+    margin: 20px;
+    display: inline-block;
+}
+#team .team-member img{
+    width: 100%;
+    border-radius: 30px;
+}
+#team p{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: #e757ac;
+    margin: 40px 0;
+    font-style: italic;
+    padding: 0 120px;
+}
+.main {
+    min-height: calc(100vh - 38px);
+}
+.black {
+    background-color: #181818;
 }
 
 @media only screen and (max-width: 500px) {    
@@ -98,7 +131,7 @@ h2 {
     }
     #link-gallery{
         width: 100%;
-        padding: 0 0 20px;
+        padding-bottom: 100px;
     }
     #link-gallery div{
         width: calc(50% - 30px);
@@ -106,5 +139,21 @@ h2 {
     }
     #link-gallery div:nth-child(even){
         margin-left: 0px;
+    }
+    #team{
+        width: 100%;
+    }
+    #team .team-member{
+        width: calc(50% - 30px);
+        margin: 20px 20px 0;
+    }
+    #team > div.team-member:nth-child(odd){
+        margin-left: 0px;
+    }
+    #team > div.team-member:nth-child(4){
+        margin: 20px calc((50% + 30px) / 2) 0;
+    }
+    #team p{
+        padding: 0 40px;
     }
 }
