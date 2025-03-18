@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /splash/
+
+Sitemap: https://ohwow.games/sitemap.xml
