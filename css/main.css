@@ -118,8 +118,29 @@ h2 {
 .main {
     min-height: calc(100vh - 38px);
 }
-.black {
+.black-bg {
     background-color: #181818;
+}
+.magenta-bg{
+    background-color:#fe0798;
+}
+.yellow-bg{
+    background-color:#f5ee08;
+}
+.blue-bg{
+    background-color:#0abafe;
+}
+.magenta-txt{
+    color:#fe0798;
+}
+.yellow-txt{
+    color:#f5ee08;
+}
+.blue-txt{
+    color:#0abafe;
+}
+.altblue-txt{
+    color:#009fdd; /* compatibility contrast on white */
 }
 
 @media only screen and (max-width: 500px) {    
