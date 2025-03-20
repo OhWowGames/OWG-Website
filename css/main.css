@@ -140,7 +140,7 @@ h2 {
     color:#0abafe;
 }
 .altblue-txt{
-    color:#009fdd; /* compatibility contrast on white */
+    color:#009fdc; /* compatibility contrast on white */
 }
 
 @media only screen and (max-width: 500px) {    
