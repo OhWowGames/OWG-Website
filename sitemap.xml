@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ohwow.games/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://ohwow.games</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ohwow.games/newsletter</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://ohwow.games/newsletter/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://ohwow.games/privacy-policy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.1</priority>
+    <loc>https://ohwow.games/privacy-policy/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
