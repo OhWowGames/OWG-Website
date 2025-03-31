@@ -83,16 +83,50 @@ button{
     cursor: pointer;
     background-color: #949ea3;
     border: none;
-    transition: outline 500ms;
-    outline: dashed 0.9cqw #b4b08f00;
+    background: linear-gradient(140deg, var(--buttonC1) 0%, var(--buttonC2) 50%, var(--buttonC3) 75%);
+    transition: --buttonC1 200ms, --buttonC2 200ms, --buttonC3 200ms;
 }
 button:hover{
-    outline: dashed 0.9cqw #b4b08f;
+    --buttonC1: #3e3e3e;
+    --buttonC2: #717171;
+    --buttonC3: #7c878c;
+}
+button.steam:hover{
+    --buttonC1: #4c4c4c;
+    --buttonC2: #9f7acf;
+    --buttonC3: #8b88d5;
+}
+button.newsletter:hover{
+    --buttonC1: #567f98;
+    --buttonC2: #6dd2d2;
+    --buttonC3: #69e0c1;
+}
+button.presskit:hover{
+    --buttonC1: #d4cf6b;
+    --buttonC2: #f09c28;
+    --buttonC3: #ea8700;
 }
 button.steam{
     height: 12.5cqw;
     background-color: #4c4c4c;
-    /* background: linear-gradient(140deg, #000000 0%, #69a1a7 50%, #2f5760 75%); */
+    --buttonC1: #4c4c4c;
+    --buttonC2: #4c4c4c;
+    --buttonC3: #4c4c4c;
+}
+@property --buttonC1{
+    syntax: '<color>';
+    initial-value: #949ea3;
+    inherits: false;
+}
+@property --buttonC2 {
+    syntax: '<color>';
+    initial-value: #949ea3;
+    inherits: false;
+}
+@property --buttonC3 {
+    syntax: '<color>';
+    initial-value: #949ea3;
+    inherits: false;
 }
 button.steam img{
     height: 100%;
@@ -254,10 +288,10 @@ clouds > .extended{
         animation-play-state: paused;
         display: none;
     }
-    ocean{
+    ocean, flocks{
         position: relative;
     }
-    .swell:nth-child(1) > .wave, .swell:nth-child(2) > .wave, .swell:nth-child(3) > .wave{
+    .swell:nth-child(1) > .wave, .swell:nth-child(2) > .wave, .swell:nth-child(3) > .wave, flock.bg, .bird:nth-child(1) > .feather, .bird:nth-child(2) > .feather{
         animation-play-state: running;
         display: block;
     }
@@ -274,7 +308,15 @@ clouds > .extended{
     }
     .swell:nth-child(3){
         left: 10vw !important;
-        top: 64vh !important;
+        top: 69vh !important;
+    }
+    flock.bg{
+        position: absolute;
+        z-index: 1;
+        transform: scale(3);
+        animation-duration: 10s;
+        top: -17vh !important;
+        animation-delay: 1.5s;
     }
     #container {
         overflow-y: scroll;
