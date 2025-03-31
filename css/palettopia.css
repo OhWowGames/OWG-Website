@@ -4,6 +4,7 @@ body{
 #owg-logo.corner{
     width: 100%;
     max-width: 9vw;
+    min-width: 108px;
     margin: 1.1vw;
     position: fixed;
     top: 0;
@@ -253,10 +254,35 @@ clouds > .extended{
         animation-play-state: paused;
         display: none;
     }
+    ocean{
+        position: relative;
+    }
+    .swell:nth-child(1) > .wave, .swell:nth-child(2) > .wave, .swell:nth-child(3) > .wave{
+        animation-play-state: running;
+        display: block;
+    }
+    .swell:nth-child(1), .swell:nth-child(2), .swell:nth-child(3){
+        transform: scale(0.4) !important;
+        position: absolute;
+        z-index: 1;
+        left: 72vw !important;
+        top: -17vw !important;
+    }
+    .swell:nth-child(2){
+        left: 21vw !important;
+        top: -7vw !important;
+    }
+    .swell:nth-child(3){
+        left: 10vw !important;
+        top: 64vh !important;
+    }
+    #container {
+        overflow-y: scroll;
+    }
     #owg-logo.corner{
         width: 50%;
         max-width: none;
-        margin: 20px 25%;
+        margin: 20px 25% 40px;
         position: static;
     }
     #palettopia-logo{
