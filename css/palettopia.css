@@ -319,7 +319,7 @@ clouds > .extended{
         animation-delay: 1.5s;
     }
     #container {
-        overflow-y: scroll;
+        overflow-x: hidden;
     }
     #owg-logo.corner{
         width: 50%;
@@ -330,7 +330,8 @@ clouds > .extended{
     #palettopia-logo{
         width: 90%;
         max-width: none;
-        margin: 70px 5% 0;
+        margin: 0 5%;
+        padding: 40px 0 0;
         position: static;
     }
     .map-island{
