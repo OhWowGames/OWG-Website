@@ -55,7 +55,7 @@ h2 {
     margin: 0 0 40px;
     font-style: italic;
 }
-#bg {    
+.bg {    
     height: 100%;
     position: fixed;
     top: 0;
@@ -143,7 +143,7 @@ h2 {
 }
 .bg-palettopia{
     opacity: 80%;
-    background: url(../images/sandbox_new.jpg) #cadde8 no-repeat center top / 90%;
+    background: url(../images/palettopia_map_demo.jpg) #cfe0ea no-repeat center top / 90%;
 }
 
 @media only screen and (max-width: 500px) {    

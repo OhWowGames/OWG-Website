@@ -31,13 +31,26 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 });
 
+// Palettopia Landing Page
+function resizePalettopia() {
+    var winWidth = $(window).width();
+    var waveWidth = winWidth / 100 * 11.43 //vw;
+    var waveScale = (waveWidth / 250);
+    var birdWidth = winWidth / 100 * 4.45 //vw;
+    var birdScale = (birdWidth / 125);
+    $('.swell').css({transform:'scale('+waveScale+')'});
+    $('.bird').css({transform:'scale('+birdScale+')'});
+}
+
 // Image Load
 $(window).on("load", function(e) {
     resizeLogo();
+    resizePalettopia();
     $('#container').css({'opacity':'1'})
 });
     
 // Window resize listener
 $(window).on( "resize", function(e) {
     resizeLogo();
+    resizePalettopia();
 });

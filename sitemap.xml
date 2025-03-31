@@ -6,6 +6,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ohwow.games/palettopia/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ohwow.games/newsletter/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

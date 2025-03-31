@@ -1,0 +1,313 @@
+body{
+    background-color: #cfe0ea;
+}
+#owg-logo.corner{
+    width: 100%;
+    max-width: 9vw;
+    margin: 1.1vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#palettopia-logo{
+    width: 100%;
+    max-width: 30vw;
+    margin: auto;
+    position: fixed;
+    top: 10vw;
+    top: calc(-11vh + -19.5vw);
+    left: -16vw;
+    right: 0;
+    bottom: 0;
+}
+#palettopia-content{
+    width: 100%;
+    max-width: 28vw;
+    min-width: 335px;
+    margin: 1.5vw;
+    margin-bottom: calc(39px + 1.1vw);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-align: left;
+    font-family: system-ui;
+    color: #5c5c5c;
+    /* box-shadow: #0000002e 0.01vw 0.5vw 0.01vw; */
+    container-type: inline-size;
+}
+/* using container-type allows for the use of the relative unit CQW, however it is only available on children elements */
+#palettopia-content > div{
+    padding: 1.8cqw 7.1cqw;
+    border-radius: 4vw;
+    font-size: 4.06cqw;
+    line-height: 141%;
+    background-color: #ffffffc4;
+    background: linear-gradient(177deg, #ffffff9c 0%, #ffffffba 50%, #ffffff2e 75%);
+}
+ul{
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-top: 8.5%;
+}
+ul li{
+    padding-bottom: 1.25%;
+    text-align: center;
+}
+ul li a{
+    color: #7090a9;
+    font-weight: 600;
+    text-decoration: none;
+}
+ul li a:hover{
+    text-decoration: underline;
+}
+ul li a.sublinks{
+    color: #7e7e7e;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+button{
+    width: 100%;
+    max-width: 67%;
+    margin: auto;
+    border-radius: 10cqw;
+    height: 9cqw;
+    font-size: 1.14em;
+    font-weight: 400;
+    font-family: system-ui;
+    color: #fff;
+    cursor: pointer;
+    background-color: #949ea3;
+    border: none;
+    transition: outline 500ms;
+    outline: dashed 0.9cqw #b4b08f00;
+}
+button:hover{
+    outline: dashed 0.9cqw #b4b08f;
+}
+button.steam{
+    height: 12.5cqw;
+    background-color: #4c4c4c;
+    /* background: linear-gradient(140deg, #000000 0%, #69a1a7 50%, #2f5760 75%); */
+}
+button.steam img{
+    height: 100%;
+    padding: 4% 6%;
+    margin-left: 8%;
+    float: left;
+}
+button.steam span{
+    float: left;
+    padding: 0;
+    height: 100%;
+    line-height: 250%;
+}
+.map-island{
+    z-index: -9;
+    background: url(../images/palettopia_map_island.jpg) #cfe0ea no-repeat 4.3vw -2vw / 90%;
+    background-position-x: -2.7vw;
+    top: -5.3vh;
+    left: -7.7vw;
+    right: 7.7vw;
+    background-position: center center;
+}
+.bg.swell{
+    z-index: -7;
+    height: 100px;
+    width: 250px;
+    overflow: hidden;
+    transform-origin: top left;
+    transform: scale(0.6);
+}
+.swell > .wave{
+    height: 100%;
+    width: 100%;
+    background: url(../images/wave_spritesheet.png) no-repeat 0 / auto;
+    background-position-y: -1px;
+    background-position-x: -1573px;
+    animation-name: wave;
+    animation-delay: 1s;
+    animation-direction: normal;
+    animation-duration: 3600ms;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: step-end;
+}
+@keyframes wave {
+    0%      {background-position-x: -1px;}
+    5.55%   {background-position-x: -263px;}
+    11.11%  {background-position-x: -525px;}
+    16.66%  {background-position-x: -787px;}
+    22.22%  {background-position-x: -1049px;}
+    27.77%  {background-position-x: -1311px;}
+    33.33%  {background-position-x: -1573px;}
+}
+flock.bg{
+    left: -32vw;
+    top: 1vw;
+    height: 13vw;
+    width: 32vw;
+    transform: scale(0.7);
+    animation-name: flockOne;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 20s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+flock.bg.two{
+    left: -32vw;
+    top: 33vw;
+    transform: scale(1);
+    animation-name: flockTwo;
+    animation-delay: 6s;
+}
+@keyframes flockOne {
+    0%      {left: -32vw; top: 1vw}
+    50%     {left: 132vw; top: 5vw}
+    100%    {left: 132vw; top: 5vw}
+}
+@keyframes flockTwo {
+    0%      {left: -32vw; top: 33vw}
+    50%     {left: 132vw; top: 30vw}
+    100%    {left: 132vw; top: 30vw}
+}
+.bg.bird{
+    z-index: -5;
+    height: 125px;
+    width: 125px;
+    overflow: hidden;
+    position: absolute;
+    transform-origin: top left;
+    transform: scale(0.5);
+}
+.bird > .feather{
+    height: 100%;
+    width: 100%;
+    background: url(../images/palettopia_map_brid.png) no-repeat 0 / auto;
+    background-position-y: -1px;
+    background-position-x: -412px;
+    animation-name: bird;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 480ms;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: step-end;
+}
+@keyframes bird {
+    0%      {background-position-x: -1px;}
+    33.33%  {background-position-x: -138px;}
+    66.66%  {background-position-x: -275px;}
+    100%    {background-position-x: -412px;}
+}
+clouds > .cloud{
+    z-index: -1;
+    background: url(../images/palettopia_map_clouds.png) no-repeat -21vw -7vw / 125%;
+    animation-name: cloud;
+    animation-delay: -0.25s;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+@keyframes cloud {
+    0%    {background-position: -21vw -7vw; background-size: 125%; opacity: 1;}
+    5%   {background-position: -21vw -7vw; background-size: 125%; opacity: 1;}
+    95%   {background-position: -18vw -5vw; background-size: 120%; opacity: 0.6;}
+    100%  {background-position: -18vw -5vw; background-size: 120%; opacity: 0.6;}
+}
+clouds > .extended{
+    background: url(../images/palettopia_map_clouds.png) no-repeat -15vw -4vw / 120%;
+    background-position-y: 53vw;
+    background-size: 200%;
+}
+
+/* Portrait for Desktop */
+/* 4/3 aspect ratios */
+@media only screen and (min-width: 500px) and (aspect-ratio < 1.15) {
+    .map-island {
+        top: -20vh;
+        background-size: 100vh;
+        left: 0;
+        right: 0;
+    }
+    #palettopia-logo {
+        top: -62vh;
+        max-width: 34vh;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {  
+    clouds > .cloud, clouds > .extended, .bird > .feather, flock.bg, flock.bg.two, .swell > .wave{
+        animation-play-state: paused;
+        display: none;
+    }
+    #owg-logo.corner{
+        width: 50%;
+        max-width: none;
+        margin: 20px 25%;
+        position: static;
+    }
+    #palettopia-logo{
+        width: 90%;
+        max-width: none;
+        margin: 70px 5% 0;
+        position: static;
+    }
+    .map-island{
+        background-size: 160%;
+        background-position: -103px 40px;
+        position: static;
+        display: block;
+        height: 99vw;
+        margin-top: -150px;
+    }
+    #palettopia-content{
+        position: static;
+        width: 90%;
+        max-width: none;
+        padding: 15px;
+        margin: 15px 5%;
+        font-size: 16px;
+        line-height: normal;
+        border-radius: 50px;
+    }
+    ul{
+        margin-top: 30px;
+    }
+    ul li{
+        padding-bottom: 6px;
+    }
+    ul li a.sublinks {
+        font-size: 14px;
+    }
+    button{
+        height: 35px;
+        font-size: 19px;
+        max-width: 75%;
+        border-radius: 50px;
+        outline-width: 2px;
+    }
+    button:hover {
+        outline-width: 2px;
+    }
+    button.steam{
+        height: 50px;
+        font-size: 19px;
+    }
+    button.steam img {
+        padding: 2.5% 5%;
+        margin-left: 11%;
+    }
+}
