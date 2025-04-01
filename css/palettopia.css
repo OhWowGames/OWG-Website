@@ -207,9 +207,9 @@ flock.bg.two{
     animation-delay: 6s;
 }
 @keyframes flockOne {
-    0%      {left: -32vw; top: 1vw}
-    50%     {left: 132vw; top: 5vw}
-    100%    {left: 132vw; top: 5vw}
+    0%      {left: -32vw; top: -2vw}
+    50%     {left: 132vw; top: 3vw}
+    100%    {left: 132vw; top: 3vw}
 }
 @keyframes flockTwo {
     0%      {left: -32vw; top: 33vw}
@@ -301,19 +301,19 @@ clouds > .extended{
         position: static;
     }
     #palettopia-logo{
-        width: 90%;
+        width: 85%;
         max-width: none;
-        margin: 0 5%;
+        margin: 0 7.5%;
         padding: 40px 0 0;
         position: static;
     }
     .map-island{
-        background-size: 160%;
-        background-position: -103px 40px;
+        background-size: 150%;
+        background-position: -20vw 40px;
         position: static;
         display: block;
-        height: 99vw;
-        margin-top: -150px;
+        height: 93vw;
+        margin-top: -164px;
     }
     #palettopia-content{
         position: static;
@@ -364,26 +364,27 @@ clouds > .extended{
         display: block;
     }
     .swell:nth-child(1), .swell:nth-child(2), .swell:nth-child(3){
-        transform: scale(0.4) !important;
+        transform: scale(0.3) !important;
         position: absolute;
         z-index: 1;
-        left: 72vw !important;
-        top: -17vw !important;
+        left: 76vw !important;
+        top: -15vw !important;
     }
     .swell:nth-child(2){
-        left: 21vw !important;
-        top: -7vw !important;
+        left: 7vw !important;
+        top: -6vw !important;
     }
     .swell:nth-child(3){
         left: 10vw !important;
-        top: 69vh !important;
+        top: 0 !important;
+        margin-top: 100vh;
     }
     flock.bg{
         position: absolute;
         z-index: 1;
-        transform: scale(3);
+        transform: scale(2.5);
         animation-duration: 10s;
-        top: -17vh !important;
+        top: -21vh !important;
         animation-delay: 1.5s;
     }
 }
