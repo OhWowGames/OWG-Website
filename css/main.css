@@ -152,7 +152,8 @@ h2 {
         background-image: url(../images/sandbox_new_mobile.jpg);
     }
     #main-logo {
-        height: 270px !important;
+        height: auto !important;
+        padding: 2% 2% 0px !important;
     }
     #link-gallery{
         width: 100%;
@@ -164,6 +165,9 @@ h2 {
     }
     #link-gallery div:nth-child(even){
         margin-left: 0px;
+    }
+    #link-gallery div img {
+        border-radius: 20px;
     }
     #team{
         width: 100%;
