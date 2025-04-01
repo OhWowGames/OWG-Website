@@ -45,6 +45,7 @@ body{
     line-height: 141%;
     background-color: #ffffffc4;
     background: linear-gradient(177deg, #ffffff9c 0%, #ffffffba 50%, #ffffff2e 75%);
+    background: linear-gradient(177deg, #ffffffa3 0%, #ffffffba 70%, #ffffff2e 100%);
 }
 ul{
     list-style-type: none;
@@ -70,6 +71,18 @@ ul li a.sublinks{
     color: #7e7e7e;
     font-weight: 300;
     font-size: 0.8em;
+}
+.social img{
+    width: 12%;
+    margin: 2% 1% 0;
+    filter: hue-rotate(210deg) brightness(2.3) saturate(0.1);
+    transition: filter 200ms;
+}
+.social img:hover{
+    filter: hue-rotate(200deg) brightness(1) saturate(0.8);
+}
+ul li a.social:hover{
+    text-decoration: none;
 }
 button{
     width: 100%;
@@ -103,7 +116,8 @@ button.steam span{
     text-align: left;
 }
 button.steam div{
-    background: url(../images/steam_logo_icon.png) no-repeat 16% center / 14%;
+    background: url(../images/social-icon-steam.png) no-repeat 16% center / 14%;
+    filter: grayscale(1) brightness(5);
     position: absolute;
     width: 100%;
     top: 0;
