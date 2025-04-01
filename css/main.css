@@ -29,8 +29,6 @@ body * {
 }
 #main-logo {
     margin: 0 auto;
-    width: 100%;
-    max-width:240px;
     padding: 10px 3%;
     display: block;
     transform: scale(0) rotateZ(20deg);
@@ -172,6 +170,7 @@ h2 {
         background-image: url(../images/sandbox_new_mobile.jpg);
     }
     #main-logo {
+        width: 100%;
         height: auto !important;
         padding: 13px 12% 28px !important;
     }
