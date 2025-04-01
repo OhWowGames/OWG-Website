@@ -20,12 +20,31 @@ body * {
     transition: opacity 0.8s;
     opacity: 0;
 }
-#main-logo, #main-hero {
+#main-hero {
     margin: 0 auto;
     width: 100%;
     max-width:240px;
     padding: 10px 3%;
     display: block;
+}
+#main-logo {
+    margin: 0 auto;
+    width: 100%;
+    max-width:240px;
+    padding: 10px 3%;
+    display: block;
+    transform: scale(0) rotateZ(20deg);
+    animation-name: kapow;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-play-state: paused;
+}
+@keyframes kapow {
+    0%   {transform: scale(0) rotateZ(360deg);}
+    80%  {transform: scale(1.3) rotateZ(-30deg);}
+    100% {transform: scale(1) rotateZ(0);}
 }
 #footer {
     position: fixed;
@@ -114,6 +133,7 @@ h2 {
 }
 .main {
     min-height: calc(100vh - 38px);
+    overflow: hidden;
 }
 .black-bg {
     background-color: #181818;
@@ -153,7 +173,12 @@ h2 {
     }
     #main-logo {
         height: auto !important;
-        padding: 2% 2% 0px !important;
+        padding: 13px 12% 28px !important;
+    }
+    .tagline{
+        width: 80%;
+        margin: 0 auto 25px;
+        font-size: 1.8em;
     }
     #link-gallery{
         width: 100%;
@@ -161,7 +186,7 @@ h2 {
     }
     #link-gallery div{
         width: 100%;
-        padding: 5px 8%;
+        padding: 5px 15%;
     }
     /* #link-gallery div{
         width: calc(50% - 30px);

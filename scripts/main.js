@@ -47,6 +47,7 @@ $(window).on("load", function(e) {
     resizeLogo();
     resizePalettopia();
     $('#container').css({'opacity':'1'})
+    $('#main-logo').css({'animation-play-state':'running'})
 });
     
 // Window resize listener

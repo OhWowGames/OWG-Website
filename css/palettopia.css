@@ -324,6 +324,7 @@ clouds > .extended{
         position: static;
     }
     .map-island{
+        background-image: url(../images/palettopia_map_island_p3_mobile.jpg);
         background-size: 150%;
         background-position: -20vw 40px;
         position: static;
