@@ -80,13 +80,13 @@ h2 {
     padding-bottom: 50px;
 }
 #link-gallery div{
-    width: calc(25% - 40px);
-    margin: 20px;
+    width: calc(25% - (0.8vw * 2));
+    margin: 0.8vw;
     display: inline-block;
 }
 #link-gallery div img{
     width: 100%;
-    border-radius: 30px;
+    border-radius: 1.9vw;
 }
 #team{
     margin: auto;
