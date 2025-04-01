@@ -73,9 +73,10 @@ ul li a.sublinks{
 button{
     width: 100%;
     max-width: 67%;
-    margin: auto;
-    border-radius: 10cqw;
     min-height: 9cqw;
+    margin: 0;
+    padding: 0;
+    border-radius: 10cqw;
     font-size: 1.14em;
     font-weight: 400;
     font-family: system-ui;
@@ -88,16 +89,24 @@ button{
 }
 button.steam{
     min-height: 12.5cqw;
+    position: relative;
     --buttonC1: #4c4c4c;
     --buttonC2: #4c4c4c;
     --buttonC3: #4c4c4c;
 }
 button.steam span{
-    padding-left: 14%;
-    padding-top: 5.5%;
-    background: url(../images/steam_logo_icon.png) no-repeat 14% center / 15%;
     display: block;
-    min-height: 12.5cqw;
+    width: 72%;
+    margin-left: 28%;
+    padding: 0 8% 0 5%;
+    text-align: left;
+}
+button.steam div{
+    background: url(../images/steam_logo_icon.png) no-repeat 16% center / 14%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
 }
 button:hover{
     --buttonC1: #3e3e3e;
@@ -372,10 +381,5 @@ clouds > .extended{
         font-size: 19px;
     }
     button.steam span{
-        min-height: 50px;
-    }
-    button.steam img {
-        padding: 2.5% 5%;
-        margin-left: 11%;
     }
 }
