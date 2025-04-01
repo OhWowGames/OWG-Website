@@ -286,43 +286,13 @@ clouds > .extended{
     }
 }
 
-@media only screen and (max-width: 500px) {  
-    clouds > .cloud, clouds > .extended, .bird > .feather, flock.bg, flock.bg.two, .swell > .wave{
-        animation-play-state: paused;
-        display: none;
-    }
-    ocean, flocks{
-        position: relative;
-    }
-    .swell:nth-child(1) > .wave, .swell:nth-child(2) > .wave, .swell:nth-child(3) > .wave, flock.bg, .bird:nth-child(1) > .feather, .bird:nth-child(2) > .feather{
-        animation-play-state: running;
-        display: block;
-    }
-    .swell:nth-child(1), .swell:nth-child(2), .swell:nth-child(3){
-        transform: scale(0.4) !important;
-        position: absolute;
-        z-index: 1;
-        left: 72vw !important;
-        top: -17vw !important;
-    }
-    .swell:nth-child(2){
-        left: 21vw !important;
-        top: -7vw !important;
-    }
-    .swell:nth-child(3){
-        left: 10vw !important;
-        top: 69vh !important;
-    }
-    flock.bg{
-        position: absolute;
-        z-index: 1;
-        transform: scale(3);
-        animation-duration: 10s;
-        top: -17vh !important;
-        animation-delay: 1.5s;
-    }
+@media only screen and (max-width: 500px) {
     #container {
         overflow-x: hidden;
+    }
+    #footer {
+        position: absolute;
+        bottom: auto;
     }
     #owg-logo.corner{
         width: 50%;
@@ -381,5 +351,39 @@ clouds > .extended{
         font-size: 19px;
     }
     button.steam span{
+    }
+    clouds > .cloud, clouds > .extended, .bird > .feather, flock.bg, flock.bg.two, .swell > .wave{
+        animation-play-state: paused;
+        display: none;
+    }
+    ocean, flocks{
+        position: relative;
+    }
+    .swell:nth-child(1) > .wave, .swell:nth-child(2) > .wave, .swell:nth-child(3) > .wave, flock.bg, .bird:nth-child(1) > .feather, .bird:nth-child(2) > .feather{
+        animation-play-state: running;
+        display: block;
+    }
+    .swell:nth-child(1), .swell:nth-child(2), .swell:nth-child(3){
+        transform: scale(0.4) !important;
+        position: absolute;
+        z-index: 1;
+        left: 72vw !important;
+        top: -17vw !important;
+    }
+    .swell:nth-child(2){
+        left: 21vw !important;
+        top: -7vw !important;
+    }
+    .swell:nth-child(3){
+        left: 10vw !important;
+        top: 69vh !important;
+    }
+    flock.bg{
+        position: absolute;
+        z-index: 1;
+        transform: scale(3);
+        animation-duration: 10s;
+        top: -17vh !important;
+        animation-delay: 1.5s;
     }
 }
