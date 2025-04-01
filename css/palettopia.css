@@ -1,5 +1,6 @@
 body{
-    background-color: #cfe0ea;
+    background-color: #cfe0ea;    
+    background-color: #cae0eb; /* P3 */
 }
 #owg-logo.corner{
     width: 100%;
@@ -146,6 +147,7 @@ button.presskit:hover{
 .map-island{
     z-index: -9;
     background: url(../images/palettopia_map_island_p3.jpg) #cfe0ea no-repeat 4.3vw -2vw / 90%;
+    background-color: #cae0eb; /* P3 */
     background-position-x: -2.7vw;
     top: -5.3vh;
     left: -7.7vw;
