@@ -75,7 +75,7 @@ button{
     max-width: 67%;
     margin: auto;
     border-radius: 10cqw;
-    height: 9cqw;
+    min-height: 9cqw;
     font-size: 1.14em;
     font-weight: 400;
     font-family: system-ui;
@@ -85,6 +85,19 @@ button{
     border: none;
     background: linear-gradient(140deg, var(--buttonC1) 0%, var(--buttonC2) 50%, var(--buttonC3) 75%);
     transition: --buttonC1 200ms, --buttonC2 200ms, --buttonC3 200ms;
+}
+button.steam{
+    min-height: 12.5cqw;
+    --buttonC1: #4c4c4c;
+    --buttonC2: #4c4c4c;
+    --buttonC3: #4c4c4c;
+}
+button.steam span{
+    padding-left: 14%;
+    padding-top: 5.5%;
+    background: url(../images/steam_logo_icon.png) no-repeat 14% center / 15%;
+    display: block;
+    min-height: 12.5cqw;
 }
 button:hover{
     --buttonC1: #3e3e3e;
@@ -106,13 +119,6 @@ button.presskit:hover{
     --buttonC2: #f09c28;
     --buttonC3: #ea8700;
 }
-button.steam{
-    height: 12.5cqw;
-    background-color: #4c4c4c;
-    --buttonC1: #4c4c4c;
-    --buttonC2: #4c4c4c;
-    --buttonC3: #4c4c4c;
-}
 @property --buttonC1{
     syntax: '<color>';
     initial-value: #949ea3;
@@ -127,18 +133,6 @@ button.steam{
     syntax: '<color>';
     initial-value: #949ea3;
     inherits: false;
-}
-button.steam img{
-    height: 100%;
-    padding: 4% 6%;
-    margin-left: 8%;
-    float: left;
-}
-button.steam span{
-    float: left;
-    padding: 0;
-    height: 100%;
-    line-height: 250%;
 }
 .map-island{
     z-index: -9;
@@ -364,7 +358,7 @@ clouds > .extended{
         font-size: 14px;
     }
     button{
-        height: 35px;
+        min-height: 35px;
         font-size: 19px;
         max-width: 75%;
         border-radius: 50px;
@@ -374,8 +368,11 @@ clouds > .extended{
         outline-width: 2px;
     }
     button.steam{
-        height: 50px;
+        min-height: 50px;
         font-size: 19px;
+    }
+    button.steam span{
+        min-height: 50px;
     }
     button.steam img {
         padding: 2.5% 5%;
