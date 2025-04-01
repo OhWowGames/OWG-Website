@@ -145,7 +145,7 @@ button.presskit:hover{
 }
 .map-island{
     z-index: -9;
-    background: url(../images/palettopia_map_island.jpg) #cfe0ea no-repeat 4.3vw -2vw / 90%;
+    background: url(../images/palettopia_map_island_p3.jpg) #cfe0ea no-repeat 4.3vw -2vw / 90%;
     background-position-x: -2.7vw;
     top: -5.3vh;
     left: -7.7vw;
@@ -164,7 +164,7 @@ button.presskit:hover{
     height: 100%;
     width: 100%;
     background: url(../images/wave_spritesheet.png) no-repeat 0 / auto;
-    background-position-y: -1px;
+    background-position-y: 0;
     background-position-x: -1573px;
     animation-name: wave;
     animation-delay: 1s;
@@ -176,13 +176,13 @@ button.presskit:hover{
     animation-timing-function: step-end;
 }
 @keyframes wave {
-    0%      {background-position-x: -1px;}
-    5.55%   {background-position-x: -263px;}
-    11.11%  {background-position-x: -525px;}
-    16.66%  {background-position-x: -787px;}
-    22.22%  {background-position-x: -1049px;}
-    27.77%  {background-position-x: -1311px;}
-    33.33%  {background-position-x: -1573px;}
+    0%      {background-position-x: 0;}
+    5.55%   {background-position-x: -262px;}
+    11.11%  {background-position-x: -524px;}
+    16.66%  {background-position-x: -786px;}
+    22.22%  {background-position-x: -1048px;}
+    27.77%  {background-position-x: -1310px;}
+    33.33%  {background-position-x: -1572px;}
 }
 flock.bg{
     left: -32vw;
@@ -229,7 +229,7 @@ flock.bg.two{
     height: 100%;
     width: 100%;
     background: url(../images/palettopia_map_brid.png) no-repeat 0 / auto;
-    background-position-y: -1px;
+    background-position-y: 0;
     background-position-x: -412px;
     animation-name: bird;
     animation-delay: 0s;
@@ -241,10 +241,10 @@ flock.bg.two{
     animation-timing-function: step-end;
 }
 @keyframes bird {
-    0%      {background-position-x: -1px;}
-    33.33%  {background-position-x: -138px;}
-    66.66%  {background-position-x: -275px;}
-    100%    {background-position-x: -412px;}
+    0%      {background-position-x: 0;}
+    33.33%  {background-position-x: -137px;}
+    66.66%  {background-position-x: -274px;}
+    100%    {background-position-x: -411px;}
 }
 clouds > .cloud{
     z-index: -1;
