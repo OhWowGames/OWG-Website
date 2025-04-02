@@ -367,8 +367,6 @@ clouds > .extended{
         min-height: 50px;
         font-size: 19px;
     }
-    button.steam span{
-    }
     clouds > .cloud, clouds > .extended, .bird > .feather, flock.bg, flock.bg.two, .swell > .wave{
         animation-play-state: paused;
         display: none;
