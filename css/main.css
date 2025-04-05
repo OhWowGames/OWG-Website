@@ -9,6 +9,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     width: 100%;
     padding: 0 0 38px;
+    overflow-anchor: none;
 }
 body * {
     box-sizing: border-box;
@@ -31,7 +32,7 @@ body * {
     margin: 0 auto;
     padding: 10px 3%;
     display: block;
-    transform: scale(0) rotateZ(20deg);
+    transform: scale(0) rotateZ(360deg);
     animation-name: kapow;
     animation-duration: 0.9s;
     animation-iteration-count: 1;
