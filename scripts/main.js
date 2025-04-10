@@ -9,7 +9,7 @@ const urlParameter = new URLSearchParams(window.location.search);
 
 // Dynamic logo height
 function resizeLogo() {
-    var logoHeight = $(window).outerHeight() - ($('#footer').outerHeight() + $('h2').outerHeight() + $('#link-gallery').outerHeight()) - 150;
+    var logoHeight = $(window).outerHeight() - ($('#footer').outerHeight() + $('h2').outerHeight() + $('#link-gallery').outerHeight()) - 50 /*margin top+bottom*/;
     $('.logo-splash').height(logoHeight);
 }
 

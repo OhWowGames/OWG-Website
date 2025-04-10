@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Inter A';
+    src: local("Inter"), url(../fonts/Inter-VariableFont_opsz,wght.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inter A';
+    src: local("Inter Italic"), url(../fonts/Inter-Italic-VariableFont_opsz,wght.ttf);
+    font-style: italic;
+}
 html, body {
     padding: 0;
     margin: 0;
@@ -6,7 +16,8 @@ html, body {
     box-sizing: border-box;
 }
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Inter A', sans-serif;
+    font-size-adjust: 0.51;
     width: 100%;
     padding: 0 0 38px;
     overflow-anchor: none;
@@ -48,7 +59,11 @@ body * {
 #main-logo.logo-splash{
     width: auto;
     max-width: none;
+    min-height: 250px;
+    min-height: 200px;
     padding: 50px 3% 0px;
+    padding-top: 0;
+    margin-top: 50px;
 }
 #footer {
     position: fixed;
@@ -71,10 +86,14 @@ h1 {
 h2 {
     text-align: center;
     font-size: 2.3em;
-    font-weight: 100;
+    font-weight: 500;
     color: #0abafe;
-    margin: 0 0 40px;
+    margin: 0;
+    padding: 0 0 50px;
     font-style: italic;
+}
+button{
+    font: inherit;
 }
 .bg {    
     height: 100%;
@@ -104,12 +123,31 @@ h2 {
 }
 #link-gallery div{
     width: calc(25% - (0.8vw * 2));
-    margin: 0.8vw;
+    margin: 0 0.8vw;
     display: inline-block;
 }
 #link-gallery div img{
     width: 100%;
     border-radius: 1.9vw;
+}
+.social{
+    text-decoration: none;
+    text-align: center;
+}
+.social a{
+    text-decoration: none;
+}
+.social img{
+    width: 5%;
+    margin: 2% 1% 0;
+    filter: hue-rotate(250deg) brightness(4) saturate(0);
+    transition: filter 200ms;
+}
+.social img:hover{
+    filter: hue-rotate(250deg) brightness(2) saturate(0);
+}
+ul li a.social:hover{
+    text-decoration: none;
 }
 #team{
     margin: auto;
@@ -129,7 +167,6 @@ h2 {
 #team p{
     text-align: center;
     font-size: 1.5em;
-    font-weight: 100;
     color: #e757ac;
     margin: 40px 0;
     font-style: italic;
@@ -180,11 +217,13 @@ h2 {
         max-width: none;
         height: auto !important;
         padding: 13px 12% 28px;
+        margin-top: 0;
     }
     .tagline{
-        width: 80%;
-        margin: 0 auto 25px;
+        width: 8em;
+        margin: -15px auto 40px;
         font-size: 1.8em;
+        padding-bottom: 0;
     }
     #link-gallery{
         width: 100%;
@@ -193,6 +232,7 @@ h2 {
     #link-gallery div{
         width: 100%;
         padding: 5px 16%;
+        margin: 0;
     }
     /* #link-gallery div{
         width: calc(50% - 30px);
@@ -203,6 +243,10 @@ h2 {
     } */
     #link-gallery div img {
         border-radius: 10vw;
+    }
+    .social img {
+        width: 13%;
+        margin-top: 40px;
     }
     #team{
         width: 100%;
