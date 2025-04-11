@@ -231,7 +231,8 @@ ul li a.social:hover{
     .tagline{
         width: 8em;
         margin: -15px auto 40px;
-        font-size: 1.9em;
+        font-size: 7.6vw;
+        font-weight: 500;
         padding-bottom: 0;
     }
     #link-gallery{
