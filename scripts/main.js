@@ -43,6 +43,9 @@ function resizePalettopia() {
     var birdScale = (birdWidth / 125);
     $('.swell').css({transform:'scale('+waveScale+')'});
     $('.bird').css({transform:'scale('+birdScale+')'});
+
+    var mobileWave = $('#palettopia-content').outerHeight() + (winWidth / 1.8);
+    $('.swell:nth-child(4)').css({marginTop: mobileWave });
 }
 
 // Image Load

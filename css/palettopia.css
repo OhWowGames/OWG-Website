@@ -282,7 +282,7 @@ clouds > .extended{
 
 /* Portrait for Desktop */
 /* 4/3 aspect ratios */
-@media only screen and (min-width: 500px) and (aspect-ratio < 1.15) {
+@media only screen and (min-width: 600px) and (aspect-ratio < 1.15) {
     .map-island {
         top: -20vh;
         background-size: 100vh;
@@ -296,7 +296,7 @@ clouds > .extended{
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     #container {
         overflow-x: hidden;
     }
@@ -330,6 +330,7 @@ clouds > .extended{
         position: static;
         width: 90%;
         max-width: none;
+        min-width: 0;
         margin: 15px 5%;
     }    
     #palettopia-content > div{
@@ -368,11 +369,11 @@ clouds > .extended{
     ocean, flocks{
         position: relative;
     }
-    .swell:nth-child(1) > .wave, .swell:nth-child(2) > .wave, .swell:nth-child(3) > .wave, flock.bg, .bird:nth-child(1) > .feather, .bird:nth-child(2) > .feather{
+    .swell:nth-child(1) > .wave, .swell:nth-child(2) > .wave, .swell:nth-child(4) > .wave, flock.bg, .bird:nth-child(1) > .feather, .bird:nth-child(2) > .feather{
         animation-play-state: running;
         display: block;
     }
-    .swell:nth-child(1), .swell:nth-child(2), .swell:nth-child(3){
+    .swell:nth-child(1), .swell:nth-child(2), .swell:nth-child(4){
         transform: scale(0.3) !important;
         position: absolute;
         z-index: 1;
@@ -383,7 +384,7 @@ clouds > .extended{
         left: 7vw !important;
         top: -6vw !important;
     }
-    .swell:nth-child(3){
+    .swell:nth-child(4){
         left: 10vw !important;
         top: 0 !important;
         margin-top: 100vh;
