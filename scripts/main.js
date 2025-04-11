@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
             $('#bg').hide();
             $('#main-hero').hide();
             // $('body').css({'background-color':'#fff'});
+        } else if (theme == vd){
+            $('#bg').addClass(vd);
+            $('#main-hero').addClass(vd);
         }
     }
 

@@ -73,7 +73,8 @@ ul li a.sublinks{
 }
 .social img{
     width: 12%;
-    filter: hue-rotate(210deg) brightness(2.3) saturate(0.1);
+    margin-top: 2%;
+    filter: hue-rotate(210deg) brightness(2.3) saturate(0.05);
 }
 .social img:hover{
     filter: hue-rotate(200deg) brightness(1) saturate(0.8);
