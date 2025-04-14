@@ -130,6 +130,10 @@ button{
     width: 100%;
     border-radius: 1.9vw;
 }
+#link-gallery div img:hover {
+    filter: contrast(1.2) saturate(1.1);
+    outline: solid 0.15vw #ff009a;
+}
 .social{
     text-decoration: none;
     text-align: center;
