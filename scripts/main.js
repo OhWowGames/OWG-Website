@@ -35,9 +35,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
     $('#link-gallery > div a[href="#team"]').click(function(event){
         event.preventDefault();
         $('.team-member img').removeClass('shimmer');
-        var bodyHeight = $('body').height(), elemOffset = $('#team').offset().top;
-        var scrollDist = $(window).height() < $('#team').height() ? elemOffset : bodyHeight-elemOffset;
-        var scrollSpeed = scrollDist / 0.9;
+        var bodyH = $(document).height(), windowH = $(window).height(), elemOffset = $('#team').offset().top;
+        var remainingScroll = bodyH-elemOffset;
+        var scrollDist = windowH < remainingScroll ? elemOffset : elemOffset-(windowH-remainingScroll);
+        var scrollSpeed = Math.max(scrollDist / 0.9, 200);
         $("html, body").stop().animate({scrollTop: scrollDist}, scrollSpeed, 'swing', function() {
             $('.team-member img').addClass('shimmer');
         });
