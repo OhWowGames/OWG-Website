@@ -168,6 +168,21 @@ ul li a.social:hover{
     width: 100%;
     border-radius: 30px;
 }
+.shimmer{
+    animation-name: shimmer;
+    animation-delay: inherit;
+    animation-direction: normal;
+    animation-duration: 600ms;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-timing-function: ease;
+}
+@keyframes shimmer {
+    0%   {filter: contrast(1) saturate(1) brightness(1);}
+    50%  {filter: contrast(0.9) saturate(1.5) brightness(1.3)}
+    100% {filter: contrast(1) saturate(1) brightness(1);}
+}
 #team p{
     text-align: center;
     font-size: 1.5em;

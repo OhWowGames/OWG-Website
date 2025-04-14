@@ -31,6 +31,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
             $('#main-hero').addClass(vd);
         }
     }
+    // Homepage - animate scroll on Team link
+    $('#link-gallery > div a[href="#team"]').click(function(event){
+        event.preventDefault();
+        $('.team-member img').removeClass('shimmer');
+        var bodyHeight = $('body').height(), elemOffset = $('#team').offset().top;
+        var scrollDist = $(window).height() < $('#team').height() ? elemOffset : bodyHeight-elemOffset;
+        var scrollSpeed = scrollDist / 0.9;
+        $("html, body").stop().animate({scrollTop: scrollDist}, scrollSpeed, 'swing', function() {
+            $('.team-member img').addClass('shimmer');
+        });
+    });
 
 });
 
