@@ -52,8 +52,42 @@ function resizePalettopia() {
 $(window).on("load", function(e) {
     resizeLogo();
     resizePalettopia();
-    $('#container').css({'opacity':'1'})
-    $('#main-logo').css({'animation-play-state':'running'})
+    $('#container').css({'opacity':'1'});
+
+    $('#main-logo').css({'animation-play-state':'running'});
+    setTimeout(function(){ 
+        $('#main-logo').css({'animation-play-state':'paused'});
+        $('#main-logo').click(function(){ 
+            $(this).css({'animation-play-state':'running'});
+            setTimeout(function(){ 
+                $('#main-logo').css({'animation-play-state':'paused'});
+                $('#main-logo').attr('src', 'images/owg_logo_icon.svg');
+                $('#main-logo').css({'animation-name':'kapow2','animation-play-state':'running'});
+                setTimeout(function(){ 
+                    $('#main-logo').css({'animation-play-state':'paused'});
+                    $('#main-logo').off('click');
+                    $('#main-logo').click(function(){ 
+                        $('#main-logo').css({'animation-name':'eat','animation-iteration-count':'1','animation-duration':'1s','animation-play-state':'running'});
+                        setTimeout(function(){
+                            $('#main-logo').off('click');
+                            $('.tagline').css({'opacity':'0'})
+                            $('.main').css({'background-color':'black'});
+                            $('#main-logo').attr('src', 'images/palettopia_aligator.svg');
+                            $('#main-logo').css({'animation-name':'hop','animation-duration':'4s','padding-bottom':'50px'});
+                            $('.speech-bubble').show();
+                            setTimeout(function(){
+                                $('.tagline').css({'transition':'opacity 2s','opacity':'1'});
+                            },1500);
+                            setTimeout(function(){
+                                $('.speech-bubble').css({'transition':'opacity 2s','opacity':'1'});
+                            },4000);                            
+                        },800)
+                    });
+                }, 900);
+            }, 900);
+        });
+    }, 900);
+    
 });
     
 // Window resize listener
