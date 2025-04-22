@@ -104,13 +104,13 @@ button.steam{
 }
 button.steam span{
     display: block;
-    width: 72%;
-    margin-left: 28%;
+    width: 63%;
+    margin-left: 37%;
     padding: 0 8% 0 5%;
     text-align: left;
 }
 button.steam div{
-    background: url(../images/social-icon-steam.png) no-repeat 16% center / 14%;
+    background: url(../images/social-icon-steam.png) no-repeat 27% center / 14%;
     filter: grayscale(1) brightness(5);
     position: absolute;
     width: 100%;
