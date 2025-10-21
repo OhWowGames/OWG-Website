@@ -13,6 +13,26 @@ function resizeLogo() {
     $('.logo-splash').height(logoHeight);
 }
 
+// Dark Mode, matches os default settings
+function themeColorChange(color){
+    if (color === 'dark'){
+        $('body').addClass('dark');
+    } else {
+        $('body').removeClass('dark');
+    }
+}
+function setThemeColor(){
+    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;    
+    if (isDarkMode) themeColorChange('dark');
+}
+const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+darkModeMediaQuery.addEventListener("change", (event) => {
+    if (event.matches)
+        themeColorChange('dark');
+    else
+        themeColorChange('light');
+});
+
 // Page Load
 document.addEventListener("DOMContentLoaded", function(e) {
     // Copyright Year
@@ -42,6 +62,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
         $("html, body").stop().animate({scrollTop: scrollDist}, scrollSpeed, 'swing', function() {
             $('.team-member img').addClass('shimmer');
         });
+    });
+    // Toggle Dark Mode
+    $('#theme-color').click(function(){
+        var isDarkActive = $('body')[0].classList.contains('dark');
+        if (isDarkActive)
+            themeColorChange('light');
+        else
+            themeColorChange('dark');
     });
 
 });
