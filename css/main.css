@@ -89,7 +89,7 @@ body.dark #theme-color div{
 }
 body.dark {
     background-image: radial-gradient(ellipse 80% 180vh at 50% 30vh, #3f3f3f, black);
-    background-color: #1c1c1c;
+    background-color: #2f2f2f;
     color: #ededed;
 }
 body.dark a {
@@ -266,6 +266,9 @@ body:not(.dark) .altblue-txt{
     }
 }
 @media only screen and (max-width: 600px) {    
+    body.dark {
+        background-image: radial-gradient(ellipse 120% 180vh at 50% 30vh, #3f3f3f, black);
+    }
     #bg {
         background-size: 440px !important;
     }
