@@ -161,7 +161,7 @@ button{
 }
 #link-gallery div img{
     width: 100%;
-    border-radius: 1.9vw;
+    border-radius: 11%/20%;
 }
 #link-gallery div img:hover {
     filter: contrast(1.2) saturate(1.1);
@@ -193,13 +193,13 @@ ul li a.social:hover{
     padding: 50px 0;
 }
 #team .team-member{
-    width: calc(33.33% - 40px);
-    margin: 20px;
+    width: 30.33%;
+    margin: 1.5%;
     display: inline-block;
 }
 #team .team-member img{
     width: 100%;
-    border-radius: 30px;
+    border-radius: 10%;
 }
 .shimmer{
     animation-name: shimmer;
@@ -217,16 +217,29 @@ ul li a.social:hover{
     100% {filter: contrast(1) saturate(1) brightness(1);}
 }
 #team p{
-    text-align: center;
-    font-size: 1.5em;
-    color: #e757ac;
-    margin: 40px 0;
-    font-style: italic;
-    padding: 0 120px;
 }
 .main {
     min-height: calc(100vh - 38px);
     overflow: hidden;
+    background: linear-gradient(160deg, #fff60047 15%, #ff009b45 45%, #ff009b45 50%, #ff009b45 55%, #00bcff47 90%);
+    background-size: 500% 500%;
+    animation: gradient 11.25s ease infinite;
+    background-position: 50% 0%;
+}
+body.dark .main {
+    background: linear-gradient(160deg, #fffca647 15%, #ff009b45 45%, #ff009b45 50%, #ff009b45 55%, #00bcff47 90%);
+    background-size: 200% 500%;
+}
+@keyframes gradient {
+	0% {
+		background-position: 50% 0%;
+	}
+	50% {
+		background-position: 50% 100%;
+	}
+	100% {
+		background-position: 50% 0%;
+	}
 }
 .black-bg {
     background-color: #181818;
@@ -284,31 +297,35 @@ body:not(.dark) .altblue-txt{
         margin-top: 0;
     }
     .tagline{
-        width: 8em;
         margin: -15px auto 40px;
-        font-size: 7.6vw;
+        font-size: 5vw;
         font-weight: 500;
-        padding-bottom: 0;
     }
     #link-gallery{
         width: 100%;
         padding-bottom: 50px;
     }
+
     #link-gallery div{
-        width: 100%;
-        padding: 5px 16%;
-        margin: 0;
-    }
-    /* #link-gallery div{
-        width: calc(50% - 30px);
-        margin: 20px 20px 0;
-    }
-    #link-gallery div:nth-child(even){
+        width: 44%;
+        padding: 0;
+        margin: 40px 4%;
+    }    
+    #link-gallery div:nth-child(odd){
         margin-left: 0px;
-    } */
-    #link-gallery div img {
-        border-radius: 10vw;
     }
+    #link-gallery div:first-of-type,#link-gallery div:last-of-type{
+        margin: 5px auto;
+        padding: 10px 10%;
+        display: block;
+        width: 70%;
+        border-radius: 35px;
+    }
+    #link-gallery div:first-of-type{
+        background-image: radial-gradient(ellipse, #cce0eb 68%, #ffffff);
+        margin-top: 20px;
+    }
+
     .social img {
         width: 13%;
         margin-top: 40px;
@@ -324,10 +341,59 @@ body:not(.dark) .altblue-txt{
         margin-left: 0px;
     }
     #team > div.team-member:nth-child(4){
-        margin: 20px calc((50% + 30px) / 2) 0;
+        margin: 40px calc((50% + 30px) / 2) 0;
     }
     #team p{
         padding: 0 40px;
         margin-bottom: 0;
     }
+}
+
+
+/* Update existing team-member class to handle text alignment */
+#team .team-member {
+    vertical-align: top; /* Ensures columns stay aligned even if bios are different lengths */
+    text-align: center;
+}
+
+/* Name Styling */
+#team .team-member h3 {
+    margin: 15px 0 5px 0;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Job Title Styling */
+#team .team-member .job-title {
+    margin: 0 0 15px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #ededed; /* Neutral color to let the names pop */
+}
+/* body.dark #team .team-member .job-title {
+    color: #bbb;
+} */
+
+/* Individual Bio Styling */
+#team .team-member .bio {
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0 10px;
+    color: #999;
+    font-style: normal; /* Overrides the italic from the parent if inherited */
+}
+
+/* Renaming the bottom paragraph class to avoid conflict */
+#team .team-summary {
+    clear: both;
+    text-align: center;
+    font-size: 1.5em;
+    color: #e757ac;
+    margin: 40px 0;
+    font-style: italic;
+
+    background: linear-gradient(90deg, #f3ef07 25%, #fe0499 42%, #fe0499 50%, #fe0499 58%, #0cbaff 75%);
+    background-clip: text;
+    color: transparent;
 }
