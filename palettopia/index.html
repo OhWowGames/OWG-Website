@@ -78,6 +78,61 @@
                 <image id="owg-logo" class="corner" src="images/owg_logo_p3_sm.png" alt="Oh Wow Games logo" />
             </a>
             <section class="animated-hero">
+                <img id="palettopia-logo" src="images/palettopia_logo_p3_lg.png" alt="Palettopia logo">
+                <div id="hero-nav">
+                    <button style="color: #ffffff; background-color: #8769ce;">Wishlist</button>
+                    <button style="color: #ffffff; background-color: #69cec3;">Presskit</button>
+                    <button style="color: #ffffff; background-color: #ce6989;">Newsletter</button>
+                </div>
+                <div class="video-frame">
+                    <div>
+                        <div>
+                            <video id="video-hero" autoplay="" muted="" loop="">
+                                <source src="video/zoom-into-biomes_web_60fps_lq_loop.mp4" type="video/mp4">
+                            </video>
+                            <script>
+                                function pauseVideo() {
+                                    const video = document.getElementById('video-hero');
+                                    if (video) {
+                                        video.pause();
+                                    }
+                                }
+                                function setTimeOfVideo(time = 10) {
+                                    const video = document.getElementById('video-hero');
+                                    if (video) {
+                                        video.currentTime = time;
+                                    }
+                                }
+                                pauseVideo();
+                                setTimeOfVideo();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="summary">
+
+            </section>
+            <section class="biomes">
+
+            </section>
+            <section class="features">
+
+            </section>
+            <section class="Gallery">
+
+            </section>
+            <section class="testimonials">
+
+            </section>
+            <section class="news">
+
+            </section>
+            <section class="newsletter">
+
+            </section>
+            <!-- 
+            <section class="animated-capsule">
                 <div class="hero-bg">
                     <div class="hero-dimensions">
                         <h1>Palettopia</h1>
@@ -162,9 +217,7 @@
                     </div>
                 </div>
             </section>
-            <section class="pdp-content">
-
-            </section>
+             -->
         </main>
         <footer id="footer">
             Oh Wow Games LLC &copy; 2024 - <span id="year">2025</span>
