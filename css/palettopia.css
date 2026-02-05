@@ -52,7 +52,7 @@ section.animated-hero #palettopia-logo{
     z-index: 1; 
 }
 section.animated-hero #hero-nav{
-width: 37%;
+    width: 37%;
     min-width: 500px;
     max-width: 80vw;
     margin: auto;
@@ -80,39 +80,34 @@ width: 37%;
 #hero-nav button:hover, #hero-nav button:active{
     filter:brightness(1.1);
 }
-section.animated-capsule{
-    /* margin-top: 1000px; */
-}
-section.animated-capsule video{
-    width: 100%;
-    border-radius: 3.5cqw;
-}
-.hero-bg{
-    background-color: #cfe0ea;    
-    background-color: #cae0eb; /* P3 */
-    overflow: hidden;
-}
-.hero-dimensions{
-    height: 100vh;
-    width: 100vw;
-    margin: 0 auto;
+.hero-summary{
+    background-color: #cfe0ea;
+    background-color: #cae0eb;
     position: relative;
     z-index: 0;
-}
-section.pdp-content{
-    height: 1000px;
+    display: flex;
+    overflow: clip;
 }
 #owg-logo.corner{
     width: 100%;
     max-width: 9vw;
     min-width: 108px;
     margin: 1.1vw;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
 }
-section.animated-capsule #palettopia-logo{
+.capsule{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+}
+.capsule, .hero-content{
+    width: 50%;
+}
+.capsule #palettopia-logo{
     width: 60%;
     margin: auto;
     position: absolute;
@@ -122,21 +117,15 @@ section.animated-capsule #palettopia-logo{
     bottom: 0;
     z-index: 1;
 }
-#hero-content{
+.hero-content video{
     width: 100%;
-    margin: 1.5vw;
-    margin-bottom: calc(39px + 1.1vw);
-    margin: auto;
-    right: 0;
-    left: 50vw;
-    bottom: 0;
-    top: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 3.5cqw;
+}
+.hero-content{
+    position: relative;
 }
 /* using container-type allows for the use of the relative unit CQW, however it is only available on children elements */
-#hero-content .cloud-frame{
+.hero-content .cloud-frame{
     padding: 2cqw;
     border-radius: 5.5cqw;
     margin: 25vh 7% 40px;
@@ -144,7 +133,7 @@ section.animated-capsule #palettopia-logo{
     background: linear-gradient(177deg, #ffffff9c 0%, #ffffffba 50%, #ffffff2e 75%);
     background: linear-gradient(177deg, #ffffffa3 0%, #ffffffba 70%, #ffffff2e 100%);
 }
-#hero-content .new-feature{
+.hero-content .new-feature{
     position: absolute;
     text-align: center;
     left: 0;
@@ -154,7 +143,7 @@ section.animated-capsule #palettopia-logo{
     font-weight: 500;
     font-size: 1.1em;
 }
-#hero-content .column{
+.hero-content .column{
     flex: 1;
     height: 100vh;
     position: relative;
@@ -260,6 +249,20 @@ button.presskit:hover{
     width: 100%;
     display: block;
     height: 100vh;
+    position: relative;
+}
+.animated-capsule{
+    position: sticky;
+    width: 0;
+    top: 0;
+    height: 100vh;
+    overflow: visible;
+}
+.animated-capsule island{
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
 }
 .bg.swell{
     z-index: -7;
@@ -431,14 +434,14 @@ clouds > .extended{
         height: 93vw;
         margin-top: -164px;
     }
-    #hero-content{
+    .hero-content{
         position: static;
         width: 90%;
         max-width: none;
         min-width: 0;
         margin: 15px 5%;
     }    
-    #hero-content > div{
+    .hero-content > div{
         padding: 15px;
         border-radius: 40px;
         font-size: 16px;
