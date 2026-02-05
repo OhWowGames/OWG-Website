@@ -77,69 +77,10 @@
             <a href="./" title="Homepage">
                 <image id="owg-logo" class="corner" src="images/owg_logo_p3_sm.png" alt="Oh Wow Games logo" />
             </a>
-            <section class="animated-hero">
-                <img id="palettopia-logo" src="images/palettopia_logo_p3_lg.png" alt="Palettopia logo">
-                <div id="hero-nav">
-                    <button style="color: #ffffff; background-color: #8769ce;">Wishlist</button>
-                    <button style="color: #ffffff; background-color: #69cec3;">Presskit</button>
-                    <button style="color: #ffffff; background-color: #ce6989;">Newsletter</button>
-                </div>
-                <div class="video-frame">
-                    <div>
-                        <div>
-                            <video id="video-hero" autoplay="" muted="" loop="">
-                                <source src="video/zoom-into-biomes_web_60fps_lq_loop.mp4" type="video/mp4">
-                            </video>
-                            <script>
-                                function pauseVideo() {
-                                    const video = document.getElementById('video-hero');
-                                    if (video) {
-                                        video.pause();
-                                    }
-                                }
-                                function setTimeOfVideo(time = 10) {
-                                    const video = document.getElementById('video-hero');
-                                    if (video) {
-                                        video.currentTime = time;
-                                    }
-                                }
-                                pauseVideo();
-                                setTimeOfVideo();
-                            </script>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="summary">
-
-            </section>
-            <section class="biomes">
-
-            </section>
-            <section class="features">
-
-            </section>
-            <section class="Gallery">
-
-            </section>
-            <section class="testimonials">
-
-            </section>
-            <section class="news">
-
-            </section>
-            <section class="newsletter">
-
-            </section>
-            <!-- 
             <section class="animated-capsule">
                 <div class="hero-bg">
                     <div class="hero-dimensions">
-                        <h1>Palettopia</h1>
-                            
-                        <img id="palettopia-logo" src="images/palettopia_logo_p3_lg.png" alt="Palettopia logo">
                         <island>
-                            <land class="bg map-island"></land>
                             <ocean>
                                 <div class="bg swell" style="left: 2vw; top: 23vw; transform: scale(0.76261);"><div class="wave"></div></div>
                                 <div class="bg swell" style="left: 69vw; top: 10vw; transform: scale(0.76261);"><div class="wave" style="animation-delay: 2s;"></div></div>
@@ -167,7 +108,41 @@
                                 <div class="bg extended"></div>
                             </clouds>
                         </island>
-                        <section id="palettopia-content">
+                        <section id="hero-content">
+                            <div class="column">
+                                <img id="palettopia-logo" src="images/palettopia_logo_p3_lg.png" alt="Palettopia logo">
+                                <land class="map-island"></land>
+                            </div>
+                            <div class="column">
+                                <div class="cloud-frame">
+                                    <h3 class="new-feature">New Content Added: <span style="
+                                                    color: #354f6e;
+                                                    font-weight: 800;
+                                                ">The Biomes of Palettopia</span></h3>
+                                    <video id="video-hero" autoplay="" muted="" loop="" playsinline="">
+                                        <source src="video/zoom-into-biomes_web_60fps_lq_loop.mp4" type="video/mp4">
+                                    </video>
+                                    <script>
+                                        function pauseVideo() {
+                                            const video = document.getElementById('video-hero');
+                                            if (video) {
+                                                video.pause();
+                                            }
+                                        }
+                                        function setTimeOfVideo(time = 10) {
+                                            const video = document.getElementById('video-hero');
+                                            if (video) {
+                                                video.currentTime = time;
+                                            }
+                                        }
+                                        pauseVideo();
+                                        setTimeOfVideo();
+                                    </script>
+                                    <h1>Palettopia</h1>
+                                </div>
+                            </div>
+                        </section>
+                        <!--<section id="palettopia-content">
                             <div>
                                 <p><strong>Palettopia</strong> is the relaxing city-painting game where creativity meets harmony.</p>
                                 <p style="margin: -0.9% 0;">Discover unique islands, work with their natural landscapes, and paint vibrant districts to bring your dream utopia to life.</p>
@@ -213,11 +188,61 @@
                                     </ul>
                                 </nav>
                             </div>
-                        </section>
+                        </section>-->
                     </div>
                 </div>
             </section>
-             -->
+            <!-- <section class="animated-hero">
+                <img id="palettopia-logo" src="images/palettopia_logo_p3_lg.png" alt="Palettopia logo">
+                <div id="hero-nav">
+                    <button style="color: #ffffff; background-color: #8769ce;">Wishlist</button>
+                    <button style="color: #ffffff; background-color: #69cec3;">Presskit</button>
+                    <button style="color: #ffffff; background-color: #ce6989;">Newsletter</button>
+                </div>
+                <div class="video-frame">
+                    <div>
+                        <div>
+                            <video id="video-hero" autoplay="" muted="" loop="">
+                                <source src="video/zoom-into-biomes_web_60fps_lq_loop.mp4" type="video/mp4">
+                            </video>
+                            <script>
+                                function pauseVideo() {
+                                    const video = document.getElementById('video-hero');
+                                    if (video) {
+                                        video.pause();
+                                    }
+                                }
+                                function setTimeOfVideo(time = 10) {
+                                    const video = document.getElementById('video-hero');
+                                    if (video) {
+                                        video.currentTime = time;
+                                    }
+                                }
+                                pauseVideo();
+                                setTimeOfVideo();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <section class="summary">
+
+            </section>
+            <section class="features">
+
+            </section>
+            <section class="Gallery">
+
+            </section>
+            <section class="testimonials">
+
+            </section>
+            <section class="news">
+
+            </section>
+            <section class="newsletter">
+
+            </section>
         </main>
         <footer id="footer">
             Oh Wow Games LLC &copy; 2024 - <span id="year">2025</span>
