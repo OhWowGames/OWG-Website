@@ -177,6 +177,11 @@
             flex-direction: column;
             gap: 16px;
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+
+            /* padding: 25px 17px 25px 14px;
+            border-radius: 0 35px 35px 0;
+            left: 0;
+            gap: 14px; */
         }
 
         .nav-btn {
@@ -344,6 +349,7 @@
             color: var(--blue);
             text-transform: capitalize;
             background: linear-gradient(90deg, var(--yellow), var(--red));
+            background: linear-gradient(90deg, #486590, #5eabb2);
             background-clip: text;
             color: transparent;
             filter: saturate(1.2);
@@ -372,13 +378,17 @@
 
         .btn-steam { 
             background: linear-gradient(90deg, var(--yellow), var(--red));
+            background: linear-gradient(90deg, #486590, #5eabb2);
             color: var(--white);
             box-shadow: 0 4px 0px var(--red);
+            box-shadow: 0 4px 0px #5eabb2;
          }
         .btn-updates { 
-            background-color: var(--white);
+            background-color: #ffffff82;
             color: var(--orange);
+            color: #5eabb2;
             border: 2.5px solid var(--orange);
+            border: 2.5px solid #5eabb2;
          }
         .cta-btn:hover { transform: translateY(-4px); }
 
@@ -392,17 +402,37 @@
 
         .spec-card { flex: 1; min-width: 140px; padding: 10px 15px; border-right: 1px solid rgba(0,0,0,0.06); }
         .spec-card:last-child { border-right: none; }
-        .spec-card h4 { font-family: var(--font-ui); font-size: 0.7rem; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; font-weight: 600; }
+        .spec-card h4 { font-family: var(--font-ui); font-size: 0.7rem; text-transform: uppercase; color: var(--orange); color: #486590; margin-bottom: 4px; font-weight: 600; }
         .spec-card p { font-weight: 600; font-size: 0.95rem; color: #555; font-family: var(--font-ui); }
 
         .rating-badge { display: inline-block; background: rgba(0,0,0,0.05); padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
 
         .quick-links-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; }
-        .quick-link { text-decoration: none; color: var(--red); font-family: var(--font-ui); font-weight: 600; font-size: 0.9rem; transition: color 0.2s ease; }
+        .quick-link { text-decoration: none; color: var(--red); color: #5eabb2; font-family: var(--font-ui); font-weight: 600; font-size: 0.9rem; transition: color 0.2s ease; }
         .quick-link:hover { color: var(--blue); }
 
         .critter-holder { display: flex; justify-content: center; padding: 10px 0; }
         .critter-placeholder { width: 100%; height: 100px; /* background: rgba(255,255,255,0.3);*/ border-radius: 50%; display: flex; align-items: center; justify-content: center; /* border: 1.5px dashed rgba(0,0,0,0.05);*/ }
+
+        .critter-ostrich {
+            width: 20%;
+            animation: ostrich-anim 4s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+        }
+
+        .critter-alligator {
+            width: 75%;
+            animation: alligator-anim 6s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ostrich-anim {
+            0%, 100% { transform: scale(0.98) rotate(7deg) translate(10px, 0px); }
+            50% { transform: scale(1) rotate(10deg) translate(10px, -5px); }
+        }
+
+        @keyframes alligator-anim {
+            0%, 100% { transform: scale(-1, 1) rotate(-5deg) translate(-20px, 30px); }
+            50% { transform: scale(-0.98, 0.98) rotate(-3deg) translate(-35px, 30px); }
+        }
 
         /* ========================================
            MID-HERO REVEAL SECTION
@@ -538,7 +568,7 @@
             background-color: #303539; 
             background-color: #3c665deb;
             background-image: linear-gradient(45deg, #0000008f, transparent);
-            padding: 120px 0;
+            padding: 120px 0 150px;
             position: relative;
             z-index: 10;
         }
@@ -617,6 +647,12 @@
         .gallery-critter-wrapper.is-animated.pos-4 .feature-critter { right: -20px; opacity: 1; }
         .gallery-critter-wrapper.is-animated.pos-4:hover .feature-critter { transform: translateX(-20px) scale(1.1); }
 
+        /* Pos News: Right Side */
+        .gallery-critter-wrapper.pos-news { top: -40px; right: 0; }
+        .gallery-critter-wrapper.pos-news .feature-critter { right: -100px; left: auto; }
+        .gallery-critter-wrapper.is-animated.pos-news .feature-critter { right: -20px; opacity: 1; }
+        .gallery-critter-wrapper.is-animated.pos-news:hover .feature-critter { transform: translateX(-20px) scale(1.1); }
+
         .gallery-item {
             position: relative;
             border-radius: 24px;
@@ -673,10 +709,25 @@
            ROADMAP (KNOWLEDGE) SECTION 
            ========================================
         */
+        #roadmap-bg {
+            background-color: #f6f2e6; 
+            background-image: linear-gradient(30deg, #ffddb1 10%, #e8debf 75%, #eee1ba 100%);
+            position: relative;
+        }
+
+        #roadmap-pattern {
+            background-image: url(images/palettopia/texture/grass_pattern.webp);
+            background-image: url(images/palettopia/texture/sand_pattern.webp);
+            background-size: 390px;
+            filter: blur(0px) invert(1) brightness(2);
+            opacity: 0.2;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
 
         #roadmap {
-            padding: 100px 0;
-            background-color: #f6f2e6; 
+            padding: 120px 0 0;          
             position: relative;
             z-index: 10;
         }
@@ -699,30 +750,33 @@
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="23" height="23"><path fill="black" d="M224 464C206.3 464 192 478.3 192 496L192 544C192 561.7 206.3 576 224 576L448 576C465.7 576 480 561.7 480 544L480 496C480 478.3 465.7 464 448 464L224 464zM201.2 416L265.8 416L186.3 327.7C179.7 320.3 176 310.8 176 300.9L176 268C176 251.9 187.9 238.5 203.4 236.3C215.2 234.6 224 224.5 224 212.5L224 136C224 122.7 234.7 112 248 112C255.2 112 261.6 115.1 266 120.1C270.6 125.3 277.1 128.2 284 128.2C290.9 128.2 297.4 125.2 302 120.1C306.4 115.1 312.8 112 320 112C328.5 112 335.9 116.4 340.2 123.1C347.1 133.8 361.1 137.3 372.2 131.1C375.7 129.2 379.6 128 384 128C394.6 128 403.7 134.9 406.8 144.6C410.6 156.3 422.7 163.3 434.8 160.6C436.5 160.2 438.2 160 440 160C453.3 160 464 170.7 464 184L464 276.2C464 290.6 460.5 304.7 453.8 317.4L401.6 416L455.9 416L496.2 339.8C506.6 320.2 512 298.3 512 276.2L512 184C512 145.6 481.9 114.2 443.9 112.1C431 92.8 409 80 384 80C378.3 80 372.8 80.7 367.5 81.9C354.8 70.8 338.2 64 320 64C306.9 64 294.6 67.5 284 73.6C273.4 67.5 261.1 64 248 64C208.2 64 176 96.2 176 136L176 194.7C147.7 207 128 235.2 128 268L128 300.9C128 322.6 136 343.6 150.6 359.8L201.2 416z"/></svg>') 11 11, grabbing !important;
         }
 
-        .roadmap-container { position: relative; padding: 80px 0 0; margin-bottom: 0; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; user-select: none; -webkit-user-select: none; }
+        .roadmap-container { position: relative; padding: 60px 0 0; margin-bottom: 0; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; user-select: none; -webkit-user-select: none; }
         .roadmap-container::-webkit-scrollbar { display: none; }
         .roadmap-svg-wrapper { position: relative; width: 2500px; height: 500px; }
         
         .river-path { 
             fill: none; 
-            stroke: hsl(199 56% 82% / 1); 
+            stroke: hsl(197.14deg 36.84% 85.1%); 
             stroke-width: 50; 
             stroke-linecap: round; 
             stroke-linejoin: round; 
-            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.05)); 
+            /* filter: drop-shadow(0 6px 12px rgba(0,0,0,0.05));  */
         }
 
         .river-waves-outer, .river-waves-inner { 
-            fill: none; 
-            stroke: rgb(255 255 255); 
-            stroke-width: 1.1px; 
-            stroke-linecap: round; 
-            stroke-dasharray: 25, 30; 
-            filter: blur(3px); 
-            animation: flowWaves 10s linear infinite; 
+            fill: none;
+            stroke: hsl(197 37% 89% / 1);
+            stroke-width: 23px;
+            stroke-linecap: butt;
+            stroke-dasharray: 30, 140;
+            filter: blur(5px);
+            animation: flowWaves 10s linear infinite;
         }
-        @keyframes flowWaves { from { stroke-dashoffset: 220; } to { stroke-dashoffset: 0; } }
+        @keyframes flowWaves { from { stroke-dashoffset: 170; } to { stroke-dashoffset: 0; } }
         #sailingBoat { position: absolute; font-size: 2.5rem; z-index: 4; pointer-events: none; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1)); transition: transform 0.1s linear; }
+        .swimmingCritters { position: absolute; z-index: 4; pointer-events: none; /* filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1)); */ transition: transform 0.1s linear; }
+        #critterWhale { width: 120px; }
+        #critterDuck { width: 65px; }
 
         .milestone { position: absolute; width: 260px; text-align: center; transform: translate(-50%, -50%); transition: transform 0.4s var(--ease-bounce); z-index: 5; }
         .milestone:hover { transform: translate(-50%, -55%) scale(1.05); }
@@ -740,7 +794,7 @@
         .milestone-title { font-family: var(--font-ui); font-weight: 700; font-size: 1.1rem; color: #222; margin-top: 4px; }
 
         /* FAQ Grid Styles */
-        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; padding: 20px; align-items: flex-start; }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 0; padding: 20px; align-items: flex-start; }
         .faq-item { background: var(--bg-glass); backdrop-filter: blur(var(--blur)); border-radius: 24px; border: 1px solid rgba(255,255,255,0.4); transition: all 0.3s ease; }
         .faq-question { padding: 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-ui); font-weight: 600; font-size: 1.25rem; }
         .faq-answer { max-height: 0; overflow: hidden; transition: all 0.4s ease; padding: 0 24px; color: #444; }
@@ -753,8 +807,7 @@
            ========================================
         */
         #news {
-            background-color: #f6f2e6; 
-            padding: 0 0 120px;
+            padding: 120px 0;
             position: relative;
             z-index: 10;
         }
@@ -762,6 +815,7 @@
         .news-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px;
+            position: relative;
         }
 
         .news-card {
@@ -786,7 +840,7 @@
         */
         #join {
             background: linear-gradient(145deg, #ff5d56f0 0%, #be9bd2f7 100%);
-            padding: 120px 0 0;
+            padding: 140px 0 0;
             min-height: 100vh;
             position: relative;
             z-index: 10;
@@ -1088,6 +1142,12 @@
                 height: 50vh;
             }
         }
+        
+        /* Utility class to pause animations when off-screen */
+        .animations-paused, 
+        .animations-paused * {
+            animation-play-state: paused !important;
+        }
     </style>
 </head>
 <body>
@@ -1210,7 +1270,7 @@
             <div class="scroll-column">
                 <div class="cloud-panel" style="border-radius: 60px; padding: 40px; transform: rotate(2deg); background-image: radial-gradient(circle at 20% 0%, transparent, rgb(255 255 255 / 80%) 50%)">
                     <div class="video-box">
-                        <video id="video-hero" muted="" loop="" playsinline="" poster="video/biome-loop-website_poster_720.webp">
+                        <video id="video-hero" preload="none" muted="" loop="" playsinline="" poster="video/biome-loop-website_poster_720.webp">
                             <source src="video/biome-loop-website-720p.webm" type="video/webm" media="(max-width: 720px)">
                             <source src="video/biome-loop-website-720p.mp4" type="video/mp4" media="(max-width: 720px)">
                             <source src="video/biome-loop-website-1440p.webm" type="video/webm">
@@ -1231,7 +1291,7 @@
                                     video.currentTime = time;
                                 }
                             }
-                            pauseVideo();
+                            //pauseVideo();
                             //setTimeOfVideo();
                         </script>
                         <div class="video-overlay">
@@ -1290,8 +1350,8 @@
                 <div class="cloud-panel" style="transform: rotate(-2deg); margin-top: -24px; background-image: radial-gradient(circle at 30% 80%, transparent, rgb(255 255 255 / 80%) 50%);">
                     <div class="critter-holder">
                         <div class="critter-placeholder">
-                            <img src="images/palettopia/stickers/critter_ostrich.webp" style="width: 20%; transform: scalex(1) rotate(7deg) translate(10px, 0px);">
-                            <img src="images/palettopia/stickers/critter_alligator.webp" style="width: 80%; transform: scalex(-1) rotate(-3deg) translate(-20px, 30px);">
+                            <img class="critter-ostrich" src="images/palettopia/stickers/critter_ostrich.webp" style="transform: scalex(1) rotate(7deg) translate(10px, 0px);">
+                            <img class="critter-alligator" src="images/palettopia/stickers/critter_alligator.webp" style="transform: scalex(-1) rotate(-3deg) translate(-20px, 30px);">
                             <!-- <i class="fa-solid fa-paw" style="font-size: 1.5rem; color: rgba(0,0,0,0.1);"></i> -->
                         </div>
                     </div>
@@ -1303,7 +1363,7 @@
         <section class="mid-hero">
             <h2>Welcome to Palettopia</h2>
             
-            <video id="video-mid" autoplay="" muted="" loop="" playsinline="" poster="video/temperate_nature_loop_poster_720.webp">
+            <video id="video-mid" preload="none" muted="" loop="" playsinline="" poster="video/temperate_nature_loop_poster_720.webp">
                 <source src="video/temperate_nature_loop_720-2mbps.webm" type="video/webm" media="(max-width: 720px)">
                 <source src="video/temperate_nature_loop_720-2mbps.mp4" type="video/mp4" media="(max-width: 720px)">
                 <source src="video/temperate_nature_loop_1440-4mbps.webm" type="video/webm">
@@ -1319,14 +1379,14 @@
                 <div class="feature-row">
                     <div class="feature-image-container">
                         <div class="feature-image">
-                            <video autoplay="" muted="" loop="" playsinline="" poster="video/feature_puzzle_poster_720.webp">
+                            <video preload="none" muted="" loop="" playsinline="" poster="video/feature_puzzle_poster_720.webp">
                                 <source src="video/feature_puzzle_720-2mbps.webm" type="video/webm" media="(max-width: 720px)">
                                 <source src="video/feature_puzzle_720-2mbps.mp4" type="video/mp4" media="(max-width: 720px)">
                                 <source src="video/feature_puzzle_1080-3mbps.webm" type="video/webm">
                                 <source src="video/feature_puzzle_1080-3mbps.mp4" type="video/mp4">
                             </video>                        </div>
                         <div class="feature-critter">
-                            <img src="images/palettopia/stickers/critter_armadillo.webp" style="height: 100%; transform: scalex(1) rotate(-1deg);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_armadillo.webp" style="height: 100%; transform: scalex(1) rotate(-1deg);">
                             <!-- <i class="fa-solid fa-paw" style="color: rgba(0,0,0,0.1); font-size: 1.5rem;"></i> -->
                         </div>
                     </div>
@@ -1353,7 +1413,7 @@
                 <div class="feature-row reverse">
                     <div class="feature-image-container">
                         <div class="feature-image">
-                            <video autoplay="" muted="" loop="" playsinline="" poster="video/feature_paint_poster_720.webp">
+                            <video preload="none" muted="" loop="" playsinline="" poster="video/feature_paint_poster_720.webp">
                                 <source src="video/feature_paint_720-2mbps.webm" type="video/webm" media="(max-width: 720px)">
                                 <source src="video/feature_paint_720-2mbps.mp4" type="video/mp4" media="(max-width: 720px)">
                                 <source src="video/feature_paint_1080-3mbps.webm" type="video/webm">
@@ -1361,7 +1421,7 @@
                             </video>    
                         </div>
                         <div class="feature-critter">
-                            <img src="images/palettopia/stickers/critter_bison.webp" style="height: 170%; transform: scalex(-1) rotate(-1deg) translate(2%, -10%)">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_bison.webp" style="height: 170%; transform: scalex(-1) rotate(-1deg) translate(2%, -10%)">
                             <!-- <i class="fa-solid fa-paw" style="color: rgba(0,0,0,0.1); font-size: 1.5rem;"></i> -->
                         </div>
                     </div>
@@ -1388,7 +1448,7 @@
                 <div class="feature-row">
                     <div class="feature-image-container">
                         <div class="feature-image">
-                            <video autoplay="" muted="" loop="" playsinline="" poster="video/zoom-into-biomes_poster_720.webp">
+                            <video preload="none" muted="" loop="" playsinline="" poster="video/zoom-into-biomes_poster_720.webp">
                                 <source src="video/zoom-into-biomes_720-2mbps.webm" type="video/webm" media="(max-width: 720px)">
                                 <source src="video/zoom-into-biomes_720-2mbps.mp4" type="video/mp4" media="(max-width: 720px)">
                                 <source src="video/zoom-into-biomes_1080-3mbps.webm" type="video/webm">
@@ -1396,8 +1456,8 @@
                             </video>
                         </div>
                         <div class="feature-critter">
-                            <img src="images/palettopia/stickers/critter_deerfemale.webp" style="height: 180%;transform: scalex(1) rotate(-1deg) translate(30%, -15%);">
-                            <img src="images/palettopia/stickers/critter_deeryoung.webp" style="height: 100%;transform: scalex(1) rotate(-1deg) translate(-30%, 19%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_deerfemale.webp" style="height: 180%;transform: scalex(1) rotate(-1deg) translate(30%, -15%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_deeryoung.webp" style="height: 100%;transform: scalex(1) rotate(-1deg) translate(-30%, 19%);">
                             <!-- <i class="fa-solid fa-paw" style="color: rgba(0,0,0,0.1); font-size: 1.5rem;"></i> -->
                         </div>
                     </div>
@@ -1444,33 +1504,33 @@
                     <!-- Critter 1: Top Left -->
                     <div class="gallery-critter-wrapper pos-1">
                         <div class="feature-critter">
-                            <img src="images/palettopia/stickers/critter_turkey.webp" style="height: 170%; transform: scalex(1) rotate(21deg) translate(-30%, -10%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_turkey.webp" style="height: 170%; transform: scalex(1) rotate(21deg) translate(-30%, -10%);">
                         </div>
                     </div>
                     <!-- Critter 2: Right 25% -->
                     <div class="gallery-critter-wrapper pos-2">
                         <div class="feature-critter">
-                            <img src="images/palettopia/stickers/critter_sandhillcrane.webp" style="height: 230%; transform: scalex(-1) rotate(5deg) translatex(-3%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_sandhillcrane.webp" style="height: 230%; transform: scalex(-1) rotate(5deg) translatex(-3%);">
                         </div>
                     </div>
                     <!-- Critter 3: Left 60% -->
                     <div class="gallery-critter-wrapper pos-3">
                         <div class="feature-critter">
-                            <img src="images/palettopia/stickers/critter_hippo.webp" style="height: 140%; transform: scalex(1) rotate(-7deg) translatex(-20%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_hippo.webp" style="height: 140%; transform: scalex(1) rotate(-7deg) translatex(-20%);">
                         </div>
                     </div>
                     <!-- Critter 4: Bottom Right -->
                     <div class="gallery-critter-wrapper pos-4">
                         <div class="feature-critter">
-                            <img src="images/palettopia/stickers/critter_penguin.webp" style="height: 210%; transform: scalex(-1) rotate(2deg) translate(-64%, -16%);">
-                            <img src="images/palettopia/stickers/critter_penguinyoung.webp" style="height: 110%; transform: scalex(-1) rotate(-1deg) translate(110%, 13%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_penguin.webp" style="height: 210%; transform: scalex(-1) rotate(2deg) translate(-64%, -16%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_penguinyoung.webp" style="height: 110%; transform: scalex(-1) rotate(-1deg) translate(110%, 13%);">
                         </div>
                     </div>
 
                     <div class="gallery-item item-lg temperate"
                         onclick="openLightbox('images/palettopia/gallery/temperate-city_1440.webp', 'A Satisfied City')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/temperate-city_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/temperate-city_720.webp" srcset="
                             images/palettopia/gallery/temperate-city_720.webp 720w,
                             images/palettopia/gallery/temperate-city_1440.webp 1440w"
                             sizes="
@@ -1482,7 +1542,7 @@
                     <div class="gallery-item item-wide temperate"
                         onclick="openLightbox('images/palettopia/gallery/temperate-mid-zoom_1440.webp', 'Temperate Biome')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/temperate-mid-zoom_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/temperate-mid-zoom_720.webp" srcset="
                             images/palettopia/gallery/temperate-mid-zoom_720.webp 720w,
                             images/palettopia/gallery/temperate-mid-zoom_1440.webp 1440w"
                             sizes="
@@ -1496,7 +1556,7 @@
                     <div class="gallery-item temperate"
                         onclick="openLightbox('images/palettopia/gallery/temperate-close-up_1440.webp', 'Turkey Trot')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/temperate-close-up_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/temperate-close-up_720.webp" srcset="
                             images/palettopia/gallery/temperate-close-up_720.webp 720w,
                             images/palettopia/gallery/temperate-close-up_1440.webp 1440w"
                             sizes="
@@ -1510,7 +1570,7 @@
                     <div class="gallery-item item-tall arid"
                         onclick="openLightbox('images/palettopia/gallery/arid-close-up_1440.webp', 'Arid Close-up')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/arid-close-up_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/arid-close-up_720.webp" srcset="
                             images/palettopia/gallery/arid-close-up_720.webp 720w,
                             images/palettopia/gallery/arid-close-up_1440.webp 1440w"
                             sizes="
@@ -1522,7 +1582,7 @@
                     <div class="gallery-item item-lg arid"
                         onclick="openLightbox('images/palettopia/gallery/arid-zoom_1440.webp', 'Arid Biome')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/arid-zoom_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/arid-zoom_720.webp" srcset="
                             images/palettopia/gallery/arid-zoom_720.webp 720w,
                             images/palettopia/gallery/arid-zoom_1440.webp 1440w"
                             sizes="
@@ -1536,7 +1596,7 @@
                     <div class="gallery-item arid"
                         onclick="openLightbox('images/palettopia/gallery/arid-zoom-out-city_1440.webp', 'Arid City')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/arid-zoom-out-city_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/arid-zoom-out-city_720.webp" srcset="
                             images/palettopia/gallery/arid-zoom-out-city_720.webp 720w,
                             images/palettopia/gallery/arid-zoom-out-city_1440.webp 1440w"
                             sizes="
@@ -1548,7 +1608,7 @@
                     <div class="gallery-item arid"
                         onclick="openLightbox('images/palettopia/gallery/arid-zoom-out_1440.webp', 'Arid Island Diversity')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/arid-zoom-out_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/arid-zoom-out_720.webp" srcset="
                             images/palettopia/gallery/arid-zoom-out_720.webp 720w,
                             images/palettopia/gallery/arid-zoom-out_1440.webp 1440w"
                             sizes="
@@ -1560,7 +1620,7 @@
                     <div class="gallery-item tropical"
                         onclick="openLightbox('images/palettopia/gallery/tropical-generate_1440.webp', 'A Giraffe Wonders')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/tropical-generate_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/tropical-generate_720.webp" srcset="
                             images/palettopia/gallery/tropical-generate_720.webp 720w,
                             images/palettopia/gallery/tropical-generate_1440.webp 1440w"
                             sizes="
@@ -1574,7 +1634,7 @@
                     <div class="gallery-item tropical"
                         onclick="openLightbox('images/palettopia/gallery/elephants_1440.webp', 'Herd of Elephants')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/elephants_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/elephants_720.webp" srcset="
                             images/palettopia/gallery/elephants_720.webp 720w,
                             images/palettopia/gallery/elephants_1440.webp 1440w"
                             sizes="
@@ -1586,7 +1646,7 @@
                     <div class="gallery-item item-lg tropical"
                         onclick="openLightbox('images/palettopia/gallery/tropical-zoom-out-city_1440.webp', 'Tropical Biome')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/tropical-zoom-out-city_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/tropical-zoom-out-city_720.webp" srcset="
                             images/palettopia/gallery/tropical-zoom-out-city_720.webp 720w,
                             images/palettopia/gallery/tropical-zoom-out-city_1440.webp 1440w"
                             sizes="
@@ -1598,7 +1658,7 @@
                     <div class="gallery-item item-tall tropical"
                         onclick="openLightbox('images/palettopia/gallery/tropical-city_1440.webp', 'Tropical City')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/tropical-city_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/tropical-city_720.webp" srcset="
                             images/palettopia/gallery/tropical-city_720.webp 720w,
                             images/palettopia/gallery/tropical-city_1440.webp 1440w"
                             sizes="
@@ -1610,7 +1670,7 @@
                     <div class="gallery-item tropical"
                         onclick="openLightbox('images/palettopia/gallery/tropical-close_1440.webp', 'Bloat of Hippos')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/tropical-close_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/tropical-close_720.webp" srcset="
                             images/palettopia/gallery/tropical-close_720.webp 720w,
                             images/palettopia/gallery/tropical-close_1440.webp 1440w"
                             sizes="
@@ -1624,7 +1684,7 @@
                     <div class="gallery-item item-wide arctic"
                         onclick="openLightbox('images/palettopia/gallery/penguins-2_1440.webp', 'Family of Penguins')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/penguins-2_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/penguins-2_720.webp" srcset="
                             images/palettopia/gallery/penguins-2_720.webp 720w,
                             images/palettopia/gallery/penguins-2_1440.webp 1440w"
                             sizes="
@@ -1638,7 +1698,7 @@
                     <div class="gallery-item item-lg arctic"
                         onclick="openLightbox('images/palettopia/gallery/arctic-zoom-out_1440.webp', 'Arctic Biome')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/arctic-zoom-out_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/arctic-zoom-out_720.webp" srcset="
                             images/palettopia/gallery/arctic-zoom-out_720.webp 720w,
                             images/palettopia/gallery/arctic-zoom-out_1440.webp 1440w"
                             sizes="
@@ -1650,7 +1710,7 @@
                     <div class="gallery-item item-wide arctic"
                         onclick="openLightbox('images/palettopia/gallery/arctic-lights_game-development_1440.webp', 'Arctic City')"
                         style="display: block;">
-                        <img src="images/palettopia/gallery/arctic-lights_game-development_720.webp" srcset="
+                        <img loading="lazy" src="images/palettopia/gallery/arctic-lights_game-development_720.webp" srcset="
                             images/palettopia/gallery/arctic-lights_game-development_720.webp 720w,
                             images/palettopia/gallery/arctic-lights_game-development_1440.webp 1440w"
                             sizes="
@@ -1671,170 +1731,176 @@
                 <div id="lightbox-caption" class="lightbox-caption"></div>
             </div>
         </div>
-
-        <!-- ROADMAP & FAQ SECTION -->
-        <section id="roadmap" class="custom-grab">
-            <!-- 2. Roadmap Inline Container Style -->
-            <div class="container">
-                <div class="gallery-header">
-                    <h2 style="color: var(--yellow);">The Journey So Far</h2>
-                    <p>From corporate dropouts to city painters. Follow our winding road to the ultimate zen experience.</p>
-                </div>
-            </div>
-            <div class="roadmap-container" id="roadmapContainer">
-                <div class="roadmap-svg-wrapper">
-                    <div id="sailingBoat">⛵</div>
-                    
-                    <svg width="2500" height="500" viewBox="0 0 2500 500">
-                        <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
-                            stroke: hsl(45 44% 85% / 1);
-                            stroke-width: 60px;
-                            transform: translateY(-2px);
-                        "></path>
-                        <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
-                            stroke: hsl(199 55% 85% / 1);
-                            stroke-width: 51px;
-                            transform: translateY(-3px);
-                        "></path>
-                        <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250"></path>
-                        <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
-                            stroke: hsl(199 56% 75% / 1);
-                            stroke-width: 19px;
-                            filter: blur(6px);
-                        "></path>
-                        <path class="river-waves-outer" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
-                            transform: translateY(11px);
-                        "></path>
-                        <path class="river-waves-inner" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
-                            transform: translateY(-11px);
-                        "></path>
-                    </svg>
-
-                    <div class="milestone completed" data-pos="0.05">
-                        <div class="milestone-marker"><i class="fas fa-flag"></i></div>
-                        <div class="milestone-content">
-                            <span class="milestone-date">Jan 2024</span>
-                            <p class="milestone-title">Oh Wow Games is formed</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone completed" data-pos="0.18">
-                        <div class="milestone-marker"><i class="fas fa-palette"></i></div>
-                        <div class="milestone-content">
-                            <span class="milestone-date">March 2024</span>
-                            <p class="milestone-title">Found the "Perfect Blue"</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone completed" data-pos="0.32">
-                        <div class="milestone-marker"><i class="fas fa-ghost"></i></div>
-                        <div class="milestone-content">
-                            <span class="milestone-date">Dec 2024</span>
-                            <p class="milestone-title">Coffee machine gained sentience</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone active" data-pos="0.48">
-                        <div class="milestone-marker"><i class="fas fa-ship"></i></div>
-                        <div class="milestone-content">
-                            <span class="milestone-date">Now</span>
-                            <p class="milestone-title">Polish the puzzle</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone" data-pos="0.62">
-                        <div class="milestone-marker"><i class="fas fa-download"></i></div>
-                        <div class="milestone-content">
-                            <span class="milestone-date">June 2026</span>
-                            <p class="milestone-title">Demo on Itch.io</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone" data-pos="0.75">
-                        <div class="milestone-marker"><i class="fas fa-certificate"></i></div>
-                        <div class="milestone-content">
-                            <span class="milestone-date">July 2026</span>
-                            <p class="milestone-title">Steam Fest Debut</p>
-                        </div>
-                    </div>
-
-                    <div class="milestone" data-pos="0.88">
-                        <div class="milestone-marker"><i class="fas fa-star"></i></div>
-                        <div class="milestone-content">
-                            <span class="milestone-date">Sept 2026</span>
-                            <p class="milestone-title">Full Steam Release</p>
-                        </div>
+        <div id="roadmap-bg">
+            <div id="roadmap-pattern"></div>
+            <!-- ROADMAP & FAQ SECTION -->
+            <section id="roadmap" class="custom-grab">
+                <!-- 2. Roadmap Inline Container Style -->
+                <div class="container">
+                    <div class="gallery-header">
+                        <h2 style="color: #7d7b69;">The Journey So Far</h2>
+                        <p>From corporate dropouts to city painters. Follow our winding road to the ultimate zen experience.</p>
                     </div>
                 </div>
-            </div>            
-            <div class="container">
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <div class="faq-question">What is Palettopia? <i class="fas fa-chevron-down faq-icon"></i></div>
-                        <div class="faq-answer">Palettopia is the relaxing city-painting game where creativity meets harmony. Discover unique islands and paint vibrant districts to bring your dream utopia to life.</div>
+                <div class="roadmap-container" id="roadmapContainer">
+                    <div class="roadmap-svg-wrapper">
+                        <!-- <div id="sailingBoat">⛵</div> -->
+                        <img id="critterWhale" class="swimmingCritters" loading="lazy" src="images/palettopia/stickers/critter_whale.webp" alt="Whale">
+                        <img id="critterDuck" class="swimmingCritters" loading="lazy" src="images/palettopia/stickers/critter_duck.webp" alt="Duck">
+                        
+                        <svg width="2500" height="500" viewBox="0 0 2500 500">
+                            <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
+                                stroke: hsl(206.09deg 16.08% 71.96%);
+                                stroke-width: 50px;
+                                transform: translateY(6px);
+                            "></path>
+                            <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250"></path>
+                            <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
+                                stroke: hsl(197 37% 88% / 1);
+                                stroke-width: 10px;
+                                filter: blur(6px);
+                            "></path>
+                            <path class="river-waves-outer" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
+                                transform: translateY(7px);
+                            "></path>
+                            <path class="river-waves-inner" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
+                                transform: translateY(-15px);
+                            "></path>
+                        </svg>
+
+                        <div class="milestone completed" data-pos="0.05">
+                            <div class="milestone-marker"><i class="fas fa-flag"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Jan 2024</span>
+                                <p class="milestone-title">Oh Wow Games is formed</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone completed" data-pos="0.18">
+                            <div class="milestone-marker"><i class="fas fa-palette"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">March 2024</span>
+                                <p class="milestone-title">Found the "Perfect Blue"</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone completed" data-pos="0.32">
+                            <div class="milestone-marker"><i class="fas fa-ghost"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Dec 2024</span>
+                                <p class="milestone-title">Coffee machine gained sentience</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone active" data-pos="0.48">
+                            <div class="milestone-marker"><i class="fas fa-ship"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Now</span>
+                                <p class="milestone-title">Polish the puzzle</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.62">
+                            <div class="milestone-marker"><i class="fas fa-download"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">June 2026</span>
+                                <p class="milestone-title">Demo on Itch.io</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.75">
+                            <div class="milestone-marker"><i class="fas fa-certificate"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">July 2026</span>
+                                <p class="milestone-title">Steam Fest Debut</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.88">
+                            <div class="milestone-marker"><i class="fas fa-star"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Sept 2026</span>
+                                <p class="milestone-title">Full Steam Release</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Who is making Palettopia? <i class="fas fa-chevron-down faq-icon"></i></div>
-                        <div class="faq-answer">We are a team of friends and family, willful corporate dropouts, united under a shared passion for art and wholesome creativity.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">How can you support the game? <i class="fas fa-chevron-down faq-icon"></i></div>
-                        <div class="faq-answer">Wishlisting on Steam, signing up for our mailing list, and spreading the word on social media! Every bit of support helps us build a better paradise.</div>
+                </div>            
+                <div class="container">
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <div class="faq-question">What is Palettopia? <i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-answer">Palettopia is the relaxing city-painting game where creativity meets harmony. Discover unique islands and paint vibrant districts to bring your dream utopia to life.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">Who is making Palettopia? <i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-answer">We are a team of friends and family, willful corporate dropouts, united under a shared passion for art and wholesome creativity.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">How can you support the game? <i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-answer">Wishlisting on Steam, signing up for our mailing list, and spreading the word on social media! Every bit of support helps us build a better paradise.</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- NEWS SECTION -->
-        <section id="news">
-            <div class="container">
-                <div class="gallery-header">
-                    <h2 style="color: var(--orange);">Latest News</h2>
-                    <p style="color: var(--off-black);">Stay updated with the latest island sightings, critter discoveries, and development progress. <a href="#join" style="color: var(--orange); text-decoration: underline; font-weight: 700;">Sign up for our newsletter.</a></p>
+            <!-- NEWS SECTION -->
+            <section id="news">
+                <div class="container">
+                    <div class="gallery-header">
+                        <h2 style="color: #89582d;">Latest News</h2>
+                        <p style="color: var(--off-black);">Stay updated with the latest island sightings, critter discoveries, and development progress. <a href="#join" style="color: #89582d; text-decoration: underline; font-weight: 700;">Sign up for our newsletter.</a></p>
+                    </div>
+
+                    <div class="news-grid">
+                        <!-- Critter: News Emu -->
+                        <div class="gallery-critter-wrapper pos-news">
+                            <div class="feature-critter">
+                                <img loading="lazy" src="images/palettopia/stickers/critter_emu.webp" style="height: 220%; transform: scalex(-1) rotate(8deg) translate(0%, 0%)">
+                            </div>
+                        </div>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
+                                <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Biome+Reveal" alt="New Biomes Reveal">
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag">Announcement</span>
+                                <span class="news-date">February 11, 2026</span>
+                                <h4 class="news-title">Unveiling the Hidden Wonders of the Arctic Biome</h4>
+                                <p class="news-excerpt">From frozen waterfalls to glowing glacial districts, discover how the Arctic biome challenges your painting strategies...</p>
+                                <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
+                                <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Dev+Blog" alt="Developer Blog">
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag">Dev Blog</span>
+                                <span class="news-date">January 24, 2026</span>
+                                <h4 class="news-title">The Art of the Stroke: Designing the Painting Mechanic</h4>
+                                <p class="news-excerpt">Our lead developer dives into the technical wizardry behind turning a city builder into a digital canvas...</p>
+                                <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
+                                <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Critter+Spotlight" alt="Critter Spotlight">
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag">Community</span>
+                                <span class="news-date">December 15, 2025</span>
+                                <h4 class="news-title">Critter Spotlight: Meet the Wobbly Sand-Fox</h4>
+                                <p class="news-excerpt">The first of our biome-specific residents is here! Learn what attracts this elusive friend to your desert districts...</p>
+                                <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-
-                <div class="news-grid">
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="https://placehold.co/400x250/e0ebf0/e19451?text=Biome+Reveal" alt="New Biomes Reveal">
-                        </div>
-                        <div class="news-body">
-                            <span class="news-tag">Announcement</span>
-                            <span class="news-date">February 11, 2026</span>
-                            <h4 class="news-title">Unveiling the Hidden Wonders of the Arctic Biome</h4>
-                            <p class="news-excerpt">From frozen waterfalls to glowing glacial districts, discover how the Arctic biome challenges your painting strategies...</p>
-                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="https://placehold.co/400x250/e0ebf0/e19451?text=Dev+Blog" alt="Developer Blog">
-                        </div>
-                        <div class="news-body">
-                            <span class="news-tag">Dev Blog</span>
-                            <span class="news-date">January 24, 2026</span>
-                            <h4 class="news-title">The Art of the Stroke: Designing the Painting Mechanic</h4>
-                            <p class="news-excerpt">Our lead developer dives into the technical wizardry behind turning a city builder into a digital canvas...</p>
-                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="news-card">
-                        <div class="news-thumb">
-                            <img src="https://placehold.co/400x250/e0ebf0/e19451?text=Critter+Spotlight" alt="Critter Spotlight">
-                        </div>
-                        <div class="news-body">
-                            <span class="news-tag">Community</span>
-                            <span class="news-date">December 15, 2025</span>
-                            <h4 class="news-title">Critter Spotlight: Meet the Wobbly Sand-Fox</h4>
-                            <p class="news-excerpt">The first of our biome-specific residents is here! Learn what attracts this elusive friend to your desert districts...</p>
-                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!-- JOIN US SECTION -->
         <section id="join">
@@ -1842,11 +1908,11 @@
                 <div class="join-panel">
                     <div class="signup-card">
                         <div class="join-peeker peeker-1">
-                            <img src="images/palettopia/stickers/critter_ostrich.webp" style="height: 150%; transform: scalex(1) translate(30px, -50px);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_ostrich.webp" style="height: 150%; transform: scalex(1) translate(30px, -50px);">
                             <!-- <div class="peeker-circle"><i class="fa-solid fa-paw"></i></div> -->
                         </div>
                         <div class="join-peeker peeker-2">
-                            <img src="images/palettopia/stickers/critter_flamingo.webp" style="height: 150%; transform: scalex(-1) translate(-10px, -30px);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_flamingo.webp" style="height: 150%; transform: scalex(-1) translate(-10px, -30px);">
                             <!-- <div class="peeker-circle"><i class="fa-solid fa-otter"></i></div> -->
                         </div>
 
@@ -1877,7 +1943,7 @@
 
                     <footer class="palette-footer">
                         <div class="footer-logo"> <a href="./" title="Homepage">
-                                <image src="images/owg_logo_p3_sm.png" style="width: 120px;" alt="Oh Wow Games logo" />
+                                <image loading="lazy" src="images/owg_logo_p3_sm.png" style="width: 120px;" alt="Oh Wow Games logo" />
                             </a></div>
                         <!-- <div class="footer-links">
                             <a href="#">Press Kit</a>
@@ -1969,7 +2035,8 @@
 
         const slider = document.getElementById('roadmapContainer');
         const riverPath = document.getElementById('riverPath');
-        const boat = document.getElementById('sailingBoat');
+        const whale = document.getElementById('critterWhale');
+        const duck = document.getElementById('critterDuck');
         const roadmapSection = document.getElementById('roadmap');
         const milestonesList = document.querySelectorAll('.milestone');
         const pathLength = riverPath.getTotalLength();
@@ -1987,17 +2054,35 @@
             });
         }
 
-        let boatProgress = 0;
-        function animateBoat() {
-            boatProgress += 0.0005; 
-            if (boatProgress > 1) boatProgress = 0;
-            const point = riverPath.getPointAtLength(boatProgress * pathLength);
-            const nextPoint = riverPath.getPointAtLength(Math.min(boatProgress + 0.01, 1) * pathLength);
+        let whaleProgress = 0;
+        const duckOffset = 0.5;
+        let roadmapAnimationId = null;
+
+        function swimmingCritters() {
+            if (roadmapSection.classList.contains('animations-paused')) {
+                roadmapAnimationId = null;
+                return;
+            }
+
+            whaleProgress += 0.0005; 
+            if (whaleProgress > 1) whaleProgress = 0;
+            const point = riverPath.getPointAtLength(whaleProgress * pathLength);
+            const nextPoint = riverPath.getPointAtLength(Math.min(whaleProgress + 0.01, 1) * pathLength);
             const angle = Math.atan2(nextPoint.y - point.y, nextPoint.x - point.x) * 180 / Math.PI;
-            boat.style.left = `${point.x - 20}px`;
-            boat.style.top = `${point.y - 45}px`; 
-            boat.style.transform = `rotate(${angle}deg)`;
-            requestAnimationFrame(animateBoat);
+            whale.style.left = `${point.x - 60}px`;
+            whale.style.top = `${point.y - 40}px`; 
+            whale.style.transform = `rotate(${angle}deg)`;
+
+            let duckProgress = (whaleProgress + duckOffset);
+            if (duckProgress > 1) duckProgress -= 1;
+            const point2 = riverPath.getPointAtLength(duckProgress * pathLength);
+            const nextPoint2 = riverPath.getPointAtLength(Math.min(duckProgress + 0.01, 1) * pathLength);
+            const angle2 = Math.atan2(nextPoint2.y - point2.y, nextPoint2.x - point2.x) * 180 / Math.PI;
+            duck.style.left = `${point2.x - 32.5}px`;
+            duck.style.top = `${point2.y - 32.5}px`;
+            duck.style.transform = `rotate(${angle2}deg)`;
+
+            roadmapAnimationId = requestAnimationFrame(swimmingCritters);
         }
 
         document.querySelectorAll('.faq-item').forEach(item => {
@@ -2052,24 +2137,55 @@
 
         window.addEventListener('load', () => {
             centerActiveMilestone();
-            animateBoat();
+            // Animation is handled by the IntersectionObserver below
         });
 
         window.addEventListener('resize', centerActiveMilestone);
 
         // VIDEO CONTROLLER
 
-        const video = document.querySelector("video");
+        const video = document.querySelectorAll("video:not(#video-mid)");
         const videoObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (!entry.isIntersecting) {
-            video.pause(); // Pause when off-screen
+            entry.target.pause(); // Pause when off-screen
             } else {
-            video.play(); // Play when on-screen
+            entry.target.play(); // Play when on-screen
             }
         });
         }, {});
-        videoObserver.observe(video);
+        
+        video.forEach(section => {
+            videoObserver.observe(section);
+        });
+        //videoObserver.observe(video);
+
+        // VIDEO MID CONTROLLER
+        const videoMid = document.querySelector("video#video-mid");
+        const playSections = document.querySelectorAll("section.mid-hero, section#features, section#gallery, section#join");
+
+        if (videoMid) {
+            const videoMidBlockers = playSections;//.filter(el => el);
+            const blockerVisibility = new Map();
+            
+            videoMidBlockers.forEach(el => blockerVisibility.set(el, false));
+
+            const videoMidObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    blockerVisibility.set(entry.target, entry.isIntersecting);
+                });
+
+                const isBlocked = Array.from(blockerVisibility.values()).some(visible => visible);
+                
+                if (!isBlocked) {
+                    videoMid.pause();
+                } else {
+                    videoMid.play().catch(e => console.log("Video play failed:", e));
+                }
+            }, { rootMargin: "-10%", threshold: 0 }); 
+
+            videoMidBlockers.forEach(el => videoMidObserver.observe(el));
+        }
 
         // replace text within element by ID
         function replaceText(id, text) {
@@ -2079,6 +2195,29 @@
         // Copyright Year
         replaceText('year', new Date().getFullYear());
 
+        /* ========================================
+           PERFORMANCE OPTIMIZATION
+           ========================================
+           Pause CSS animations when sections are not in view
+        */
+        const pauseAnimationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('animations-paused');
+                    // Restart JS animations for roadmap if needed
+                    if (entry.target.id === 'roadmap' && !roadmapAnimationId) {
+                        swimmingCritters();
+                    }
+                } else {
+                    entry.target.classList.add('animations-paused');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const animationSections = document.querySelectorAll('.top-section, #roadmap');
+        animationSections.forEach(section => {
+            pauseAnimationObserver.observe(section);
+        });
     </script>
 </body>
 </html>
