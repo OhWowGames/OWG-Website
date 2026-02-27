@@ -14,15 +14,18 @@ if ($total -eq 0) {
     Write-Host "Make sure the .mp4 files are in the SAME folder as this script." -ForegroundColor Gray
 } else {
     foreach ($file in $videos) {
-        $output = Join-Path $PSScriptRoot "$($file.BaseName).webm"
+        $output = Join-Path $PSScriptRoot "$($file.BaseName)_1440_audio.webm"
         
         Write-Host "`n--------------------------------------------------" -ForegroundColor Cyan
         Write-Host "Processing ($current of $total): $($file.Name)" -ForegroundColor Yellow
         
-        # FFmpeg Command: No audio (-an), 2M bitrate, speed optimized
+        # FFmpeg Command: No audio (-an)frame rate(-r 60) (webm -c:v libvpx-vp9 -crf 34) (mp4 -crf 21)
+
         ffmpeg -i "$($file.FullName)" `
-               -c:v libvpx-vp9 -crf 34 -b:v 0 -speed 0 `
-               -an -y `
+               	-crf 34 -b:v 0 -speed 0 `
+               	-y -an -r 30 `
+		-map_metadata 0 -fflags +genpts `
+	       	-vf "scale=trunc(oh*a/2)*2:1440" `
                "$output"
                
         $current++
@@ -31,5 +34,5 @@ if ($total -eq 0) {
 }
 
 # Wait for user input before closing
-Write-Host "`nPress any key to exit..." -ForegroundColor White
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+ Write-Host "`nPress any key to exit..." -ForegroundColor White
+ $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
