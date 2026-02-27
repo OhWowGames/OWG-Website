@@ -559,7 +559,7 @@
         .feature-description { font-size: 1.15rem; color: var(--off-white); margin-bottom: 32px; }
         .sub-bullets { display: flex; gap: 24px; flex-wrap: wrap; }
         .bullet-item { display: flex; align-items: center; gap: 10px; font-family: var(--font-ui); font-weight: 600; font-size: 1rem; color: var(--white); }
-        .bullet-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; }
+        .bullet-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem; }
 
         /* ========================================
            GALLERY SECTION
@@ -569,7 +569,7 @@
             background-color: #303539; 
             background-color: #3c665deb;
             background-image: linear-gradient(45deg, #0000008f, transparent);
-            padding: 120px 0 150px;
+            padding: 100px 0 150px;
             position: relative;
             z-index: 10;
         }
@@ -735,7 +735,7 @@
         }
 
         #roadmap {
-            padding: 120px 0 0;          
+            padding: 100px 0 0;          
             position: relative;
             z-index: 10;
         }
@@ -750,17 +750,17 @@
 
         #roadmap .gallery-header p { color: var(--off-black); }
 
-        #roadmap.custom-grab {
+        #roadmap .custom-grab {
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><path fill="black" d="M256.5 0c-25.3 0-47.2 14.7-57.6 36-7-2.6-14.5-4-22.4-4-35.3 0-64 28.7-64 64l0 165.5-2.7-2.7c-25-25-65.5-25-90.5 0s-25 65.5 0 90.5L107 437c48 48 113.1 75 181 75l16.5 0c1.5 0 3-.1 4.5-.4 91.7-6.2 165-79.4 171.1-171.1 .3-1.5 .4-3 .4-4.5l0-176c0-35.3-28.7-64-64-64-5.5 0-10.9 .7-16 2l0-2c0-35.3-28.7-64-64-64-7.9 0-15.4 1.4-22.4 4-10.4-21.3-32.3-36-57.6-36zm-16 96.1l0-.1 0-32c0-8.8 7.2-16 16-16s16 7.2 16 16l0 168c0 13.3 10.7 24 24 24s24-10.7 24-24l0-136c0-8.8 7.2-16 16-16s16 7.2 16 16l0 136c0 13.3 10.7 24 24 24s24-10.7 24-24l0-72c0-8.8 7.2-16 16-16s16 7.2 16 16l0 172.9c-.1 .6-.1 1.3-.2 1.9-3.4 69.7-59.3 125.6-129 129-.6 0-1.3 .1-1.9 .2L288 464C232.9 464 180 442.1 141 403.1L53.2 315.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l43.7 43.7c6.9 6.9 17.2 8.9 26.2 5.2s14.8-12.5 14.8-22.2l0-223.4c0-8.8 7.2-16 16-16 8.8 0 16 7.1 16 15.9l0 136.1c0 13.3 10.7 24 24 24s24-10.7 24-24l0-135.9z"/></svg>') 10 10, grab;
         }
 
-        #roadmap.custom-grabbing {
+        #roadmap .custom-grabbing {
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="23" height="23"><path fill="black" d="M224 464C206.3 464 192 478.3 192 496L192 544C192 561.7 206.3 576 224 576L448 576C465.7 576 480 561.7 480 544L480 496C480 478.3 465.7 464 448 464L224 464zM201.2 416L265.8 416L186.3 327.7C179.7 320.3 176 310.8 176 300.9L176 268C176 251.9 187.9 238.5 203.4 236.3C215.2 234.6 224 224.5 224 212.5L224 136C224 122.7 234.7 112 248 112C255.2 112 261.6 115.1 266 120.1C270.6 125.3 277.1 128.2 284 128.2C290.9 128.2 297.4 125.2 302 120.1C306.4 115.1 312.8 112 320 112C328.5 112 335.9 116.4 340.2 123.1C347.1 133.8 361.1 137.3 372.2 131.1C375.7 129.2 379.6 128 384 128C394.6 128 403.7 134.9 406.8 144.6C410.6 156.3 422.7 163.3 434.8 160.6C436.5 160.2 438.2 160 440 160C453.3 160 464 170.7 464 184L464 276.2C464 290.6 460.5 304.7 453.8 317.4L401.6 416L455.9 416L496.2 339.8C506.6 320.2 512 298.3 512 276.2L512 184C512 145.6 481.9 114.2 443.9 112.1C431 92.8 409 80 384 80C378.3 80 372.8 80.7 367.5 81.9C354.8 70.8 338.2 64 320 64C306.9 64 294.6 67.5 284 73.6C273.4 67.5 261.1 64 248 64C208.2 64 176 96.2 176 136L176 194.7C147.7 207 128 235.2 128 268L128 300.9C128 322.6 136 343.6 150.6 359.8L201.2 416z"/></svg>') 11 11, grabbing !important;
         }
 
-        .roadmap-container { position: relative; padding: 80px 150px 0; margin-bottom: 0; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; user-select: none; -webkit-user-select: none; }
+        .roadmap-container { position: relative; padding: 100px 150px 0; margin-top: -20px; margin-bottom: 0; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; user-select: none; -webkit-user-select: none; }
         .roadmap-container::-webkit-scrollbar { display: none; }
-        .roadmap-svg-wrapper { position: relative; width: 2500px; height: 500px; }
+        .roadmap-svg-wrapper { position: relative; width: 6000px; height: 500px; }
         
         .river-path { 
             fill: none; 
@@ -786,15 +786,14 @@
         #critterWhale { width: 120px; }
         #critterDuck { width: 65px; }
 
-        .milestone { position: absolute; width: 260px; text-align: center; transform: translate(-50%, -50%); transition: transform 0.4s var(--ease-bounce); z-index: 5; }
+        .milestone { position: absolute; width: 260px; text-align: center; transform: translate(-50%, -50%); transition: transform 0.4s var(--ease-bounce); z-index: 5; cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="28" height="28"><path fill="black" d="M320 128C302.3 128 288 142.3 288 160C288 177.7 302.3 192 320 192C337.7 192 352 177.7 352 160C352 142.3 337.7 128 320 128zM224 160C224 107 267 64 320 64C373 64 416 107 416 160C416 201.8 389.3 237.4 352 250.5L352 508.4C414.9 494.1 462.2 438.7 463.9 371.9L447.8 386C437.8 394.7 422.7 393.7 413.9 383.7C405.1 373.7 406.2 358.6 416.2 349.8L480.2 293.8C489.2 285.9 502.8 285.9 511.8 293.8L575.8 349.8C585.8 358.5 586.8 373.7 578.1 383.7C569.4 393.7 554.2 394.7 544.2 386L528 371.9C525.9 485 433.6 576 320 576C206.4 576 114.1 485 112 371.9L95.8 386.1C85.8 394.8 70.7 393.8 61.9 383.8C53.1 373.8 54.2 358.7 64.2 349.9L128.2 293.9C137.2 286 150.8 286 159.8 293.9L223.8 349.9C233.8 358.6 234.8 373.8 226.1 383.8C217.4 393.8 202.2 394.8 192.2 386.1L176.1 372C177.9 438.8 225.2 494.2 288 508.5L288 250.6C250.7 237.4 224 201.9 224 160.1z"/></svg>') 14 14, pointer; }
         .milestone:hover { transform: translate(-50%, -55%) scale(1.05); z-index: 100; }
         .milestone-marker { width: 45px; height: 45px; background: white; border: 4px solid var(--color-river); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: relative; }
-        .milestone.completed .milestone-marker { background: var(--green); border-color: #222; } 
-        
+        .milestone.completed .milestone-marker { background: var(--green); border-color: #222; }
+        .milestone.completed.company .milestone-marker { background: var(--blur); border-color: #222; color: #222; }         
         .milestone.active .milestone-marker { 
             background: var(--yellow); 
-            border-color: #222; 
-            box-shadow: 0 0 20px rgba(112, 156, 221, 0.5); 
+            border-color: #222;
         }
         
         .milestone-content { background: var(--bg-glass); backdrop-filter: blur(var(--blur)); border-radius: 20px; padding: 18px; border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 8px 32px rgba(0,0,0,0.05); pointer-events: none; }
@@ -815,7 +814,7 @@
            ========================================
         */
         #news {
-            padding: 120px 0;
+            padding: 100px 0;
             position: relative;
             z-index: 10;
         }
@@ -1502,11 +1501,11 @@
                         </p>
                         <div class="sub-bullets">
                             <div class="bullet-item">
-                                <div class="bullet-icon" style="background-color: var(--green);"><i class="fa-solid fa-leaf"></i></div>
+                                <div class="bullet-icon" style="background-color: var(--green);"><i class="fa-solid fa-tree"></i></div>
                                 <span>4 Biomes</span>
                             </div>
                             <div class="bullet-item">
-                                <div class="bullet-icon" style="background-color: var(--green);"><i class="fa-solid fa-paw"></i></div>
+                                <div class="bullet-icon" style="background-color: var(--green);"><i class="fa-solid fa-mountain-city"></i></div>
                                 <span>Infinite Islands</span>
                             </div>
                         </div>
@@ -1766,7 +1765,7 @@
         <div id="roadmap-bg">
             <div id="roadmap-pattern"></div>
             <!-- ROADMAP & FAQ SECTION -->
-            <section id="roadmap" class="custom-grab">
+            <section id="roadmap">
                 <!-- 2. Roadmap Inline Container Style -->
                 <div class="container">
                     <div class="gallery-header">
@@ -1774,45 +1773,65 @@
                         <p>From three corporate drop outs to city painters. Discover our winding journey from ideation to launch.</p>
                     </div>
                 </div>
-                <div class="roadmap-container" id="roadmapContainer">
+                <div class="roadmap-container custom-grab" id="roadmapContainer">
                     <div class="roadmap-svg-wrapper">
                         <!-- <div id="sailingBoat">⛵</div> -->
                         <img id="critterWhale" class="swimmingCritters" loading="lazy" src="images/palettopia/stickers/critter_whale.webp" alt="Whale">
                         <img id="critterDuck" class="swimmingCritters" loading="lazy" src="images/palettopia/stickers/critter_duck.webp" alt="Duck">
                         
-                        <svg width="2500" height="500" viewBox="0 0 2500 500">
-                            <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
+                        <svg width="100%" height="100%" viewBox="0 0 5700 500" preserveAspectRatio="none">
+                            <defs>
+                                <path id="riverPathDef" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 400 2550 400 S 2750 100 2950 100 S 3150 400 3350 400 S 3550 100 3750 100 S 3950 400 4150 400 S 4350 100 4550 100 S 4750 400 4950 400 S 5150 100 5350 100 S 5550 250 5650 250" />
+                            </defs>
+                            <path id="riverPath" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 400 2550 400 S 2750 100 2950 100 S 3150 400 3350 400 S 3550 100 3750 100 S 3950 400 4150 400 S 4350 100 4550 100 S 4750 400 4950 400 S 5150 100 5350 100 S 5550 250 5650 250" style="visibility: hidden; position: absolute; pointer-events: none;" />
+                            <use href="#riverPathDef" class="river-path" style="
                                 stroke: hsl(206.09deg 16.08% 71.96%);
                                 stroke-width: 50px;
                                 transform: translateY(6px);
-                            "></path>
-                            <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250"></path>
-                            <path id="riverPath" class="river-path" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
+                            " />
+                            <use href="#riverPathDef" class="river-path" />
+                            <use href="#riverPathDef" class="river-path" style="
                                 stroke: hsl(197 37% 88% / 1);
                                 stroke-width: 10px;
                                 filter: blur(6px);
-                            "></path>
-                            <path class="river-waves-outer" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
+                            " />
+                            <use href="#riverPathDef" class="river-waves-outer" style="
                                 transform: translateY(7px);
-                            "></path>
-                            <path class="river-waves-inner" d="M 50 250 C 250 250 350 100 550 100 S 750 400 950 400 S 1150 100 1350 100 S 1550 400 1750 400 S 1950 100 2150 100 S 2350 250 2450 250" style="
+                            " />
+                            <use href="#riverPathDef" class="river-waves-inner" style="
                                 transform: translateY(-15px);
-                            "></path>
+                            " />
                         </svg>
 
-                        <div class="milestone completed" data-pos="0.0">
-                            <div class="milestone-marker"><i class="fas fa-rocket"></i></div>
+                        <div class="milestone completed company" data-pos="0.0">
+                            <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Oct 2023</span>
-                                <p class="milestone-title">Cobalt becomes the first corporate dropout & Oh Wow Games is formed.</p>
+                                <p class="milestone-title">Cobalt becomes the first corporate dropout</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone completed company" data-pos="0.0">
+                            <div class="milestone-marker"><i class="fa-solid fa-baby"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Oct 2023</span>
+                                <p class="milestone-title">At a 1-year-olds Dino party, Palettopia is discussed</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone completed company" data-pos="0.0">
+                            <div class="milestone-marker"><i class="fa-solid fa-flag"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Jan 2023</span>
+                                <p class="milestone-title">Oh Wow Games is formed</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.07">
-                            <div class="milestone-marker"><i class="fas fa-palette"></i></div>
+                            <div class="milestone-marker"><i class="fas fa-eye-dropper"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Jan 2024</span>
-                                <p class="milestone-title">The first ideas for Palettopia are painted.</p>
+                                <span class="milestone-date">Feb 2024</span>
+                                <p class="milestone-title">The first designs are drafted</p>
                             </div>
                         </div>
 
@@ -1825,34 +1844,34 @@
                         </div>
 
                         <div class="milestone completed" data-pos="0.264">
-                            <div class="milestone-marker"><i class="fas fa-eye-dropper"></i></div>
+                            <div class="milestone-marker"><i class="fa-solid fa-hat-wizard"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">June 2024</span>
-                                <p class="milestone-title">Found the perfect blue. Dev paused for a 3-day gala.</p>
+                                <p class="milestone-title">Procedural islands are finished! Hard stuff first</p>
                             </div>
                         </div>
 
-                        <div class="milestone completed" data-pos="0.33">
+                        <div class="milestone completed company" data-pos="0.33">
                             <div class="milestone-marker"><i class="fas fa-robot"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">August 2024</span>
-                                <p class="milestone-title">First company retreat at Stu & Cobalts shared birthday party. The theme was robots and dinosaurs.</p>
+                                <p class="milestone-title">Team pauses for a Robot birthday party</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.396">
-                            <div class="milestone-marker"><i class="fas fa-gamepad"></i></div>
+                            <div class="milestone-marker"><i class="fa-solid fa-compass"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Dec 2024</span>
-                                <p class="milestone-title">Completed our first playtest. Our mothers question where they went wrong.</p>
+                                <p class="milestone-title">Alpha playtest complete! Our journey is charted</p>
                             </div>
                         </div>
 
-                        <div class="milestone completed" data-pos="0.462">
+                        <div class="milestone completed company" data-pos="0.462">
                             <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Jan 2025</span>
-                                <p class="milestone-title">Stu joins the fray full time.</p>
+                                <p class="milestone-title">Stu leaves corp life and joins full time!</p>
                             </div>
                         </div>
 
@@ -1860,7 +1879,7 @@
                             <div class="milestone-marker"><i class="fas fa-brush"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">March 2025</span>
-                                <p class="milestone-title">Built and rebuilt the painting mechanic.</p>
+                                <p class="milestone-title">Advanced painting features added for creative mode</p>
                             </div>
                         </div>
 
@@ -1868,23 +1887,31 @@
                             <div class="milestone-marker"><i class="fas fa-tree"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">July 2025</span>
-                                <p class="milestone-title">Biomes are here!</p>
+                                <p class="milestone-title">New Biomes!<br>Frozen lakes to sand dunes</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.726">
-                            <div class="milestone-marker"><i class="fas fa-cubes"></i></div>
+                            <div class="milestone-marker"><i class="fa-solid fa-dumbbell"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Sept 2025</span>
-                                <p class="milestone-title">Details, details, details. Cobalt goes mad from asset generation.</p>
+                                <p class="milestone-title">Finished exporting asset no.384! Nailed it!</p>
                             </div>
                         </div>
 
-                        <div class="milestone completed" data-pos="0.792">
+                        <div class="milestone completed company" data-pos="0.792">
                             <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Dec 2025</span>
-                                <p class="milestone-title">Cassie quits her day job, probably a bad idea.</p>
+                                <p class="milestone-title">Cassie quits her day job!</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone completed" data-pos="0.858">
+                            <div class="milestone-marker"><i class="fa-solid fa-city"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Feb 2026</span>
+                                <p class="milestone-title">Exciting new city districts makes the game come to life</p>
                             </div>
                         </div>
 
@@ -1892,23 +1919,55 @@
                             <div class="milestone-marker"><i class="fas fa-puzzle-piece"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Now</span>
-                                <p class="milestone-title">Puzzle Polish. making sure the puzzles are actually puzzling.</p>
+                                <p class="milestone-title">Combining our beautiful biomes with our new city districts for challenge mode</p>
                             </div>
                         </div>
 
-                        <div class="milestone" data-pos="0.924">
-                            <div class="milestone-marker"><i class="fas fa-play"></i></div>
+                        <div class="milestone" data-pos="0.62">
+                            <div class="milestone-marker"><i class="fas fa-download"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">June 2026</span>
-                                <p class="milestone-title">Demo Available.</p>
+                                <p class="milestone-title">Demo Available</p>
                             </div>
                         </div>
 
-                        <div class="milestone" data-pos="0.99">
-                            <div class="milestone-marker"><i class="fa-brands fa-steam"></i></div>
+                        <div class="milestone" data-pos="0.75">
+                            <div class="milestone-marker"><i class="fa-solid fa-plane-departure"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Q3 2026</span>
-                                <p class="milestone-title">Launch on Steam (wishlist now).</p>
+                                <span class="milestone-date">July 2026</span>
+                                <p class="milestone-title">Steam Fest Debut</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.88">
+                            <div class="milestone-marker"><i class="fa-solid fa-key"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Sept 2026</span>
+                                <p class="milestone-title">Early Access on Steam</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.88">
+                            <div class="milestone-marker"><i class="fa-solid fa-gift"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Q4 2026</span>
+                                <p class="milestone-title">Free content updates!</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.88">
+                            <div class="milestone-marker"><i class="fa-solid fa-cake-candles"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">2027</span>
+                                <p class="milestone-title">Full Steam Release</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.88">
+                            <div class="milestone-marker"><i class="fa-solid fa-mobile-screen"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">2027</span>
+                                <p class="milestone-title">Mobile Release<br>iOS and Android</p>
                             </div>
                         </div>
                     </div>
@@ -2214,6 +2273,9 @@
 
         const slider = document.getElementById('roadmapContainer');
         const riverPath = document.getElementById('riverPath');
+        const wrapper = document.querySelector('.roadmap-svg-wrapper');
+        const baseWidth = 5700;
+        const baseHeight = 500;
         const whale = document.getElementById('critterWhale');
         const duck = document.getElementById('critterDuck');
         const roadmapSection = document.getElementById('roadmap');
@@ -2224,23 +2286,27 @@
         let startX;
         let scrollLeft;
         let autoSpacing = true;
-        let autoPadding = 0.02; // Padding as percentage expressed in decimal
+        let autoPadding = 0.025; // Padding as percentage expressed in decimal
 
 
         function positionMilestones() {
+            const scaleX = wrapper.offsetWidth / baseWidth;
+            const scaleY = wrapper.offsetHeight / baseHeight;
+
             let autoPos = 0.0 + autoPadding;
             let autoPosInc = (1 - autoPadding * 2) / (milestonesList.length - 1);
             milestonesList.forEach(m => {
                 const pos = autoSpacing ? autoPos : parseFloat(m.getAttribute('data-pos'));
                 const point = riverPath.getPointAtLength(pos * pathLength);
-                m.style.left = `${point.x}px`;
-                m.style.top = `${point.y - 75}px`;
+                m.style.left = `${point.x * scaleX}px`;
+                m.style.top = `${point.y * scaleY - 75}px`;
                 autoPos += autoPosInc;
             });
         }
 
         let whaleProgress = 0;
         const duckOffset = 0.5;
+        const critterSpeed = 0.0002; // Lower this value to make them swim slower
         let roadmapAnimationId = null;
 
         function swimmingCritters() {
@@ -2249,22 +2315,33 @@
                 return;
             }
 
-            whaleProgress += 0.0005; 
+            const scaleX = wrapper.offsetWidth / baseWidth;
+            const scaleY = wrapper.offsetHeight / baseHeight;
+
+            whaleProgress += critterSpeed; 
             if (whaleProgress > 1) whaleProgress = 0;
             const point = riverPath.getPointAtLength(whaleProgress * pathLength);
             const nextPoint = riverPath.getPointAtLength(Math.min(whaleProgress + 0.01, 1) * pathLength);
-            const angle = Math.atan2(nextPoint.y - point.y, nextPoint.x - point.x) * 180 / Math.PI;
-            whale.style.left = `${point.x - 60}px`;
-            whale.style.top = `${point.y - 40}px`; 
+            
+            const dx = (nextPoint.x - point.x) * scaleX;
+            const dy = (nextPoint.y - point.y) * scaleY;
+            const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+            
+            whale.style.left = `${point.x * scaleX - 60}px`;
+            whale.style.top = `${point.y * scaleY - 40}px`; 
             whale.style.transform = `rotate(${angle}deg)`;
 
             let duckProgress = (whaleProgress + duckOffset);
             if (duckProgress > 1) duckProgress -= 1;
             const point2 = riverPath.getPointAtLength(duckProgress * pathLength);
             const nextPoint2 = riverPath.getPointAtLength(Math.min(duckProgress + 0.01, 1) * pathLength);
-            const angle2 = Math.atan2(nextPoint2.y - point2.y, nextPoint2.x - point2.x) * 180 / Math.PI;
-            duck.style.left = `${point2.x - 32.5}px`;
-            duck.style.top = `${point2.y - 32.5}px`;
+            
+            const dx2 = (nextPoint2.x - point2.x) * scaleX;
+            const dy2 = (nextPoint2.y - point2.y) * scaleY;
+            const angle2 = Math.atan2(dy2, dx2) * 180 / Math.PI;
+
+            duck.style.left = `${point2.x * scaleX - 32.5}px`;
+            duck.style.top = `${point2.y * scaleY - 32.5}px`;
             duck.style.transform = `rotate(${angle2}deg)`;
 
             roadmapAnimationId = requestAnimationFrame(swimmingCritters);
@@ -2278,14 +2355,14 @@
 
         slider.addEventListener('mousedown', (e) => {
             isDragging = true;
-            roadmapSection.classList.add('custom-grabbing');
+            slider.classList.add('custom-grabbing');
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
         });
 
         window.addEventListener('mouseup', () => {
             isDragging = false;
-            roadmapSection.classList.remove('custom-grabbing');
+            slider.classList.remove('custom-grabbing');
         });
 
         slider.addEventListener('mousemove', (e) => {
@@ -2300,9 +2377,13 @@
             positionMilestones();
             const active = document.querySelector('.milestone.active');
             if (active) {
-                const containerWidth = slider.offsetWidth;
+                const containerWidth = slider.clientWidth;
+                // Get computed padding-left since it is defined in CSS
+                const paddingLeft = parseFloat(window.getComputedStyle(slider).paddingLeft) || 0;
                 const activeOffset = active.offsetLeft;
-                const targetScroll = activeOffset - (containerWidth / 2);
+                
+                // Calculate target scroll ensuring we account for the container's padding
+                const targetScroll = (activeOffset + paddingLeft) - (containerWidth / 2);
                 slider.scrollLeft = targetScroll;
             }
         }
