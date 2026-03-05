@@ -745,10 +745,10 @@
         }
 
         #roadmap .gallery-header h2 {
-            color: var(--yellow); 
+            color: #9a824f; 
         }
 
-        #roadmap .gallery-header p { color: var(--off-black); }
+        #roadmap .gallery-header p { color: var(--off-black) }
 
         #roadmap .custom-grab {
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20"><path fill="black" d="M256.5 0c-25.3 0-47.2 14.7-57.6 36-7-2.6-14.5-4-22.4-4-35.3 0-64 28.7-64 64l0 165.5-2.7-2.7c-25-25-65.5-25-90.5 0s-25 65.5 0 90.5L107 437c48 48 113.1 75 181 75l16.5 0c1.5 0 3-.1 4.5-.4 91.7-6.2 165-79.4 171.1-171.1 .3-1.5 .4-3 .4-4.5l0-176c0-35.3-28.7-64-64-64-5.5 0-10.9 .7-16 2l0-2c0-35.3-28.7-64-64-64-7.9 0-15.4 1.4-22.4 4-10.4-21.3-32.3-36-57.6-36zm-16 96.1l0-.1 0-32c0-8.8 7.2-16 16-16s16 7.2 16 16l0 168c0 13.3 10.7 24 24 24s24-10.7 24-24l0-136c0-8.8 7.2-16 16-16s16 7.2 16 16l0 136c0 13.3 10.7 24 24 24s24-10.7 24-24l0-72c0-8.8 7.2-16 16-16s16 7.2 16 16l0 172.9c-.1 .6-.1 1.3-.2 1.9-3.4 69.7-59.3 125.6-129 129-.6 0-1.3 .1-1.9 .2L288 464C232.9 464 180 442.1 141 403.1L53.2 315.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l43.7 43.7c6.9 6.9 17.2 8.9 26.2 5.2s14.8-12.5 14.8-22.2l0-223.4c0-8.8 7.2-16 16-16 8.8 0 16 7.1 16 15.9l0 136.1c0 13.3 10.7 24 24 24s24-10.7 24-24l0-135.9z"/></svg>') 10 10, grab;
@@ -760,7 +760,7 @@
 
         .roadmap-container { position: relative; padding: 100px 150px 0; margin-top: -20px; margin-bottom: 0; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; user-select: none; -webkit-user-select: none; }
         .roadmap-container::-webkit-scrollbar { display: none; }
-        .roadmap-svg-wrapper { position: relative; width: 6000px; height: 500px; }
+        .roadmap-svg-wrapper { position: relative; width: 7000px; height: 500px; }
         
         .river-path { 
             fill: none; 
@@ -783,31 +783,56 @@
         @keyframes flowWaves { from { stroke-dashoffset: 170; } to { stroke-dashoffset: 0; } }
         #sailingBoat { position: absolute; font-size: 2.5rem; z-index: 4; pointer-events: none; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1)); transition: transform 0.1s linear; }
         .swimmingCritters { position: absolute; z-index: 4; pointer-events: none; /* filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1)); */ transition: transform 0.1s linear; }
-        #critterWhale { width: 120px; }
-        #critterDuck { width: 65px; }
+        #critterWhale, #critterWhale2 { width: 120px; }
+        #critterDuck, #critterDuck2 { width: 65px; }
 
         .milestone { position: absolute; width: 260px; text-align: center; transform: translate(-50%, -50%); transition: transform 0.4s var(--ease-bounce); z-index: 5; cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="28" height="28"><path fill="black" d="M320 128C302.3 128 288 142.3 288 160C288 177.7 302.3 192 320 192C337.7 192 352 177.7 352 160C352 142.3 337.7 128 320 128zM224 160C224 107 267 64 320 64C373 64 416 107 416 160C416 201.8 389.3 237.4 352 250.5L352 508.4C414.9 494.1 462.2 438.7 463.9 371.9L447.8 386C437.8 394.7 422.7 393.7 413.9 383.7C405.1 373.7 406.2 358.6 416.2 349.8L480.2 293.8C489.2 285.9 502.8 285.9 511.8 293.8L575.8 349.8C585.8 358.5 586.8 373.7 578.1 383.7C569.4 393.7 554.2 394.7 544.2 386L528 371.9C525.9 485 433.6 576 320 576C206.4 576 114.1 485 112 371.9L95.8 386.1C85.8 394.8 70.7 393.8 61.9 383.8C53.1 373.8 54.2 358.7 64.2 349.9L128.2 293.9C137.2 286 150.8 286 159.8 293.9L223.8 349.9C233.8 358.6 234.8 373.8 226.1 383.8C217.4 393.8 202.2 394.8 192.2 386.1L176.1 372C177.9 438.8 225.2 494.2 288 508.5L288 250.6C250.7 237.4 224 201.9 224 160.1z"/></svg>') 14 14, pointer; }
         .milestone:hover { transform: translate(-50%, -55%) scale(1.05); z-index: 100; }
-        .milestone-marker { width: 45px; height: 45px; background: white; border: 4px solid var(--color-river); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: relative; }
-        .milestone.completed .milestone-marker { background: var(--green); border-color: #222; }
-        .milestone.completed.company .milestone-marker { background: var(--blur); border-color: #222; color: #222; }         
+        .milestone-marker { width: 45px; height: 45px; background: #f4feff; border: 4px solid #cfdee4; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: relative; }
+        .milestone.completed .milestone-marker {
+            background: #83df7a;
+            border-color: #6bb065; 
+        }
+        .milestone.completed.company .milestone-marker { 
+            background: #e2c4ff;
+            border-color: #bd9ade; 
+        }         
         .milestone.active .milestone-marker { 
-            background: var(--yellow); 
-            border-color: #222;
+            background: #eeda70;
+            border-color: #dbc344;
+        }
+        .milestone.active .milestone-content {
+            border: 2px solid #ffec8b;
         }
         
         .milestone-content { background: var(--bg-glass); backdrop-filter: blur(var(--blur)); border-radius: 20px; padding: 18px; border: 1px solid rgba(255,255,255,0.5); box-shadow: 0 8px 32px rgba(0,0,0,0.05); pointer-events: none; }
         .milestone-date { font-family: var(--font-ui); font-weight: 600; color: #555; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
-        .milestone-title { font-family: var(--font-ui); font-weight: 700; font-size: 1.1rem; color: #222; margin-top: 4px; }
+        .milestone-title { font-family: var(--font-ui); font-weight: 600; font-size: 1.1rem; color: #373320; margin-top: 4px; }
+        .milestone-link > a {
+            font-size: 0.9em;
+            font-weight: 500;
+            font-family: var(--font-ui);
+            color: #7d7b69;
+            pointer-events: auto;
+            display: block;
+            width: 70%;
+            margin: -10px auto;
+            padding: 10px 0;
+        }
 
         /* FAQ Grid Styles */
         .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 0; padding: 20px; align-items: flex-start; }
-        .faq-item { background: var(--bg-glass); backdrop-filter: blur(var(--blur)); border-radius: 24px; border: 1px solid rgba(255,255,255,0.4); transition: all 0.3s ease; }
+        .faq-item { background: var(--bg-glass); backdrop-filter: blur(var(--blur)); border-radius: 24px; border: 1px solid rgba(255,255,255,0.4); transition: all 0.3s ease; color: #373320; }
         .faq-question { padding: 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-ui); font-weight: 600; font-size: 1.25rem; }
         .faq-answer { max-height: 0; overflow: hidden; transition: all 0.4s ease; padding: 0 24px; color: #444; }
         .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 24px; }
         .faq-icon { transition: transform 0.3s ease; color: var(--blue); }
         .faq-item.open .faq-icon { transform: rotate(180deg); }
+        .faq-grid a {
+            color: #89582d;
+            text-decoration: none;
+            border-bottom: 1px solid #89582d;
+        }
 
         /* ========================================
            NEWS SECTION
@@ -821,12 +846,13 @@
 
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px;
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  */
+            gap: 30px; margin-top: 60px;
             position: relative;
         }
 
         .news-card {
-            background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); border-radius: 32px; overflow: hidden; border: 1px solid rgba(255,255,255,0.5); transition: transform 0.3s var(--ease-bounce), box-shadow 0.3s ease; display: flex; flex-direction: column;
+            background: rgba(255, 255, 255, 0.7); border-radius: 32px; overflow: hidden; border: 1px solid rgba(255,255,255,0.5); transition: transform 0.3s var(--ease-bounce), box-shadow 0.3s ease; display: flex; flex-direction: row;
         }
 
         .news-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
@@ -840,6 +866,20 @@
         .news-excerpt { font-size: 0.95rem; color: #555; margin-bottom: 25px; flex-grow: 1; }
         .news-link { text-decoration: none; color: var(--black); font-family: var(--font-ui); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; transition: gap 0.2s ease; }
         .news-link:hover { gap: 12px; color: var(--orange); } 
+        .news-card.teaser {
+            height: 220px;
+            background: none;
+            border: 5px dashed var(--orange);
+            color: var(--orange);
+        }
+        .teaser h3 {
+            font-size: 2em;
+            font-family: var(--font-ui);
+            margin: auto;
+        }
+        .teaser a {
+            color: var(--orange);
+        }
 
         /* ========================================
            JOIN US SECTION
@@ -1495,9 +1535,9 @@
                         <h3>Paradise</h3>
                         <p class="feature-tagline" style="color: var(--green);">Your own tiny utopia.</p>
                         <p class="feature-description">
-                            Immerse yourself in the world of Palettopia. Watch weather systems roll across your city and discover the local wildlife. Explore four distinct biomes to set down your roots - Temperate, Arctic, Tropical & Arid.
+                            Immerse yourself in the world of Palettopia. Watch weather systems roll across your city and discover the local critters. Explore four distinct biomes to set down your roots - Temperate, Arctic, Tropical & Arid.
                             <br><br>
-                            Procedurally generated islands means infinite canvases with 5 different terrain features - Mountain, River, Lakes, Woodlands & Wetlands. It’s not just a city builder; it’s a digital terrarium.
+                            Procedurally generated islands means infinite canvases with 6 different terrain features - Mountain, Grassland, River, Lakes, Woodlands, & Wetlands. It’s not just a city builder; it’s a digital terrarium.
                         </p>
                         <div class="sub-bullets">
                             <div class="bullet-item">
@@ -1520,7 +1560,7 @@
             <div class="container">
                 <div class="gallery-header">
                     <h2>Gallery</h2>
-                    <p>A glimpse into the vibrant worlds of Palettopia. Every screenshot is a unique island waiting for your creative touch.</p>
+                    <p>A glimpse into the vibrant worlds of Palettopia. Every screenshot is a unique procedural paradise, just waiting for a splash of District paint and a little creative soul.</p>
                 </div>
         
                 <div class="gallery-filter">
@@ -1769,7 +1809,7 @@
                 <!-- 2. Roadmap Inline Container Style -->
                 <div class="container">
                     <div class="gallery-header">
-                        <h2 style="color: #7d7b69;">The Journey to Palettopia</h2>
+                        <h2>The Journey to Palettopia</h2>
                         <p>From three corporate drop outs to city painters. Discover our winding journey from ideation to launch.</p>
                     </div>
                 </div>
@@ -1778,6 +1818,8 @@
                         <!-- <div id="sailingBoat">⛵</div> -->
                         <img id="critterWhale" class="swimmingCritters" loading="lazy" src="images/palettopia/stickers/critter_whale.webp" alt="Whale">
                         <img id="critterDuck" class="swimmingCritters" loading="lazy" src="images/palettopia/stickers/critter_duck.webp" alt="Duck">
+                        <img id="critterWhale2" class="swimmingCritters" loading="lazy" src="images/palettopia/stickers/critter_whale.webp" alt="Whale">
+                        <img id="critterDuck2" class="swimmingCritters" loading="lazy" src="images/palettopia/stickers/critter_duck.webp" alt="Duck">
                         
                         <svg width="100%" height="100%" viewBox="0 0 5700 500" preserveAspectRatio="none">
                             <defs>
@@ -1806,7 +1848,7 @@
                         <div class="milestone completed company" data-pos="0.0">
                             <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Oct 2023</span>
+                                <span class="milestone-date">Sept 2023</span>
                                 <p class="milestone-title">Cobalt becomes the first corporate dropout</p>
                             </div>
                         </div>
@@ -1815,14 +1857,14 @@
                             <div class="milestone-marker"><i class="fa-solid fa-baby"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Oct 2023</span>
-                                <p class="milestone-title">At a 1-year-olds Dino party, Palettopia is discussed</p>
+                                <p class="milestone-title">At a 1-year-olds dino party, Palettopia is discussed</p>
                             </div>
                         </div>
 
                         <div class="milestone completed company" data-pos="0.0">
                             <div class="milestone-marker"><i class="fa-solid fa-flag"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Jan 2023</span>
+                                <span class="milestone-date">Jan 2024</span>
                                 <p class="milestone-title">Oh Wow Games is formed</p>
                             </div>
                         </div>
@@ -1839,7 +1881,7 @@
                             <div class="milestone-marker"><i class="fas fa-mountain"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">March 2024</span>
-                                <p class="milestone-title">First island rendered. It looked like a potato, but it was our potato.</p>
+                                <p class="milestone-title">First island rendered.<br>It looked like a potato, but it was our potato</p>
                             </div>
                         </div>
 
@@ -1847,7 +1889,7 @@
                             <div class="milestone-marker"><i class="fa-solid fa-hat-wizard"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">June 2024</span>
-                                <p class="milestone-title">Procedural islands are finished! Hard stuff first</p>
+                                <p class="milestone-title">Infinite procedural island generator, complete!</p>
                             </div>
                         </div>
 
@@ -1855,7 +1897,7 @@
                             <div class="milestone-marker"><i class="fas fa-robot"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">August 2024</span>
-                                <p class="milestone-title">Team pauses for a Robot birthday party</p>
+                                <p class="milestone-title">Company retreat for<br>Cobalt &amp; Stu's robot birthday party</p>
                             </div>
                         </div>
 
@@ -1864,6 +1906,7 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">Dec 2024</span>
                                 <p class="milestone-title">Alpha playtest complete! Our journey is charted</p>
+                                <p class="milestone-link"><a href="#join" target="_blank">Join Newsletter</a></p>
                             </div>
                         </div>
 
@@ -1871,7 +1914,7 @@
                             <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Jan 2025</span>
-                                <p class="milestone-title">Stu leaves corp life and joins full time!</p>
+                                <p class="milestone-title">Stu drops corporate life and joins full time!</p>
                             </div>
                         </div>
 
@@ -1888,11 +1931,12 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">July 2025</span>
                                 <p class="milestone-title">New Biomes!<br>Frozen lakes to sand dunes</p>
+                                <p class="milestone-link"><a href="#join" target="_blank">Join Newsletter</a></p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.726">
-                            <div class="milestone-marker"><i class="fa-solid fa-dumbbell"></i></div>
+                            <div class="milestone-marker"><i class="fa-solid fa-hammer"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Sept 2025</span>
                                 <p class="milestone-title">Finished exporting asset no.384! Nailed it!</p>
@@ -1903,7 +1947,7 @@
                             <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Dec 2025</span>
-                                <p class="milestone-title">Cassie quits her day job!</p>
+                                <p class="milestone-title">Cassie sticks it to the man, the corporate dropout trinity is formed!</p>
                             </div>
                         </div>
 
@@ -1911,7 +1955,7 @@
                             <div class="milestone-marker"><i class="fa-solid fa-city"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Feb 2026</span>
-                                <p class="milestone-title">Exciting new city districts makes the game come to life</p>
+                                <p class="milestone-title">Exciting new city districts, the game comes to life!</p>
                             </div>
                         </div>
 
@@ -1919,7 +1963,15 @@
                             <div class="milestone-marker"><i class="fas fa-puzzle-piece"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">Now</span>
-                                <p class="milestone-title">Combining our beautiful biomes with our new city districts for challenge mode</p>
+                                <p class="milestone-title">Puzzling our way to paradise, working on a synergetic puzzle mode!</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.62">
+                            <div class="milestone-marker"><i class="fa-solid fa-music"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">April 2026</span>
+                                <p class="milestone-title">New sounds and tunes,<br>time to boogie!</p>
                             </div>
                         </div>
 
@@ -1928,6 +1980,7 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">June 2026</span>
                                 <p class="milestone-title">Demo Available</p>
+                                <p class="milestone-link"><a href="#join" target="_blank">Signup to Play!</a></p>
                             </div>
                         </div>
 
@@ -1935,7 +1988,8 @@
                             <div class="milestone-marker"><i class="fa-solid fa-plane-departure"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">July 2026</span>
-                                <p class="milestone-title">Steam Fest Debut</p>
+                                <p class="milestone-title">Steam Next Fest debut</p>
+                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist Now</a></p>
                             </div>
                         </div>
 
@@ -1944,14 +1998,31 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">Sept 2026</span>
                                 <p class="milestone-title">Early Access on Steam</p>
+                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist Now</a></p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.88">
+                            <div class="milestone-marker"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Q4 2026</span>
+                                <p class="milestone-title">Free content update no.1!</p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-gift"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Q4 2026</span>
-                                <p class="milestone-title">Free content updates!</p>
+                                <span class="milestone-date">Q1 2027</span>
+                                <p class="milestone-title">Free content update no.2!</p>
+                            </div>
+                        </div>
+
+                        <div class="milestone" data-pos="0.88">
+                            <div class="milestone-marker"><i class="fa-solid fa-gifts"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date">Q2 2027</span>
+                                <p class="milestone-title">Free content update no.3!</p>
                             </div>
                         </div>
 
@@ -1960,6 +2031,7 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">2027</span>
                                 <p class="milestone-title">Full Steam Release</p>
+                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist Now</a></p>
                             </div>
                         </div>
 
@@ -1967,7 +2039,8 @@
                             <div class="milestone-marker"><i class="fa-solid fa-mobile-screen"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date">2027</span>
-                                <p class="milestone-title">Mobile Release<br>iOS and Android</p>
+                                <p class="milestone-title">Mobile release<br>iOS and Android</p>
+                                <p class="milestone-link"><a href="#join" target="_blank">Join Newsletter</a></p>
                             </div>
                         </div>
                     </div>
@@ -1975,16 +2048,16 @@
                 <div class="container">
                     <div class="faq-grid">
                         <div class="faq-item">
-                            <div class="faq-question">What is Palettopia? <i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-question">What is Palettopia?<i class="fas fa-chevron-down faq-icon"></i></div>
                             <div class="faq-answer">Palettopia is a cozy, city building and puzzle game about painting minimalistic cities on infinite procedural generated islands.</div>
                         </div>
                         <div class="faq-item">
-                            <div class="faq-question">Who is making Palettopia? <i class="fas fa-chevron-down faq-icon"></i></div>
-                            <div class="faq-answer">Cassie, Cobalt & Stu - a team of friends and family, willful corporate dropouts who are united by a passion for video games, art, and creativity. Together, we aim to share the joy and wonder of building beautiful things with others.</div>
+                            <div class="faq-question">Who is making Palettopia?<i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-answer"><a href="./#team" target="_blank">Cassie, Cobalt & Stu</a> - a team of friends and family, willful corporate dropouts who are united by a passion for video games, art, and creativity. Together, we aim to share the joy and wonder of building beautiful things with others.</div>
                         </div>
                         <div class="faq-item">
-                            <div class="faq-question">How can you support the game? <i class="fas fa-chevron-down faq-icon"></i></div>
-                            <div class="faq-answer">Wishlist Palettopia on Steam, join our mailing list, follow us on social or simply share the game with your friends!</div>
+                            <div class="faq-question">How can you support the game?<i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-answer"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist</a> Palettopia on Steam, join our <a href="#join" target="_blank">mailing list</a>, follow us on <a href="#join" target="_blank">social</a> or simply share the game with your friends!</div>
                         </div>
                     </div>
                 </div>
@@ -1995,7 +2068,7 @@
                 <div class="container">
                     <div class="gallery-header">
                         <h2 style="color: #89582d;">Latest News</h2>
-                        <p style="color: var(--off-black);">Stay updated on the latest critter sightings, island discoveries and development progress. <a href="#join" style="color: #89582d; text-decoration: underline; font-weight: 700;">Sign up for our newsletter for more.</a></p>
+                        <p style="color: var(--off-black);">Stay updated on the latest critter sightings, island discoveries and development progress. <a href="#join" style="color: #89582d; text-decoration: underline; font-weight: 700;">Sign up for our newsletter.</a></p>
                     </div>
 
                     <div class="news-grid">
@@ -2008,18 +2081,21 @@
 
                         <article class="news-card">
                             <div class="news-thumb">
-                                <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Biome+Reveal" alt="New Biomes Reveal">
+                                <img loading="lazy" src="images/palettopia/news/biome_annoucement_720.webp" alt="New Biomes Reveal">
                             </div>
                             <div class="news-body">
                                 <span class="news-tag">Announcement</span>
-                                <span class="news-date">February 11, 2026</span>
-                                <h4 class="news-title">Unveiling the Hidden Wonders of the Arctic Biome</h4>
-                                <p class="news-excerpt">From frozen waterfalls to glowing glacial districts, discover how the Arctic biome challenges your painting strategies...</p>
-                                <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <span class="news-date">July 8, 2025</span>
+                                <h4 class="news-title">Discover our newest addition - Biomes</h4>
+                                <p class="news-excerpt">We’ve been hard at work implementing lots of updates to both the game mechanics and game content after our first round of player testing. After hearing positive feedback around our cute critters and fun environment, we’ve expanded this aspect of our game while making improvements to the base mechanics.....</p>
+                                <p class="news-excerpt">To add further variation with the new biomes we are introducing a new terrain type, wetlands! Wetlands is a low area that holds more moisture than the surrounding areas. These can take on the form of bogs, oasis and swamps depending on the biome....</p>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/506206686159048545" target="_blank" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
-                        <article class="news-card">
+                        <article class="news-card teaser"><h3><a href="#join">Join the Newsletter</a> to hear the next update.</h3></article>
+
+                        <article class="news-card" style="display: none;">
                             <div class="news-thumb">
                                 <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Dev+Blog" alt="Developer Blog">
                             </div>
@@ -2032,7 +2108,7 @@
                             </div>
                         </article>
 
-                        <article class="news-card">
+                        <article class="news-card" style="display: none;">
                             <div class="news-thumb">
                                 <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Critter+Spotlight" alt="Critter Spotlight">
                             </div>
@@ -2064,7 +2140,7 @@
                         </div>
 
                         <h2 class="join-header">Don’t Miss a Brushstroke</h2>
-                        <p class="join-desc">Sign up for the Oh Wow Games newsletter to get exclusive updates on Palettopia, beta invites, and arguably <span style="color: var(--red); font-weight: 600;">funny jokes</span> delivered straight to your inbox. You may unsubscribe at any time.</p>
+                        <p class="join-desc">Sign up for the Oh Wow Games newsletter to get exclusive updates on Palettopia, playtest invites, and arguably <span style="color: var(--red); font-weight: 600;">funny jokes</span> delivered straight to your inbox. You may unsubscribe at any time.</p>
                         
                         <form id="signup-form" class="join-form">
                             <div class="form-row">
@@ -2278,6 +2354,8 @@
         const baseHeight = 500;
         const whale = document.getElementById('critterWhale');
         const duck = document.getElementById('critterDuck');
+        const whale2 = document.getElementById('critterWhale2');
+        const duck2 = document.getElementById('critterDuck2');
         const roadmapSection = document.getElementById('roadmap');
         const milestonesList = document.querySelectorAll('.milestone');
         const pathLength = riverPath.getTotalLength();
@@ -2305,7 +2383,9 @@
         }
 
         let whaleProgress = 0;
-        const duckOffset = 0.5;
+        const duckOffset = 0.25;
+        const whale2Offset = 0.5;
+        const duck2Offset = 0.75;
         const critterSpeed = 0.0002; // Lower this value to make them swim slower
         let roadmapAnimationId = null;
 
@@ -2314,10 +2394,10 @@
                 roadmapAnimationId = null;
                 return;
             }
-
             const scaleX = wrapper.offsetWidth / baseWidth;
             const scaleY = wrapper.offsetHeight / baseHeight;
 
+            // WHALE
             whaleProgress += critterSpeed; 
             if (whaleProgress > 1) whaleProgress = 0;
             const point = riverPath.getPointAtLength(whaleProgress * pathLength);
@@ -2331,6 +2411,7 @@
             whale.style.top = `${point.y * scaleY - 40}px`; 
             whale.style.transform = `rotate(${angle}deg)`;
 
+            // DUCK
             let duckProgress = (whaleProgress + duckOffset);
             if (duckProgress > 1) duckProgress -= 1;
             const point2 = riverPath.getPointAtLength(duckProgress * pathLength);
@@ -2343,6 +2424,34 @@
             duck.style.left = `${point2.x * scaleX - 32.5}px`;
             duck.style.top = `${point2.y * scaleY - 32.5}px`;
             duck.style.transform = `rotate(${angle2}deg)`;
+
+            // WHALE2
+            let whale2Progress = (whaleProgress + whale2Offset);
+            if (whale2Progress > 1) whale2Progress -= 1;
+            const point3 = riverPath.getPointAtLength(whale2Progress * pathLength);
+            const nextPoint3 = riverPath.getPointAtLength(Math.min(whale2Progress + 0.01, 1) * pathLength);
+            
+            const dx3 = (nextPoint3.x - point3.x) * scaleX;
+            const dy3 = (nextPoint3.y - point3.y) * scaleY;
+            const angle3 = Math.atan2(dy3, dx3) * 180 / Math.PI;
+
+            whale2.style.left = `${point3.x * scaleX - 60}px`;
+            whale2.style.top = `${point3.y * scaleY - 40}px`;
+            whale2.style.transform = `rotate(${angle3}deg)`;
+
+            // DUCK2
+            let duck2Progress = (whaleProgress + duck2Offset);
+            if (duck2Progress > 1) duck2Progress -= 1;
+            const point4 = riverPath.getPointAtLength(duck2Progress * pathLength);
+            const nextPoint4 = riverPath.getPointAtLength(Math.min(duck2Progress + 0.01, 1) * pathLength);
+            
+            const dx4 = (nextPoint4.x - point4.x) * scaleX;
+            const dy4 = (nextPoint4.y - point4.y) * scaleY;
+            const angle4 = Math.atan2(dy4, dx4) * 180 / Math.PI;
+
+            duck2.style.left = `${point4.x * scaleX - 32.5}px`;
+            duck2.style.top = `${point4.y * scaleY - 32.5}px`;
+            duck2.style.transform = `rotate(${angle4}deg)`;
 
             roadmapAnimationId = requestAnimationFrame(swimmingCritters);
         }
