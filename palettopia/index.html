@@ -127,15 +127,6 @@
             overflow-x: hidden !important;
             line-height: 1.5;
             position: relative;
-            overscroll-behavior-y: none;
-        }
-
-        main {
-            /* Adds padding equal to the physical hardware notches/bars */
-            padding-top: env(safe-area-inset-top);
-            padding-left: env(safe-area-inset-left);
-            padding-right: env(safe-area-inset-right);
-            will-change: transform;
         }
 
         /* Utility class to pause animations when off-screen */
@@ -1286,7 +1277,6 @@
             article.news-card { flex-direction: column; }
             #join {
                 padding: 80px 0 0;
-                padding-bottom: env(safe-area-inset-bottom);
             }
             .signup-card { padding: 10% 8%; font-size: 0.75em; transform: rotate(1deg); }
             .join-desc { font-size: 1.1rem; }
@@ -1354,6 +1344,9 @@
     </style>
 </head>
 <body>
+
+    <div class="clouds"></div>
+
     <!-- NAVIGATION PANEL -->
     <nav class="nav-container">
         <a href="#home" class="nav-btn active" style="background-color: var(--blue);">
