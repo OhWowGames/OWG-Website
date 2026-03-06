@@ -1548,7 +1548,7 @@
                         <a href="palettopia/#news" class="quick-link">News</a>
                         <a href="https://drive.google.com/drive/u/1/folders/1SEtwyuhQ7HRkMgafgdlLy-s6V5PO1xai" class="quick-link" target="_blank">Press Kit</a>
                         <a href="palettopia/#roadmap" class="quick-link">FAQs</a>
-                        <a href="mailto:support@ohwow.games" class="quick-link">Support</a>
+                        <a href="mailto:support@ohwow.games" class="quick-link" target="_blank">Support</a>
                     </div>
                 </div>
 
@@ -2043,7 +2043,7 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">Dec 2024</span>
                                 <p class="milestone-title">Alpha playtest complete! Our journey is charted</p>
-                                <p class="milestone-link"><a href="palettopia/#join" target="_blank">Join Newsletter</a></p>
+                                <p class="milestone-link"><a href="palettopia/#join">Join Newsletter</a></p>
                             </div>
                         </div>
 
@@ -2068,7 +2068,7 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">July 2025</span>
                                 <p class="milestone-title">New Biomes!<br>Frozen lakes to sand dunes</p>
-                                <p class="milestone-link"><a href="palettopia/#join" target="_blank">Join Newsletter</a></p>
+                                <p class="milestone-link"><a href="palettopia/#join">Join Newsletter</a></p>
                             </div>
                         </div>
 
@@ -2117,7 +2117,7 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">June 2026</span>
                                 <p class="milestone-title">Demo Available</p>
-                                <p class="milestone-link"><a href="palettopia/#join" target="_blank">Signup to Play!</a></p>
+                                <p class="milestone-link"><a href="palettopia/#join">Signup to Play!</a></p>
                             </div>
                         </div>
 
@@ -2177,7 +2177,7 @@
                             <div class="milestone-content">
                                 <span class="milestone-date">2027</span>
                                 <p class="milestone-title">Mobile release<br>iOS and Android</p>
-                                <p class="milestone-link"><a href="palettopia/#join" target="_blank">Join Newsletter</a></p>
+                                <p class="milestone-link"><a href="palettopia/#join">Join Newsletter</a></p>
                             </div>
                         </div>
                     </div>
@@ -2194,7 +2194,7 @@
                         </div>
                         <div class="faq-item">
                             <div class="faq-question">How can you support the game?<i class="fas fa-chevron-down faq-icon"></i></div>
-                            <div class="faq-answer"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist</a> Palettopia on Steam, join our <a href="palettopia/#join" target="_blank">mailing list</a>, follow us on <a href="palettopia/#join" target="_blank">social</a> or simply share the game with your friends!</div>
+                            <div class="faq-answer"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist</a> Palettopia on Steam, join our <a href="palettopia/#join">mailing list</a>, follow us on <a href="palettopia/#join">social</a> or simply share the game with your friends!</div>
                         </div>
                     </div>
                 </div>
@@ -2305,11 +2305,13 @@
                                 });                            
                                 const result = await response.json();
                                 
-                                if (response.ok)
+                                if (response.ok) {
                                     form.innerHTML='<h3 id="confirmation-message" style="color:var(--purple);">Thank you for supporting Palettopia! 🎨</h3>';
-                                else
+                                }
+                                else {
                                     console.error("Worker Error Details:", result.error);
                                     form.innerHTML='<h3 id="confirmation-message" style="color:var(--red);">❗There has been an error. Please try again.</h3>'; 
+                                }
                                 
                             } catch (err) {
                                 console.error("Network/Fetch Error:", err);
