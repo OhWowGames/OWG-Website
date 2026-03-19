@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Palettopia | Paint Your Paradise</title>
+    <meta charset="UTF-8">    
+    <meta http-equiv="content-language" content="en">
+    <title data-i18n="page_title">Palettopia | Paint Your Paradise</title>
     <base href="../" />
     <link rel="canonical" href="https://ohwow.games/palettopia/" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Palettopia is the relaxing city-painting game where creativity meets harmony." />
-    <meta name="keywords" content="Video Games, Oh Wow" />
-    <meta property="og:locale" content="en_US" />
+    <meta name="description" data-i18n="page_desc" content="Palettopia is a cozy, city building and puzzle game about creating minimalistic cities with the stroke of your paintbrush. Paint your way to paradise." />
+    <meta name="keywords" data-i18n="page_keywords" content="Video Games, Oh Wow" />
+    <meta property="og:locale" data-i18n="og_locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ohwow.games/palettopia/" />
     <meta property="og:site_name" content="Oh Wow Games LLC" />
-    <meta property="og:title" content="Palettopia - Wishlist on Steam" />
-    <meta property="og:description" content="Palettopia is the relaxing city-painting game where creativity meets harmony." />
+    <meta property="og:title" data-i18n="og_title" content="Palettopia - Wishlist on Steam" />
+    <meta property="og:description" data-i18n="og_desc" content="Palettopia is a cozy, city building and puzzle game about creating minimalistic cities with the stroke of your paintbrush. Paint your way to paradise." />
     <meta property="og:image" content="https://ohwow.games/images/palettopia_splash_thumbnail.jpg" />
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="1920" />
@@ -21,10 +23,6 @@
     <meta name="twitter:site" content="@oh_wow_games">
     <meta name="twitter:creator" content="@oh_wow_games">
     <meta name="twitter:card" content="summary_large_image">
-    <!-- <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/palettopia.css" /> -->
-    <!-- <script type="text/javascript" src="scripts/jquery-3.7.1.min.js" data-cfasync="false"></script>
-    <script type="text/javascript" src="scripts/main.js" data-cfasync="false"></script> -->
     <link rel="dns-prefetch" href="https://assets.mailerlite.com/" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -45,32 +43,95 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WM76DV2X');</script>
     <!-- End Google Tag Manager -->
+     
+    <!-- JSON-LD future add: price, priceCurrency, InStock, datePublished -->
     <script type="application/ld+json">
-        {
-            "@context": "http://www.schema.org",
-            "@type": "Organization",
-            "name": "Oh Wow Games LLC",
-            "url": "https://ohwow.games/",
-            "sameAs": [
-                "https://x.com/oh_wow_games",
-                "https://bsky.app/profile/ohwowgames.bsky.social",
-                "https://www.reddit.com/user/ohwowgames/",
-                "https://www.tiktok.com/@ohwowgames",
-                "https://www.youtube.com/@OhWowGames",
-                "https://www.instagram.com/ohwowgames/"
-            ],
-            "logo": "https://ohwow.games/images/owg_logo_p3_sm.png",
-            "image": "https://ohwow.games/images/owg_bradybunch_thumbnail.jpg",
-            "description": "We are a team of friends and family united under a shared passion for video games, art, and creativity. Together, we aim to share the joy and wonder of building beautiful things with others.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "116 Agnes Rd Ste 200",
-                "addressLocality": "Knoxville",
-                "addressRegion": "TN",
-                "postalCode": "37919",
-                "addressCountry": "United States"
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://ohwow.games/#organization",
+                "name": "Oh Wow Games LLC",
+                "alternateName": "OWG",
+                "email": "press@ohwow.games",
+                "foundingDate": "2023",
+                "url": "https://ohwow.games/",
+                "logo": "https://ohwow.games/images/owg_logo_p3_sm.png",
+                "image": "https://ohwow.games/images/owg_bradybunch_thumbnail.jpg",
+                "description": "We are a team of friends and family united under a shared passion for video games, art, and creativity. Together, we aim to share the joy and wonder of building beautiful things with others.",
+                "sameAs": [
+                    "https://x.com/oh_wow_games",
+                    "https://www.tiktok.com/@ohwowgames",
+                    "https://bsky.app/profile/ohwowgames.bsky.social",
+                    "https://www.youtube.com/@OhWowGames",
+                    "https://www.reddit.com/user/ohwowgames/",
+                    "https://www.instagram.com/ohwowgames/"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "116 Agnes Rd Ste 200",
+                    "addressLocality": "Knoxville",
+                    "addressRegion": "TN",
+                    "postalCode": "37919",
+                    "addressCountry": "United States"
+                },
+				"founder": [
+					{
+						"@type": "Person",
+						"name": "Cassie Sigrest",
+						"jobTitle": "Co-Founder / Marketing Director"
+					},
+					{
+						"@type": "Person",
+						"name": "Cobalt Cox",
+						"jobTitle": "Co-Founder / Game Director"
+					},
+					{
+						"@type": "Person",
+						"name": "Stu Sigrest",
+						"jobTitle": "Co-Founder / Studio Director"
+					}
+				]
+            },
+            {
+                "@type": "VideoGame",
+                "@id": "https://ohwow.games/palettopia/#game",
+                "name": "Palettopia",
+                "url": "https://ohwow.games/palettopia/",
+                "image": "https://ohwow.games/images/palettopia_splash_thumbnail.jpg",
+                "description": "Palettopia is a cozy, city building and puzzle game about creating minimalistic cities with the stroke of your paintbrush. Paint your way to paradise.",
+                "genre": ["Puzzle", "City Builder", "Cozy"],
+                "applicationCategory": "Game",
+                "operatingSystem": "Windows, macOS, Linux",
+                "gamePlatform": ["PC", "macOS", "Linux", "Steam Deck"],
+                "playMode": "SinglePlayer",
+                "contentRating": "Everyone",
+                "sameAs": [
+                    "https://store.steampowered.com/app/3004170/Palettopia/"
+                ],
+                "offers": {
+                    "@type": "Offer",
+                    "url": "https://store.steampowered.com/app/3004170/Palettopia/",
+                    "availability": "https://schema.org/PreOrder" 
+                },
+                "author": {
+                    "@id": "https://ohwow.games/#organization"
+                },
+                "publisher": {
+                    "@id": "https://ohwow.games/#organization"
+                },
+                "trailer": {
+                    "@type": "VideoObject",
+                    "name": "Teaser Trailer: New Palettopia Updates!",
+                    "description": "Excited to share this sneak peek look at some of the newest features coming to Palettopia!",
+                    "thumbnailUrl": "https://ohwow.games/video/teaser_trailer_1080.webp",
+                    "uploadDate": "2026-02-24T08:00:00+08:00",
+                    "embedUrl": "https://www.youtube.com/embed/SF_aPdGzQ5o?si=Lcwbm5jTaKx_3Q7L"
+                }
             }
-        }
+        ]
+    }
     </script>
     
     <!-- Google Fonts -->
@@ -1348,27 +1409,27 @@
     <nav class="nav-container">
         <a href="#home" class="nav-btn active" style="background-color: var(--blue);">
             <i class="fa-solid fa-house"></i>
-            <span class="nav-tooltip">Home</span>
+            <span class="nav-tooltip" data-i18n="nav_home">Home</span>
         </a>
         <a href="#features" class="nav-btn" style="background-color: var(--purple);">
             <i class="fa-solid fa-palette"></i>
-            <span class="nav-tooltip">Key Features</span>
+            <span class="nav-tooltip" data-i18n="nav_features">Key Features</span>
         </a>
         <a href="#gallery" class="nav-btn" style="background-color: var(--green);">
             <i class="fa-solid fa-image"></i>
-            <span class="nav-tooltip">Gallery</span>
+            <span class="nav-tooltip" data-i18n="nav_gallery">Gallery</span>
         </a>
         <a href="#roadmap" class="nav-btn" style="background-color: var(--yellow);">
             <i class="fa-solid fa-map"></i>
-            <span class="nav-tooltip">Roadmap & FAQ</span>
+            <span class="nav-tooltip" data-i18n="nav_roadmap">Roadmap & FAQ</span>
         </a>
         <a href="#news" class="nav-btn" style="background-color: var(--orange);">
             <i class="fa-solid fa-bullhorn"></i>
-            <span class="nav-tooltip">News</span>
+            <span class="nav-tooltip" data-i18n="nav_news">News</span>
         </a>
         <a href="#join" class="nav-btn" style="background-color: var(--red);">
             <i class="fa-solid fa-heart"></i>
-            <span class="nav-tooltip">Join Us</span>
+            <span class="nav-tooltip" data-i18n="nav_join">Join Us</span>
         </a>
     </nav>
 
@@ -1466,7 +1527,7 @@
             <div class="scroll-column">
                 <div class="cloud-panel" style="padding: 40px; transform: rotate(2deg); background-image: radial-gradient(circle at 20% 0%, transparent, rgb(255 255 255 / 80%) 50%)">
                     <div class="video-box">
-                        <video id="video-hero" preload="none" muted="" loop="" playsinline="" poster="video/teaser_trailer_1080.webp" onclick="openLightbox('video-hero-fullscreen', 'New Districts! - Teaser Trailer')">
+                        <video id="video-hero" preload="none" muted="" loop="" playsinline="" poster="video/teaser_trailer_1080.webp" onclick="openLightbox('video-hero-fullscreen', document.querySelector('.video-announcement').textContent)">
                             <source src="video/teaser_trailer_720.webm" type="video/webm" media="(max-width: 1280px)">
                             <source src="video/teaser_trailer_720.mp4" type="video/mp4" media="(max-width: 1280px)">
                             <source src="video/teaser_trailer_1080.webm" type="video/webm">
@@ -1497,7 +1558,7 @@
                             //setTimeOfVideo();
                         </script>
                         <div class="video-overlay">
-                            <div class="video-announcement">New Beautiful Districts + Teaser Trailer!</div>
+                            <div class="video-announcement" data-i18n="home_video_announcement">New Beautiful Districts + Teaser Trailer!</div>
                             <i class="fa-solid fa-circle-play" style="font-size: 3em; color: white; position: absolute; bottom: 0; right: 0; transform: translate(-50%, -50%); opacity: 0.8;" onclick="pauseVideo()"></i>
                         </div>
                     </div>
@@ -1505,18 +1566,18 @@
 
                 <div class="cloud-panel" style="transform: rotate(-2deg); margin-top: -30px;">
                     <div class="summary-header">
-                        <div class="status-text">Wishlist Available • Coming Q3 2026</div>
-                        <h1 class="main-tagline">Paint your paradise</h1>
-                        <p class="main-description">
+                        <div class="status-text" data-i18n="home_status">Wishlist Available • Coming Q3 2026</div>
+                        <h1 class="main-tagline" data-i18n="home_tagline">Paint your paradise</h1>
+                        <p class="main-description" data-i18n="home_desc">
                             Palettopia is a cozy, city building and puzzle game about creating minimalistic cities with the stroke of your paintbrush. Explore infinite islands and solve puzzles while building synergy between the serene landscapes and the urban districts. Discover vibrant biomes as you paint your way to paradise and create your dream utopia.
                         </p>
                     </div>
 
                     <div class="cta-container">
-                        <a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" class="cta-btn btn-steam">
+                        <a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" class="cta-btn btn-steam" data-i18n="home_cta_wishlist">
                             <i class="fa-brands fa-steam" style="font-size: 1.4em;"></i> Wishlist on Steam
                         </a>
-                        <a href="palettopia/#join" class="cta-btn btn-updates">
+                        <a href="palettopia/#join" class="cta-btn btn-updates" data-i18n="home_cta_updates">
                             <i class="fa-solid fa-envelope"></i> Get Updates
                         </a>
                     </div>
@@ -1524,28 +1585,28 @@
 
                 <div class="cloud-panel" style="transform: rotate(0deg) translateX(10px); margin-top: -5px;">
                     <div class="specs-section">
-                        <div class="spec-card">
+                        <div class="spec-card" data-i18n="home_specs_platforms">
                             <h4>PC Platforms</h4>
                             <p>Win, Mac, Linux</p>
                         </div>
-                        <div class="spec-card">
+                        <div class="spec-card" data-i18n="home_specs_mobile">
                             <h4>Mobile (Future)</h4>
                             <p>iOS & Android</p>
                         </div>
-                        <div class="spec-card">
+                        <div class="spec-card" data-i18n="home_specs_rating">
                             <h4>Rating</h4>
                             <p><span class="rating-badge">E</span> (Est)</p>
                         </div>
-                        <div class="spec-card">
+                        <div class="spec-card" data-i18n="home_specs_publisher">
                             <h4>Dev + Publisher</h4>
                             <p>Oh Wow Games</p>
                         </div>
                     </div>
                     <div class="quick-links-row">
-                        <a href="palettopia/#news" class="quick-link">News</a>
-                        <a href="https://drive.google.com/drive/u/1/folders/1SEtwyuhQ7HRkMgafgdlLy-s6V5PO1xai" class="quick-link" target="_blank">Press Kit</a>
-                        <a href="palettopia/#roadmap" class="quick-link">FAQs</a>
-                        <a href="mailto:support@ohwow.games" class="quick-link" target="_blank">Support</a>
+                        <a href="palettopia/#news" class="quick-link" data-i18n="home_links_news">News</a>
+                        <a href="https://drive.google.com/drive/u/1/folders/1SEtwyuhQ7HRkMgafgdlLy-s6V5PO1xai" class="quick-link" target="_blank" data-i18n="home_links_press">Press Kit</a>
+                        <a href="palettopia/#roadmap" class="quick-link" data-i18n="home_links_faq">FAQs</a>
+                        <a href="mailto:support@ohwow.games" class="quick-link" target="_blank" data-i18n="home_links_support">Support</a>
                     </div>
                 </div>
 
@@ -1564,7 +1625,7 @@
         <!-- MID-HERO REVEAL -->
         <section class="mid-hero">
             <div class="container" style="z-index: 1;">
-                <h2>Welcome to Palettopia</h2>
+                <h2 data-i18n="midhero_welcome">Welcome to Palettopia</h2>
             </div>
             
             <video id="video-mid" preload="none" muted="" loop="" playsinline="" poster="video/temperate-island_nature_1440.webp">
@@ -1595,19 +1656,19 @@
                         </div>
                     </div>
                     <div class="feature-text">
-                        <h3>Puzzle</h3>
-                        <p class="feature-tagline" style="color: var(--blue);">Create harmony in paradise.</p>
-                        <p class="feature-description">
+                        <h3 data-i18n="features_puzzle_title">Puzzle</h3>
+                        <p class="feature-tagline" style="color: var(--blue);" data-i18n="features_puzzle_tagline">Create harmony in paradise.</p>
+                        <p class="feature-description" data-i18n="features_puzzle_desc">
                             Solve placement puzzles to meet the needs of your citizens in Puzzle Mode. Create synergy between your urban districts and the local landscape as you uncover the perfect layout for your utopia.
                         </p>
                         <div class="sub-bullets">
                             <div class="bullet-item">
                                 <div class="bullet-icon" style="background-color: var(--blue);"><i class="fa-solid fa-brain"></i></div>
-                                <span>Synergy Rewards</span>
+                                <span data-i18n="features_puzzle_bullet_1">Synergy Rewards</span>
                             </div>
                             <div class="bullet-item">
                                 <div class="bullet-icon" style="background-color: var(--blue);"><i class="fa-solid fa-puzzle-piece"></i></div>
-                                <span>7 Unique Districts</span>
+                                <span data-i18n="features_puzzle_bullet_2">7 Unique Districts</span>
                             </div>
                         </div>
                     </div>
@@ -1630,19 +1691,19 @@
                         </div>
                     </div>
                     <div class="feature-text">
-                        <h3>Paint</h3>
-                        <p class="feature-tagline" style="color: var(--yellow);">The world is your canvas.</p>
-                        <p class="feature-description">
+                        <h3 data-i18n="features_paint_title">Paint</h3>
+                        <p class="feature-tagline" style="color: var(--yellow);" data-i18n="features_paint_subtext">The world is your canvas.</p>
+                        <p class="feature-description" data-i18n="features_paint_desc">
                             Splash color onto infinite islands to create vibrant cities in Creative Mode. No complex systems. Simply select a district from your color palette and brush it across the land, instantly turning your strokes into bustling cities.
                         </p>
                         <div class="sub-bullets">
                             <div class="bullet-item">
                                 <div class="bullet-icon" style="background-color: var(--yellow);"><i class="fa-solid fa-brush"></i></div>
-                                <span>Unlimited Paint</span>
+                                <span data-i18n="features_paint_bullet_1">Unlimited Paint</span>
                             </div>
                             <div class="bullet-item">
                                 <div class="bullet-icon" style="background-color: var(--yellow);"><i class="fa-solid fa-palette"></i></div>
-                                <span>Unlimited Possibilities</span>
+                                <span data-i18n="features_paint_bullet_2">Unlimited Possibilities</span>
                             </div>
                         </div>
                     </div>
@@ -1666,9 +1727,9 @@
                         </div>
                     </div>
                     <div class="feature-text">
-                        <h3>Paradise</h3>
-                        <p class="feature-tagline" style="color: var(--green);">Your own tiny utopia.</p>
-                        <p class="feature-description">
+                        <h3 data-i18n="features_paradise_title">Paradise</h3>
+                        <p class="feature-tagline" style="color: var(--green);" data-i18n="features_paradise_subtext">Your own tiny utopia.</p>
+                        <p class="feature-description" data-i18n="features_paradise_desc">
                             Immerse yourself in the world of Palettopia. Watch weather systems roll across your city and discover the local critters. Explore four distinct biomes to set down your roots - Temperate, Arctic, Tropical & Arid.
                             <br><br>
                             Procedurally generated islands means infinite canvases with 6 different terrain features - Mountain, Grassland, River, Lakes, Woodlands, & Wetlands. It’s not just a city builder; it’s a digital terrarium.
@@ -1676,11 +1737,11 @@
                         <div class="sub-bullets">
                             <div class="bullet-item">
                                 <div class="bullet-icon" style="background-color: var(--green);"><i class="fa-solid fa-tree"></i></div>
-                                <span>4 Biomes</span>
+                                <span data-i18n="features_paradise_bullet_1">4 Biomes</span>
                             </div>
                             <div class="bullet-item">
                                 <div class="bullet-icon" style="background-color: var(--green);"><i class="fa-solid fa-mountain-city"></i></div>
-                                <span>Infinite Islands</span>
+                                <span data-i18n="features_paradise_bullet_2">Infinite Islands</span>
                             </div>
                         </div>
                     </div>
@@ -1693,16 +1754,16 @@
         <section id="gallery" class="gallery-section">
             <div class="container">
                 <div class="gallery-header">
-                    <h2>Gallery</h2>
-                    <p>A glimpse into the vibrant worlds of Palettopia. Every screenshot is a unique procedural paradise, just waiting for a splash of District paint and a little creative soul.</p>
+                    <h2 data-i18n="gallery_title">Gallery</h2>
+                    <p data-i18n="gallery_desc">A glimpse into the vibrant worlds of Palettopia. Every screenshot is a unique procedural paradise, just waiting for a splash of District paint and a little creative soul.</p>
                 </div>
         
                 <div class="gallery-filter">
-                    <button class="filter-btn active" data-filter="all">All Biomes</button>
-                    <button class="filter-btn" data-filter="arctic">Arctic</button>
-                    <button class="filter-btn" data-filter="arid">Arid</button>
-                    <button class="filter-btn" data-filter="temperate">Temperate</button>
-                    <button class="filter-btn" data-filter="tropical">Tropical</button>
+                    <button class="filter-btn active" data-filter="all" data-i18n="gallery_button_all">All Biomes</button>
+                    <button class="filter-btn" data-filter="arctic" data-i18n="gallery_button_arctic">Arctic</button>
+                    <button class="filter-btn" data-filter="arid" data-i18n="gallery_button_arid">Arid</button>
+                    <button class="filter-btn" data-filter="temperate" data-i18n="gallery_button_temperate">Temperate</button>
+                    <button class="filter-btn" data-filter="tropical" data-i18n="gallery_button_tropical">Tropical</button>
                 </div>
         
                 <div class="gallery-grid">
@@ -1733,7 +1794,7 @@
                     </div>
 
                     <div class="gallery-item item-lg temperate"
-                        onclick="openLightbox('images/palettopia/gallery/temperate-city_1440.webp', 'A Satisfied City')"
+                        onclick="openLightbox('images/palettopia/gallery/temperate-city_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/temperate-city_720.webp" srcset="
                             images/palettopia/gallery/temperate-city_720.webp 720w,
@@ -1742,10 +1803,10 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="A Satisfied City">
-                        <div class="gallery-overlay"><span>A Satisfied City</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_1">A Satisfied City</span></div>
                     </div>
                     <div class="gallery-item item-wide temperate"
-                        onclick="openLightbox('images/palettopia/gallery/temperate-mid-zoom_1440.webp', 'Temperate Biome')"
+                        onclick="openLightbox('images/palettopia/gallery/temperate-mid-zoom_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/temperate-mid-zoom_720.webp" srcset="
                             images/palettopia/gallery/temperate-mid-zoom_720.webp 720w,
@@ -1756,10 +1817,10 @@
                             40vw" alt="Temperate Biome" style="
                             transform: scale(1.2) translate(0%, -7%);
                         ">
-                        <div class="gallery-overlay"><span>Temperate Biome</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_2">Temperate Biome</span></div>
                     </div>
                     <div class="gallery-item temperate"
-                        onclick="openLightbox('images/palettopia/gallery/temperate-close-up_1440.webp', 'Turkey Trot')"
+                        onclick="openLightbox('images/palettopia/gallery/temperate-close-up_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/temperate-close-up_720.webp" srcset="
                             images/palettopia/gallery/temperate-close-up_720.webp 720w,
@@ -1770,10 +1831,10 @@
                             40vw" alt="Turkey Trot" style="
                             transform: scale(1.7) translate(-20%, -6%);
                         ">
-                        <div class="gallery-overlay"><span>Turkey Trot</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_3">Turkey Trot</span></div>
                     </div>
                     <div class="gallery-item item-tall arid"
-                        onclick="openLightbox('images/palettopia/gallery/arid-close-up_1440.webp', 'Arid Close-up')"
+                        onclick="openLightbox('images/palettopia/gallery/arid-close-up_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/arid-close-up_720.webp" srcset="
                             images/palettopia/gallery/arid-close-up_720.webp 720w,
@@ -1782,10 +1843,10 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="Arid Close-up">
-                        <div class="gallery-overlay"><span>Arid Close-up</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_4">Arid Close-up</span></div>
                     </div>
                     <div class="gallery-item item-lg arid"
-                        onclick="openLightbox('images/palettopia/gallery/arid-zoom_1440.webp', 'Arid Biome')"
+                        onclick="openLightbox('images/palettopia/gallery/arid-zoom_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/arid-zoom_720.webp" srcset="
                             images/palettopia/gallery/arid-zoom_720.webp 720w,
@@ -1796,10 +1857,10 @@
                             40vw" alt="Arid Biome" style="
                             transform: scale(1.2) translate(-8%, 8%);
                         ">
-                        <div class="gallery-overlay"><span>Arid Biome</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_5">Arid Biome</span></div>
                     </div>
                     <div class="gallery-item arid"
-                        onclick="openLightbox('images/palettopia/gallery/arid-zoom-out-city_1440.webp', 'Arid City')"
+                        onclick="openLightbox('images/palettopia/gallery/arid-zoom-out-city_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/arid-zoom-out-city_720.webp" srcset="
                             images/palettopia/gallery/arid-zoom-out-city_720.webp 720w,
@@ -1808,10 +1869,10 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="Arid City">
-                        <div class="gallery-overlay"><span>Arid City</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_6">Arid City</span></div>
                     </div>
                     <div class="gallery-item arid"
-                        onclick="openLightbox('images/palettopia/gallery/arid-zoom-out_1440.webp', 'Arid Island Diversity')"
+                        onclick="openLightbox('images/palettopia/gallery/arid-zoom-out_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/arid-zoom-out_720.webp" srcset="
                             images/palettopia/gallery/arid-zoom-out_720.webp 720w,
@@ -1820,10 +1881,10 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="Arid Island Diversity">
-                        <div class="gallery-overlay"><span>Arid Island Diversity</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_7">Arid Island Diversity</span></div>
                     </div>
                     <div class="gallery-item tropical"
-                        onclick="openLightbox('images/palettopia/gallery/tropical-generate_1440.webp', 'A Giraffe Wonders')"
+                        onclick="openLightbox('images/palettopia/gallery/tropical-generate_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/tropical-generate_720.webp" srcset="
                             images/palettopia/gallery/tropical-generate_720.webp 720w,
@@ -1834,10 +1895,10 @@
                             40vw" alt="A Giraffe Wonders" style="
                             transform: scale(1.7) translate(2%, 9%);
                         ">
-                        <div class="gallery-overlay"><span>A Giraffe Wonders</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_8">A Giraffe Wonders</span></div>
                     </div>
                     <div class="gallery-item tropical"
-                        onclick="openLightbox('images/palettopia/gallery/elephants_1440.webp', 'Herd of Elephants')"
+                        onclick="openLightbox('images/palettopia/gallery/elephants_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/elephants_720.webp" srcset="
                             images/palettopia/gallery/elephants_720.webp 720w,
@@ -1846,10 +1907,10 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="Herd of Elephants">
-                        <div class="gallery-overlay"><span>Herd of Elephants</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_9">Herd of Elephants</span></div>
                     </div>
                     <div class="gallery-item item-lg tropical"
-                        onclick="openLightbox('images/palettopia/gallery/tropical-zoom-out-city_1440.webp', 'Tropical Biome')"
+                        onclick="openLightbox('images/palettopia/gallery/tropical-zoom-out-city_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/tropical-zoom-out-city_720.webp" srcset="
                             images/palettopia/gallery/tropical-zoom-out-city_720.webp 720w,
@@ -1858,10 +1919,10 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="Tropical Biome">
-                        <div class="gallery-overlay"><span>Tropical Biome</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_10">Tropical Biome</span></div>
                     </div>        
                     <div class="gallery-item item-tall tropical"
-                        onclick="openLightbox('images/palettopia/gallery/tropical-city_1440.webp', 'Tropical City')"
+                        onclick="openLightbox('images/palettopia/gallery/tropical-city_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/tropical-city_720.webp" srcset="
                             images/palettopia/gallery/tropical-city_720.webp 720w,
@@ -1870,10 +1931,10 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="Tropical City">
-                        <div class="gallery-overlay"><span>Tropical City</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_11">Tropical City</span></div>
                     </div>
                     <div class="gallery-item tropical"
-                        onclick="openLightbox('images/palettopia/gallery/tropical-close_1440.webp', 'Bloat of Hippos')"
+                        onclick="openLightbox('images/palettopia/gallery/tropical-close_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/tropical-close_720.webp" srcset="
                             images/palettopia/gallery/tropical-close_720.webp 720w,
@@ -1884,10 +1945,10 @@
                             40vw" alt="Bloat of Hippos" style="
                             transform: scale(1.3) translate(1%, 8%);
                         ">
-                        <div class="gallery-overlay"><span>Bloat of Hippos</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_12">Bloat of Hippos</span></div>
                     </div>
                     <div class="gallery-item item-wide arctic"
-                        onclick="openLightbox('images/palettopia/gallery/penguins-2_1440.webp', 'Family of Penguins')"
+                        onclick="openLightbox('images/palettopia/gallery/penguins-2_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/penguins-2_720.webp" srcset="
                             images/palettopia/gallery/penguins-2_720.webp 720w,
@@ -1898,10 +1959,10 @@
                             40vw" alt="Family of Penguins" style="
                             transform: scale(1.7) translate(-14%, 15%);
                         ">
-                        <div class="gallery-overlay"><span>Family of Penguins</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_13">Family of Penguins</span></div>
                     </div>
                     <div class="gallery-item item-lg arctic"
-                        onclick="openLightbox('images/palettopia/gallery/arctic-zoom-out_1440.webp', 'Arctic Biome')"
+                        onclick="openLightbox('images/palettopia/gallery/arctic-zoom-out_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/arctic-zoom-out_720.webp" srcset="
                             images/palettopia/gallery/arctic-zoom-out_720.webp 720w,
@@ -1910,10 +1971,10 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="Arctic Biome">
-                        <div class="gallery-overlay"><span>Arctic Biome</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_14">Arctic Biome</span></div>
                     </div>
                     <div class="gallery-item item-wide arctic"
-                        onclick="openLightbox('images/palettopia/gallery/arctic-lights_game-development_1440.webp', 'Arctic City')"
+                        onclick="openLightbox('images/palettopia/gallery/arctic-lights_game-development_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/arctic-lights_game-development_720.webp" srcset="
                             images/palettopia/gallery/arctic-lights_game-development_720.webp 720w,
@@ -1922,7 +1983,7 @@
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
                             40vw" alt="Arctic City">
-                        <div class="gallery-overlay"><span>Arctic City</span></div>
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_15">Arctic City</span></div>
                     </div>
                 </div>
             </div>
@@ -1943,8 +2004,8 @@
                 <!-- 2. Roadmap Inline Container Style -->
                 <div class="container">
                     <div class="gallery-header">
-                        <h2>The Journey to Palettopia</h2>
-                        <p>From three corporate drop outs to city painters. Discover our winding journey from ideation to launch.</p>
+                        <h2 data-i18n="roadmap_title">The Journey to Palettopia</h2>
+                        <p data-i18n="roadmap_desc">From three corporate drop outs to city painters. Discover our winding journey from ideation to launch.</p>
                     </div>
                 </div>
                 <div class="roadmap-container custom-grab" id="roadmapContainer">
@@ -1982,199 +2043,199 @@
                         <div class="milestone completed company" data-pos="0.0">
                             <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Sept 2023</span>
-                                <p class="milestone-title">Cobalt becomes the first corporate dropout</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_1_date">Sept 2023</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_1_title">Cobalt becomes the first corporate dropout</p>
                             </div>
                         </div>
 
                         <div class="milestone completed company" data-pos="0.0">
                             <div class="milestone-marker"><i class="fa-solid fa-baby"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Oct 2023</span>
-                                <p class="milestone-title">At a 1-year-olds dino party, Palettopia is discussed</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_2_date">Oct 2023</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_2_title">At a 1-year-olds dino party, Palettopia is discussed</p>
                             </div>
                         </div>
 
                         <div class="milestone completed company" data-pos="0.0">
                             <div class="milestone-marker"><i class="fa-solid fa-flag"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Jan 2024</span>
-                                <p class="milestone-title">Oh Wow Games is formed</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_3_date">Jan 2024</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_3_title">Oh Wow Games is formed</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.07">
                             <div class="milestone-marker"><i class="fas fa-eye-dropper"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Feb 2024</span>
-                                <p class="milestone-title">The first designs are drafted</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_4_date">Feb 2024</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_4_title">The first designs are drafted</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.132">
                             <div class="milestone-marker"><i class="fas fa-mountain"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">March 2024</span>
-                                <p class="milestone-title">First island rendered.<br>It looked like a potato, but it was our potato</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_5_date">March 2024</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_5_title">First island rendered.<br>It looked like a potato, but it was our potato</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.264">
                             <div class="milestone-marker"><i class="fa-solid fa-hat-wizard"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">June 2024</span>
-                                <p class="milestone-title">Infinite procedural island generator, complete!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_6_date">June 2024</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_6_title">Infinite procedural island generator, complete!</p>
                             </div>
                         </div>
 
                         <div class="milestone completed company" data-pos="0.33">
                             <div class="milestone-marker"><i class="fas fa-robot"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">August 2024</span>
-                                <p class="milestone-title">Company retreat for<br>Cobalt &amp; Stu's robot birthday party</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_7_date">August 2024</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_7_title">Company retreat for<br>Cobalt &amp; Stu's robot birthday party</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.396">
                             <div class="milestone-marker"><i class="fa-solid fa-compass"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Dec 2024</span>
-                                <p class="milestone-title">Alpha playtest complete! Our journey is charted</p>
-                                <p class="milestone-link"><a href="palettopia/#join">Join Newsletter</a></p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_8_date">Dec 2024</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_8_title">Alpha playtest complete! Our journey is charted</p>
+                                <p class="milestone-link"><a href="palettopia/#join" data-i18n="roadmap_milestone_8_cta">Join Newsletter</a></p>
                             </div>
                         </div>
 
                         <div class="milestone completed company" data-pos="0.462">
                             <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Jan 2025</span>
-                                <p class="milestone-title">Stu drops corporate life and joins full time!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_9_date">Jan 2025</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_9_title">Stu drops corporate life and joins full time!</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.528">
                             <div class="milestone-marker"><i class="fas fa-brush"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">March 2025</span>
-                                <p class="milestone-title">Advanced painting features added for creative mode</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_10_date">March 2025</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_10_title">Advanced painting features added for creative mode</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.66">
                             <div class="milestone-marker"><i class="fas fa-tree"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">July 2025</span>
-                                <p class="milestone-title">New Biomes!<br>Frozen lakes to sand dunes</p>
-                                <p class="milestone-link"><a href="palettopia/#join">Join Newsletter</a></p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_11_date">July 2025</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_11_title">New Biomes!<br>Frozen lakes to sand dunes</p>
+                                <p class="milestone-link"><a href="palettopia/#join" data-i18n="roadmap_milestone_11_cta">Join Newsletter</a></p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.726">
                             <div class="milestone-marker"><i class="fa-solid fa-hammer"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Sept 2025</span>
-                                <p class="milestone-title">Finished exporting asset no.384! Nailed it!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_12_date">Sept 2025</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_12_title">Finished exporting asset no.384! Nailed it!</p>
                             </div>
                         </div>
 
                         <div class="milestone completed company" data-pos="0.792">
                             <div class="milestone-marker"><i class="fas fa-user-plus"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Dec 2025</span>
-                                <p class="milestone-title">Cassie sticks it to the man, the corporate dropout trinity is formed!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_13_date">Dec 2025</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_13_title">Cassie sticks it to the man, the corporate dropout trinity is formed!</p>
                             </div>
                         </div>
 
                         <div class="milestone completed" data-pos="0.858">
                             <div class="milestone-marker"><i class="fa-solid fa-city"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Feb 2026</span>
-                                <p class="milestone-title">Exciting new city districts, the game comes to life!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_14_date">Feb 2026</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_14_title">Exciting new city districts, the game comes to life!</p>
                             </div>
                         </div>
 
                         <div class="milestone active" data-pos="0.858">
                             <div class="milestone-marker"><i class="fas fa-puzzle-piece"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Now</span>
-                                <p class="milestone-title">Puzzling our way to paradise, working on a synergetic puzzle mode!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_15_date">Now</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_15_title">Puzzling our way to paradise, working on a synergetic puzzle mode!</p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.62">
                             <div class="milestone-marker"><i class="fa-solid fa-music"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">April 2026</span>
-                                <p class="milestone-title">New sounds and tunes,<br>time to boogie!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_16_date">April 2026</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_16_title">New sounds and tunes,<br>time to boogie!</p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.62">
                             <div class="milestone-marker"><i class="fas fa-download"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">June 2026</span>
-                                <p class="milestone-title">Demo Available</p>
-                                <p class="milestone-link"><a href="palettopia/#join">Signup to Play!</a></p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_17_date">June 2026</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_17_title">Demo Available</p>
+                                <p class="milestone-link"><a href="palettopia/#join" data-i18n="roadmap_milestone_17_cta">Signup to Play!</a></p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.75">
                             <div class="milestone-marker"><i class="fa-solid fa-plane-departure"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">July 2026</span>
-                                <p class="milestone-title">Steam Next Fest debut</p>
-                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist Now</a></p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_18_date">July 2026</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_18_title">Steam Next Fest debut</p>
+                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" data-i18n="roadmap_milestone_18_cta">Wishlist Now</a></p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-key"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Sept 2026</span>
-                                <p class="milestone-title">Early Access on Steam</p>
-                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist Now</a></p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_19_date">Sept 2026</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_19_title">Early Access on Steam</p>
+                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" data-i18n="roadmap_milestone_19_cta">Wishlist Now</a></p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-hand-holding-heart"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Q4 2026</span>
-                                <p class="milestone-title">Free content update no.1!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_20_date">Q4 2026</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_20_title">Free content update no.1!</p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-gift"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Q1 2027</span>
-                                <p class="milestone-title">Free content update no.2!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_21_date">Q1 2027</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_21_title">Free content update no.2!</p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-gifts"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">Q2 2027</span>
-                                <p class="milestone-title">Free content update no.3!</p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_22_date">Q2 2027</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_22_title">Free content update no.3!</p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-cake-candles"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">2027</span>
-                                <p class="milestone-title">Full Steam Release</p>
-                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist Now</a></p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_23_date">2027</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_23_title">Full Steam Release</p>
+                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" data-i18n="roadmap_milestone_23_cta">Wishlist Now</a></p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-mobile-screen"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date">2027</span>
-                                <p class="milestone-title">Mobile release<br>iOS and Android</p>
-                                <p class="milestone-link"><a href="palettopia/#join">Join Newsletter</a></p>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_24_date">2027</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_24_title">Mobile release<br>iOS and Android</p>
+                                <p class="milestone-link"><a href="palettopia/#join" data-i18n="roadmap_milestone_24_cta">Join Newsletter</a></p>
                             </div>
                         </div>
                     </div>
@@ -2182,16 +2243,16 @@
                 <div class="container">
                     <div class="faq-grid">
                         <div class="faq-item">
-                            <div class="faq-question">What is Palettopia?<i class="fas fa-chevron-down faq-icon"></i></div>
-                            <div class="faq-answer">Palettopia is a cozy, city building and puzzle game about painting minimalistic cities on infinite procedural generated islands.</div>
+                            <div class="faq-question" data-i18n="faq_question_1">What is Palettopia?<i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-answer" data-i18n="faq_answer_1">Palettopia is a cozy, city building and puzzle game about painting minimalistic cities on infinite procedural generated islands.</div>
                         </div>
                         <div class="faq-item">
-                            <div class="faq-question">Who is making Palettopia?<i class="fas fa-chevron-down faq-icon"></i></div>
-                            <div class="faq-answer"><a href="./#team" target="_blank">Cassie, Cobalt & Stu</a> - a team of friends and family, willful corporate dropouts who are united by a passion for video games, art, and creativity. Together, we aim to share the joy and wonder of building beautiful things with others.</div>
+                            <div class="faq-question" data-i18n="faq_question_2">Who is making Palettopia?<i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-answer" data-i18n="faq_answer_2"><a href="./#team" target="_blank">Cassie, Cobalt & Stu</a> - a team of friends and family, willful corporate dropouts who are united by a passion for video games, art, and creativity. Together, we aim to share the joy and wonder of building beautiful things with others.</div>
                         </div>
                         <div class="faq-item">
-                            <div class="faq-question">How can you support the game?<i class="fas fa-chevron-down faq-icon"></i></div>
-                            <div class="faq-answer"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist</a> Palettopia on Steam, join our <a href="palettopia/#join">mailing list</a>, follow us on <a href="palettopia/#join">social</a> or simply share the game with your friends!</div>
+                            <div class="faq-question" data-i18n="faq_question_3">How can you support the game?<i class="fas fa-chevron-down faq-icon"></i></div>
+                            <div class="faq-answer" data-i18n="faq_answer_3"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank">Wishlist</a> Palettopia on Steam, join our <a href="palettopia/#join">mailing list</a>, follow us on <a href="palettopia/#join">social</a> or simply share the game with your friends!</div>
                         </div>
                     </div>
                 </div>
@@ -2201,8 +2262,8 @@
             <section id="news">
                 <div class="container">
                     <div class="gallery-header">
-                        <h2 style="color: #89582d;">Latest News</h2>
-                        <p style="color: var(--off-black);">Stay updated on the latest critter sightings, island discoveries and development progress. <a href="palettopia/#join" style="color: #89582d; text-decoration: underline; font-weight: 700;">Sign up for our newsletter.</a></p>
+                        <h2 style="color: #89582d;" data-i18n="news_title">Latest News</h2>
+                        <p style="color: var(--off-black);" data-i18n="news_desc">Stay updated on the latest critter sightings, island discoveries and development progress. <a href="palettopia/#join" style="color: #89582d; text-decoration: underline; font-weight: 700;">Sign up for our newsletter.</a></p>
                     </div>
 
                     <div class="news-grid">
@@ -2218,27 +2279,27 @@
                                 <img loading="lazy" src="images/palettopia/news/biome_annoucement_720.webp" alt="New Biomes Reveal">
                             </div>
                             <div class="news-body">
-                                <span class="news-tag">Announcement</span>
-                                <span class="news-date">July 8, 2025</span>
-                                <h4 class="news-title">Discover our newest addition - Biomes</h4>
-                                <p class="news-excerpt">We’ve been hard at work implementing lots of updates to both the game mechanics and game content after our first round of player testing. After hearing positive feedback around our cute critters and fun environment, we’ve expanded this aspect of our game while making improvements to the base mechanics.....</p>
-                                <p class="news-excerpt">To add further variation with the new biomes we are introducing a new terrain type, wetlands! Wetlands is a low area that holds more moisture than the surrounding areas. These can take on the form of bogs, oasis and swamps depending on the biome....</p>
-                                <a href="https://store.steampowered.com/news/app/3004170/view/506206686159048545" target="_blank" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <span class="news-tag" data-i18n="news_card_1_tag">Announcement</span>
+                                <span class="news-date" data-i18n="news_card_1_date">July 8, 2025</span>
+                                <h4 class="news-title" data-i18n="news_card_1_title">Discover our newest addition - Biomes</h4>
+                                <p class="news-excerpt" data-i18n="news_card_1_excerpt_1">We’ve been hard at work implementing lots of updates to both the game mechanics and game content after our first round of player testing. After hearing positive feedback around our cute critters and fun environment, we’ve expanded this aspect of our game while making improvements to the base mechanics.....</p>
+                                <p class="news-excerpt" data-i18n="news_card_1_excerpt_2">To add further variation with the new biomes we are introducing a new terrain type, wetlands! Wetlands is a low area that holds more moisture than the surrounding areas. These can take on the form of bogs, oasis and swamps depending on the biome....</p>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/506206686159048545" target="_blank" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
-                        <article class="news-card teaser"><h3><a href="palettopia/#join">Join the Newsletter</a> to hear the next update.</h3></article>
+                        <article class="news-card teaser"><h3 data-i18n="news_teaser"><a href="palettopia/#join">Join the Newsletter</a> to hear the next update.</h3></article>
 
                         <article class="news-card" style="display: none;">
                             <div class="news-thumb">
                                 <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Dev+Blog" alt="Developer Blog">
                             </div>
                             <div class="news-body">
-                                <span class="news-tag">Dev Blog</span>
-                                <span class="news-date">January 24, 2026</span>
-                                <h4 class="news-title">The Art of the Stroke: Designing the Painting Mechanic</h4>
-                                <p class="news-excerpt">Our lead developer dives into the technical wizardry behind turning a city builder into a digital canvas...</p>
-                                <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <span class="news-tag" data-i18n="news_card_2_tag">Dev Blog</span>
+                                <span class="news-date" data-i18n="news_card_2_date">January 24, 2026</span>
+                                <h4 class="news-title" data-i18n="news_card_2_title">The Art of the Stroke: Designing the Painting Mechanic</h4>
+                                <p class="news-excerpt" data-i18n="news_card_2_excerpt">Our lead developer dives into the technical wizardry behind turning a city builder into a digital canvas...</p>
+                                <a href="#" class="news-link" data-i18n="news_card_2_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
@@ -2247,11 +2308,11 @@
                                 <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Critter+Spotlight" alt="Critter Spotlight">
                             </div>
                             <div class="news-body">
-                                <span class="news-tag">Community</span>
-                                <span class="news-date">December 15, 2025</span>
-                                <h4 class="news-title">Critter Spotlight: Meet the Wobbly Sand-Fox</h4>
-                                <p class="news-excerpt">The first of our biome-specific residents is here! Learn what attracts this elusive friend to your desert districts...</p>
-                                <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <span class="news-tag" data-i18n="news_card_3_tag">Community</span>
+                                <span class="news-date" data-i18n="news_card_3_date">December 15, 2025</span>
+                                <h4 class="news-title" data-i18n="news_card_3_title">Critter Spotlight: Meet the Wobbly Sand-Fox</h4>
+                                <p class="news-excerpt" data-i18n="news_card_3_excerpt">The first of our biome-specific residents is here! Learn what attracts this elusive friend to your desert districts...</p>
+                                <a href="#" class="news-link" data-i18n="news_card_3_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
                     </div>
@@ -2273,17 +2334,17 @@
                             <!-- <div class="peeker-circle"><i class="fa-solid fa-otter"></i></div> -->
                         </div>
 
-                        <h2 class="join-header">Don’t Miss a Brushstroke</h2>
-                        <p class="join-desc">Sign up for the Oh Wow Games newsletter to get exclusive updates on Palettopia, playtest invites, and arguably <span style="color: var(--red); font-weight: 600;">funny jokes</span> delivered straight to your inbox. You may unsubscribe at any time.</p>
+                        <h2 class="join-header" data-i18n="join_title">Don’t Miss a Brushstroke</h2>
+                        <p class="join-desc" data-i18n="join_desc">Sign up for the Oh Wow Games newsletter to get exclusive updates on Palettopia, playtest invites, and arguably <span style="color: var(--red); font-weight: 600;">funny jokes</span> delivered straight to your inbox. You may unsubscribe at any time.</p>
                         
                         <form id="signup-form" class="join-form">
                             <div class="form-row">
-                                <input type="email" name="email" autocomplete="email" placeholder="Your Email Address" class="join-input" required>
-                                <button type="submit" class="btn-join">Get Updates</button>
+                                <input type="email" name="email" autocomplete="email" placeholder="Your Email Address" class="join-input" required data-i18n="join_input_email">
+                                <button type="submit" class="btn-join" data-i18n="join_cta">Get Updates</button>
                             </div>
                             <div class="cf-turnstile" data-sitekey="0x4AAAAAACi_XNzKzesWgQ0j"></div>
                         </form>
-                        <p style="color: var(--off-black); font-size: 0.8em;">See the <a href="privacy-policy/" style="color: var(--red);" target="_blank">Privacy Policy</a> details.</p>
+                        <p style="color: var(--off-black); font-size: 0.8em;" data-i18n="join_privacy">See the <a href="privacy-policy/" style="color: var(--red);" target="_blank">Privacy Policy</a> details.</p>
 
                         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
                         <script>
@@ -2318,7 +2379,7 @@
                         </script>
 
                         <div class="social-hub">
-                            <span class="social-title">Follow the Journey</span>
+                            <span class="social-title" data-i18n="join_social_title">Follow the Journey</span>
                             <div class="social-links">
                                 <a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" class="social-btn"><i class="fa-brands fa-steam"></i></a>
                                 <!-- <a href="#" target="_blank" class="social-btn"><i class="fa-brands fa-discord"></i></a> -->
@@ -2341,8 +2402,8 @@
                             <a href="#">Support</a>
                             <a href="#">Privacy Policy</a>
                         </div> -->
-                        <span>Made with <i class="fa-solid fa-heart"></i> by corporate dropouts.</span>
-                        <div class="copyright">Oh Wow Games LLC &copy; 2024 - <span id="year">2026</span></div>
+                        <span data-i18n="footer_tagline">Made with <i class="fa-solid fa-heart"></i> by corporate dropouts.</span>
+                        <div class="copyright" data-i18n="footer_copyright">Oh Wow Games LLC &copy; 2024 - <span id="year">2026</span></div>
                     </footer>
                 </div>
             </div>
@@ -2759,3 +2820,4 @@
     </script>
 </body>
 </html>
+

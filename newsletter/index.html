@@ -43,29 +43,28 @@
         <!-- End Google Tag Manager -->
         <script type='application/ld+json'>
         {
-            "@context": "http://www.schema.org",
-            "@type": "Organization",
-            "name": "Oh Wow Games LLC",
-            "url": "https://ohwow.games/",
-            "sameAs": [
-                "https://x.com/oh_wow_games",
-                "https://bsky.app/profile/ohwowgames.bsky.social",
-                "https://www.reddit.com/user/ohwowgames/",
-                "https://www.tiktok.com/@ohwowgames",
-                "https://www.youtube.com/@OhWowGames",
-                "https://www.instagram.com/ohwowgames/"
-            ],
-            "logo": "https://ohwow.games/images/owg_logo_p3_sm.png",
-            "image": "https://ohwow.games/images/owg_bradybunch_thumbnail.jpg",
-            "description": "We are a team of friends and family united under a shared passion for video games, art, and creativity. Together, we aim to share the joy and wonder of building beautiful things with others.",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "116 Agnes Rd Ste 200",
-                "addressLocality": "Knoxville",
-                "addressRegion": "TN",
-                "postalCode": "37919",
-                "addressCountry": "United States"
-            }
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebPage",
+                    "@id": "https://ohwow.games/newsletter/#webpage",
+                    "url": "https://ohwow.games/newsletter/",
+                    "name": "Newsletter | Oh Wow Games LLC",
+                    "isPartOf": {
+                        "@id": "https://ohwow.games/#website"
+                    }
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://ohwow.games/#website",
+                    "name": "Oh Wow Games",
+                    "publisher": {
+                        "@type": "Organization",
+                        "@id": "https://ohwow.games/#organization",
+                        "name": "Oh Wow Games LLC"
+                    }
+                }
+            ]
         }
         </script>
     </head>
