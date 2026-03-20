@@ -9,19 +9,19 @@ try {
 
     $html = Get-Content -Path $htmlFile -Raw -Encoding UTF8
 
-    # 1. Extract all ISO codes from hreflang tags (ignoring x-default)
+    # 1. Extract ISO codes from custom meta tag
     $isoCodes = @()
-    $hreflangRegex = '(?i)<link[^>]+hreflang="([^"]+)"'
-    $langMatches = [regex]::Matches($html, $hreflangRegex)
-
-    foreach ($match in $langMatches) {
-        $code = $match.Groups[1].Value.ToLower()
-        if ($code -ne "x-default" -and $code -notin $isoCodes) {
-            $isoCodes += $code
-        }
+    $langMetaRegex = '(?i)<meta[^>]+name="supported-languages"[^>]+content="([^"]+)"'
+    
+    if ($html -match $langMetaRegex) {
+        $rawCodes = $matches[1]
+        # Split by comma, trim any spaces, convert to lowercase, and ignore empty strings
+        $isoCodes = $rawCodes -split ',' | ForEach-Object { $_.Trim().ToLower() } | Where-Object { $_ -ne "" }
+    } else {
+        throw "Could not find <meta name=`"supported-languages`" content=`"...`"> in index.html. Please add it to the <head>."
     }
 
-    Write-Host "Found $($isoCodes.Count) languages in hreflang tags." -ForegroundColor Cyan
+    Write-Host "Found $($isoCodes.Count) languages in the supported-languages meta tag." -ForegroundColor Cyan
 
     # 2. Extract English text
     $englishDictionary = [ordered]@{}
