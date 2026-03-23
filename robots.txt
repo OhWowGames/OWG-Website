@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /splash/
+Disallow: /*.ps1$
+Disallow: /*.md$
 
 Sitemap: https://ohwow.games/sitemap.xml
+Sitemap: https://ohwow.games/palettopia/sitemap.xml
