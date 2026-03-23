@@ -152,6 +152,8 @@
         "join_cta":  "Get Updates",
         "join_privacy":  "See the \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePrivacy Policy\u003c/a\u003e details.",
         "join_social_title":  "Follow the Journey",
+        "join_success_msg": "Thank you for supporting Palettopia! 🎨",
+        "join_failure_msg": "❗There has been an error. Please try again.",
         "footer_tagline":  "Made with \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e by corporate dropouts.",
         "footer_copyright":  "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder":  "Your Email Address"
@@ -309,6 +311,8 @@
         "join_cta": "Recevoir les mises à jour",
         "join_privacy": "Voir les détails de la \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePolitique de confidentialité\u003c/a\u003e.",
         "join_social_title": "Suivez l'Aventure",
+        "join_success_msg": "Merci de soutenir Palettopia ! 🎨",
+        "join_failure_msg": "❗Une erreur s'est produite. Veuillez réessayer.",
         "footer_tagline": "Fait avec \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e par des évadés du monde de l'entreprise.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Votre adresse e-mail"
@@ -466,6 +470,8 @@
         "join_cta": "Ricevi aggiornamenti",
         "join_privacy": "Vedi i dettagli della \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePrivacy Policy\u003c/a\u003e.",
         "join_social_title": "Segui il Viaggio",
+        "join_success_msg": "Grazie per aver supportato Palettopia! 🎨",
+        "join_failure_msg": "❗Si è verificato un errore. Riprova.",
         "footer_tagline": "Fatto con \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e da ex dipendenti aziendali.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Il tuo indirizzo email"
@@ -623,6 +629,8 @@
         "join_cta": "Updates erhalten",
         "join_privacy": "Siehe die Details der \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eDatenschutzerklärung\u003c/a\u003e.",
         "join_social_title": "Folge der Reise",
+        "join_success_msg": "Danke, dass du Palettopia unterstützt! 🎨",
+        "join_failure_msg": "❗Es ist ein Fehler aufgetreten. Bitte versuche es erneut.",
         "footer_tagline": "Gemacht mit \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e von Konzernaussteigern.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Deine E-Mail Adresse"
@@ -780,6 +788,8 @@
         "join_cta": "Recibir actualizaciones",
         "join_privacy": "Consulta los detalles de la \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePolítica de privacidad\u003c/a\u003e.",
         "join_social_title": "Sigue el viaje",
+        "join_success_msg": "¡Gracias por apoyar a Palettopia! 🎨",
+        "join_failure_msg": "❗Se ha producido un error. Por favor, inténtalo de nuevo.",
         "footer_tagline": "Hecho con \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e por desertores corporativos.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Tu correo electrónico"
@@ -937,6 +947,8 @@
         "join_cta": "Получаване на актуализации",
         "join_privacy": "Вижте подробностите в \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eПолитиката за поверителност\u003c/a\u003e.",
         "join_social_title": "Проследете пътуването",
+        "join_success_msg": "Благодарим ви, че подкрепяте Palettopia! 🎨",
+        "join_failure_msg": "❗Възникна грешка. Моля, опитайте отново.",
         "footer_tagline": "Създадено с \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e от хора, напуснали корпоративния свят.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Вашият имейл адрес"
@@ -1094,6 +1106,8 @@
         "join_cta": "Odebírat novinky",
         "join_privacy": "Podívejte se na \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eZásady ochrany osobních údajů\u003c/a\u003e.",
         "join_social_title": "Sledujte naši cestu",
+        "join_success_msg": "Děkujeme za podporu Palettopia! 🎨",
+        "join_failure_msg": "❗Došlo k chybě. Zkuste to prosím znovu.",
         "footer_tagline": "Vytvořeno s \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e korporátními odpadlíky.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Tvá e-mailová adresa"
@@ -1251,6 +1265,8 @@
         "join_cta": "Få opdateringer",
         "join_privacy": "Se detaljerne i \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePrivatlivspolitikken\u003c/a\u003e.",
         "join_social_title": "Følg rejsen",
+        "join_success_msg": "Tak fordi du støtter Palettopia! 🎨",
+        "join_failure_msg": "❗Der er opstået en fejl. Prøv venligst igen.",
         "footer_tagline": "Lavet med \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e af erhvervsafhoppere.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Din e-mailadresse"
@@ -1408,6 +1424,8 @@
         "join_cta": "Ontvang updates",
         "join_privacy": "Bekijk de details van het \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePrivacybeleid\u003c/a\u003e.",
         "join_social_title": "Volg de reis",
+        "join_success_msg": "Bedankt voor het steunen van Palettopia! 🎨",
+        "join_failure_msg": "❗Er is een fout opgetreden. Probeer het opnieuw.",
         "footer_tagline": "Gemaakt met \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e door corporate drop-outs.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Je e-mailadres"
@@ -1565,6 +1583,8 @@
         "join_cta": "Tilaa päivitykset",
         "join_privacy": "Katso \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eTietosuojakäytännön\u003c/a\u003e yksityiskohdat.",
         "join_social_title": "Seuraa matkaa",
+        "join_success_msg": "Kiitos, että tuet Palettopiaa! 🎨",
+        "join_failure_msg": "❗Tapahtui virhe. Yritä uudelleen.",
         "footer_tagline": "Tehnyt \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e yritysmaailman jättäjät.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Sähköpostiosoitteesi"
@@ -1722,6 +1742,8 @@
         "join_cta": "Λήψη ενημερώσεων",
         "join_privacy": "Δείτε τις λεπτομέρειες της \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eΠολιτικής Απορρήτου\u003c/a\u003e.",
         "join_social_title": "Ακολουθήστε το Ταξίδι",
+        "join_success_msg": "Σας ευχαριστούμε που υποστηρίζετε το Palettopia! 🎨",
+        "join_failure_msg": "❗Παρουσιάστηκε σφάλμα. Παρακαλώ δοκιμάστε ξανά.",
         "footer_tagline": "Φτιαγμένο με \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e από πρώην εταιρικούς υπαλλήλους.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Η διεύθυνση email σας"
@@ -1879,6 +1901,8 @@
         "join_cta": "Frissítések kérése",
         "join_privacy": "Tekintsd meg az \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eAdatvédelmi Irányelvek\u003c/a\u003e részleteit.",
         "join_social_title": "Kövesd az Utazást",
+        "join_success_msg": "Köszönjük, hogy támogatod a Palettopiát! 🎨",
+        "join_failure_msg": "❗Hiba történt. Kérjük, próbáld újra.",
         "footer_tagline": "\u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e-vel készítették kiugrott irodisták.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Az e-mail címed"
@@ -2036,6 +2060,8 @@
         "join_cta": "Dapatkan Pembaruan",
         "join_privacy": "Lihat detail \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eKebijakan Privasi\u003c/a\u003e.",
         "join_social_title": "Ikuti Perjalanan",
+        "join_success_msg": "Terima kasih telah mendukung Palettopia! 🎨",
+        "join_failure_msg": "❗Terjadi kesalahan. Silakan coba lagi.",
         "footer_tagline": "Dibuat dengan \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e oleh para pelarian korporat.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Alamat emailmu"
@@ -2193,6 +2219,8 @@
         "join_cta": "Otrzymuj aktualizacje",
         "join_privacy": "Zobacz szczegóły w \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePolityce prywatności\u003c/a\u003e.",
         "join_social_title": "Śledź naszą podróż",
+        "join_success_msg": "Dziękujemy za wsparcie Palettopii! 🎨",
+        "join_failure_msg": "❗Wystąpił błąd. Spróbuj ponownie.",
         "footer_tagline": "Stworzone z \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e przez uciekinierów z korporacji.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Twój adres email"
@@ -2350,6 +2378,8 @@
         "join_cta": "Receber atualizações",
         "join_privacy": "Veja os detalhes da \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePolítica de Privacidade\u003c/a\u003e.",
         "join_social_title": "Siga a Jornada",
+        "join_success_msg": "Obrigado por apoiares Palettopia! 🎨",
+        "join_failure_msg": "❗Ocorreu um erro. Por favor, tenta novamente.",
         "footer_tagline": "Feito com \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e por fugitivos corporativos.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "O seu endereço de e-mail"
@@ -2507,6 +2537,8 @@
         "join_cta": "Primește Actualizări",
         "join_privacy": "Vezi detaliile din \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePolitica de Confidențialitate\u003c/a\u003e.",
         "join_social_title": "Urmărește Călătoria",
+        "join_success_msg": "Îți mulțumim că susții Palettopia! 🎨",
+        "join_failure_msg": "❗A apărut o eroare. Te rugăm să încerci din nou.",
         "footer_tagline": "Făcut cu \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e de evadați din corporații.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Adresa ta de e-mail"
@@ -2664,6 +2696,8 @@
         "join_cta": "Получать обновления",
         "join_privacy": "Подробности смотрите в \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eПолитике конфиденциальности\u003c/a\u003e.",
         "join_social_title": "Следите за путешествием",
+        "join_success_msg": "Спасибо за поддержку Palettopia! 🎨",
+        "join_failure_msg": "❗Произошла ошибка. Пожалуйста, попробуйте еще раз.",
         "footer_tagline": "Сделано с \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e беглецами из корпораций.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Ваш email адрес"
@@ -2821,6 +2855,8 @@
         "join_cta": "Få uppdateringar",
         "join_privacy": "Se detaljerna i vår \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eIntegritetspolicy\u003c/a\u003e.",
         "join_social_title": "Följ resan",
+        "join_success_msg": "Tack för att du stödjer Palettopia! 🎨",
+        "join_failure_msg": "❗Ett fel har inträffat. Vänligen försök igen.",
         "footer_tagline": "Gjord med \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e av företagsavhoppare.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Din e-postadress"
@@ -2978,6 +3014,8 @@
         "join_cta": "Güncellemeleri Al",
         "join_privacy": "\u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eGizlilik Politikası\u003c/a\u003e ayrıntılarını görün.",
         "join_social_title": "Yolculuğu Takip Et",
+        "join_success_msg": "Palettopia'yı desteklediğiniz için teşekkür ederiz! 🎨",
+        "join_failure_msg": "❗Bir hata oluştu. Lütfen tekrar deneyin.",
         "footer_tagline": "Kurumsal kaçaklar tarafından \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e ile yapılmıştır.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "E-posta adresiniz"
@@ -3135,6 +3173,8 @@
         "join_cta": "Отримувати оновлення",
         "join_privacy": "Подробиці дивіться в \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eПолітиці конфіденційності\u003c/a\u003e.",
         "join_social_title": "Слідкуйте за подорожжю",
+        "join_success_msg": "Дякуємо за підтримку Palettopia! 🎨",
+        "join_failure_msg": "❗Сталася помилка. Будь ласка, спробуйте ще раз.",
         "footer_tagline": "Зроблено з \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e втікачами з корпорацій.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Ваша електронна адреса"
@@ -3292,6 +3332,8 @@
         "join_cta": "Nhận cập nhật",
         "join_privacy": "Xem chi tiết \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eChính sách Quyền riêng tư\u003c/a\u003e.",
         "join_social_title": "Theo dõi Hành trình",
+        "join_success_msg": "Cảm ơn bạn đã ủng hộ Palettopia! 🎨",
+        "join_failure_msg": "❗Đã có lỗi xảy ra. Vui lòng thử lại.",
         "footer_tagline": "Được tạo bằng \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e bởi những người từ bỏ doanh nghiệp.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Địa chỉ email của bạn"
@@ -3449,6 +3491,8 @@
         "join_cta": "获取最新动态",
         "join_privacy": "查看 \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003e隐私政策\u003c/a\u003e 详情。",
         "join_social_title": "关注我们的旅程",
+        "join_success_msg": "感谢您支持 Palettopia！ 🎨",
+        "join_failure_msg": "❗发生错误。请重试。",
         "footer_tagline": "由逃离大公司的人倾注 \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e 制作。",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "您的电子邮箱地址"
@@ -3606,6 +3650,8 @@
         "join_cta": "最新情報を受け取る",
         "join_privacy": "\u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eプライバシーポリシー\u003c/a\u003eの詳細をご覧ください。",
         "join_social_title": "旅をフォローする",
+        "join_success_msg": "Palettopia をサポートしていただきありがとうございます！ 🎨",
+        "join_failure_msg": "❗エラーが発生しました。もう一度お試しください。",
         "footer_tagline": "企業脱落者たちが \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e を込めて制作しました。",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "あなたのメールアドレス"
@@ -3763,6 +3809,8 @@
         "join_cta": "업데이트 받기",
         "join_privacy": "\u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003e개인정보 처리방침\u003c/a\u003e의 세부 정보를 확인하세요.",
         "join_social_title": "여정 팔로우하기",
+        "join_success_msg": "Palettopia를 지원해 주셔서 감사합니다! 🎨",
+        "join_failure_msg": "❗오류가 발생했습니다. 다시 시도해 주세요.",
         "footer_tagline": "기업의 낙오자들이 \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e 로 만들었습니다.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "귀하의 이메일 주소"
@@ -3920,6 +3968,8 @@
         "join_cta": "รับการอัปเดต",
         "join_privacy": "ดูรายละเอียดใน \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eนโยบายความเป็นส่วนตัว\u003c/a\u003e",
         "join_social_title": "ติดตามการเดินทาง",
+        "join_success_msg": "ขอบคุณที่สนับสนุน Palettopia! 🎨",
+        "join_failure_msg": "❗เกิดข้อผิดพลาด โปรดลองอีกครั้ง",
         "footer_tagline": "สร้างขึ้นด้วย \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e โดยผู้หลบหนีจากองค์กร",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "ที่อยู่อีเมลของคุณ"
@@ -4077,6 +4127,8 @@
         "join_cta": "احصل على التحديثات",
         "join_privacy": "شاهد تفاصيل \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003eسياسة الخصوصية\u003c/a\u003e.",
         "join_social_title": "تابع الرحلة",
+        "join_success_msg": "شكرًا لدعمكم Palettopia! 🎨",
+        "join_failure_msg": "❗حدث خطأ. يرجى المحاولة مرة أخرى.",
         "footer_tagline": "صُنعت بـ \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e بواسطة هاربين من عالم الشركات.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "عنوان بريدك الإلكتروني"
@@ -4234,6 +4286,8 @@
         "join_cta": "Recibir actualizaciones",
         "join_privacy": "Consulta los detalles de la \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePolítica de privacidad\u003c/a\u003e.",
         "join_social_title": "Sigue el viaje",
+        "join_success_msg": "¡Gracias por apoyar a Palettopia! 🎨",
+        "join_failure_msg": "❗Hubo un error. Por favor, inténtalo de nuevo.",
         "footer_tagline": "Hecho con \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e por desertores corporativos.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Tu correo electrónico"
@@ -4391,6 +4445,8 @@
         "join_cta": "獲取最新動態",
         "join_privacy": "查看 \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003e隱私權政策\u003c/a\u003e 詳情。",
         "join_social_title": "關注我們的旅程",
+        "join_success_msg": "感謝您支持 Palettopia！ 🎨",
+        "join_failure_msg": "❗發生錯誤。請重試。",
         "footer_tagline": "由逃離大公司的人傾注 \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e 製作。",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "您的電子信箱地址"
@@ -4548,6 +4604,8 @@
         "join_cta": "Receber atualizações",
         "join_privacy": "Veja os detalhes da \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePolítica de Privacidade\u003c/a\u003e.",
         "join_social_title": "Siga a Jornada",
+        "join_success_msg": "Obrigado por apoiar Palettopia! 🎨",
+        "join_failure_msg": "❗Ocorreu um erro. Por favor, tente novamente.",
         "footer_tagline": "Feito com \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e por desertores corporativos.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "O seu endereço de e-mail"
@@ -4705,6 +4763,8 @@
         "join_cta": "Få oppdateringer",
         "join_privacy": "Se detaljene i \u003ca href=\"privacy-policy/\" style=\"color: var(--red);\" target=\"_blank\"\u003ePersonvernerklæringen\u003c/a\u003e.",
         "join_social_title": "Følg reisen",
+        "join_success_msg": "Takk for at du støtter Palettopia! 🎨",
+        "join_failure_msg": "❗Det har oppstått en feil. Vennligst prøv igjen.",
         "footer_tagline": "Laget med \u003ci class=\"fa-solid fa-heart\"\u003e\u003c/i\u003e av bedriftsavhoppere.",
         "footer_copyright": "Oh Wow Games LLC \u0026copy; 2024 - \u003cspan id=\"year\"\u003e2026\u003c/span\u003e",
         "join_input_email_placeholder": "Din e-postadresse"

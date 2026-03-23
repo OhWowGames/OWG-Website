@@ -530,6 +530,7 @@
             top: 0;
             height: 100vh;
             overflow: visible;
+            pointer-events: none;
         }
         .animated-capsule island {
             overflow: hidden;
@@ -776,7 +777,7 @@
             font-size: 4rem;
             color: #f5f3e6;
             color: #785798;
-            text-shadow: 0px 0px 100px #ffffff;
+            filter: drop-shadow(0px 0px 50px #ffffff73);
             z-index: 2;
             text-align: center;
             padding: 0 20px;
@@ -1239,6 +1240,82 @@
             padding-bottom: 43px;
         }
 
+        /* ========================================
+           GLOBAL LANGUAGE UI
+           ========================================
+        */
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: transparent;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: var(--font-body);
+            color: #444;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 900;
+            transition: 0.2s color;
+        }
+        .lang-btn:hover { color: var(--black); }
+        .lang-modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgb(86 104 130 / 60%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            backdrop-filter: blur(3px);
+        }
+        .lang-modal-overlay[hidden] { display: none; }
+        .lang-modal-content {
+            background: rgb(255 255 255 / 86%);
+            border-radius: 20px;
+            padding: 24px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .lang-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            font-family: var(--font-logo);
+        }
+        .close-btn {
+            background: none; border: none; font-size: 1.5rem; cursor: pointer;
+        }
+        /* The 3-Column Grid for the 31 Languages */
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .lang-option-btn {
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            padding: 12px;
+            text-align: left;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: border 0.2s;
+            font-family: var(--font-ui);
+            text-align: center;
+        }
+        .lang-option-btn:hover { border-color: var(--blue); }
+        .lang-option-btn.active { background: var(--blue); color: white; border-color: transparent; }
+
         /* Responsive */
         @media (max-width: 1200px) {
             .scroll-column { padding-right: 3%; }
@@ -1253,7 +1330,7 @@
             .top-section { flex-direction: column; margin-top: -500vh; }
             #palettopia-logo { display: none; }
             #palettopia-logo-mobile { display: block; }
-            .sticky-column { position: static; padding-top: 40px; height: auto; }
+            .sticky-column { position: relative; padding-top: 40px; height: auto; }
             .scroll-column { padding-left: calc(100px + 3%); padding-top: 30px; }
 
             clouds>.cloud { background-size: 170% !important; }
@@ -1346,66 +1423,23 @@
             .peeker-2 { top: -3vw; right: -4vw; transform: rotate(-15deg); }
             .palette-footer { flex-direction: column; gap: 20px; text-align: center; margin: 20px 0 0; }
         }
+
         
-        /* @media only screen and (max-width: 600px) {
-            clouds>.cloud,
-            clouds>.extended,
-            .bird>.feather,
-            flock.bg,
-            flock.bg.two,
-            .swell>.wave {
-                animation-play-state: paused;
-                display: none;
-            }
-
-            ocean,
-            flocks {
-                position: relative;
-            }
-
-            .swell:nth-child(1)>.wave,
-            .swell:nth-child(2)>.wave,
-            .swell:nth-child(4)>.wave,
-            flock.bg,
-            .bird:nth-child(1)>.feather,
-            .bird:nth-child(2)>.feather {
-                animation-play-state: running;
-                display: block;
-            }
-
-            .swell:nth-child(1),
-            .swell:nth-child(2),
-            .swell:nth-child(4) {
-                transform: scale(0.3) !important;
-                position: absolute;
-                z-index: 1;
-                left: 76vw !important;
-                top: -15vw !important;
-            }
-
-            .swell:nth-child(2) {
-                left: 7vw !important;
-                top: -6vw !important;
-            }
-
-            .swell:nth-child(4) {
-                left: 10vw !important;
-                top: 0 !important;
-                margin-top: 100vh;
-            }
-
-            flock.bg {
-                position: absolute;
-                z-index: 1;
-                transform: scale(2.5);
-                animation-duration: 10s;
-                top: -21vh !important;
-                animation-delay: 1.5s;
-            }
-        } */
     </style>
 </head>
 <body>
+    
+    <!-- GLOBAL LANGUAGE UI -->
+    <div id="lang-modal" class="lang-modal-overlay" hidden>
+        <div class="lang-modal-content" role="dialog" aria-labelledby="lang-modal-title">
+            <div class="lang-modal-header">
+                <h2 id="lang-modal-title" data-i18n="select_language">Select Language</h2>
+                <button id="close-lang-modal" class="close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div id="lang-grid" class="lang-grid"></div> 
+        </div>
+    </div>
+
     <!-- NAVIGATION PANEL -->
     <nav class="nav-container">
         <a href="#home" class="nav-btn active" style="background-color: var(--blue);">
@@ -1518,6 +1552,12 @@
             </div>
 
             <div class="sticky-column">
+                <!-- GLOBAL LANGUAGE UI -->
+                <button id="lang-switcher-btn" class="lang-btn" aria-haspopup="dialog" aria-expanded="false">
+                    <span class="globe-icon"><i class="fa-solid fa-earth-americas"></i></span>
+                    <span id="current-lang-name">English</span>
+                </button>
+
                 <div class="island-wrapper">
                     <!-- PALETTOPIA LOGO -->
                     <img src="images/palettopia/palettopia_new-logo_p3_lg.webp" alt="Palettopia Logo" id="palettopia-logo-mobile">
@@ -2356,25 +2396,25 @@
                                 const formData = new FormData(e.target);
                                 const payload = {
                                     email: formData.get('email'),
+                                    language: document.documentElement.lang.toLowerCase(),
                                     cfToken: formData.get('cf-turnstile-response') // The token generated by Turnstile
                                 };
                                 const response = await fetch('https://ohwow.games/palettopia/sign-up', {
                                     method: 'POST',
                                     body: JSON.stringify(payload)
-                                });                            
+                                });
                                 const result = await response.json();
                                 
                                 if (response.ok) {
-                                    form.innerHTML='<h3 id="confirmation-message" style="color:var(--purple);">Thank you for supporting Palettopia! 🎨</h3>';
+                                    form.innerHTML='<h3 id="confirmation-message" style="color:var(--purple);" data-i18n="join_success_msg">Thank you for supporting Palettopia! 🎨</h3>';
                                 }
                                 else {
                                     console.error("Worker Error Details:", result.error);
-                                    form.innerHTML='<h3 id="confirmation-message" style="color:var(--red);">❗There has been an error. Please try again.</h3>'; 
+                                    form.innerHTML='<h3 id="confirmation-message" style="color:var(--red);" data-i18n="join_failure_msg">❗There has been an error. Please try again.</h3>';
                                 }
-                                
                             } catch (err) {
                                 console.error("Network/Fetch Error:", err);
-                                form.innerHTML='<h3 id="confirmation-message" style="color:var(--red);">❗There has been an error. Please try again.</h3>'; 
+                                form.innerHTML='<h3 id="confirmation-message" style="color:var(--red);" data-i18n="join_failure_msg">❗There has been an error. Please try again.</h3>';
                             }
                         });
                         </script>
@@ -2416,6 +2456,19 @@
            INTERACTIVE LOGIC
            ========================================
         */
+
+        // fix for urls with hash not loading to their target
+        window.addEventListener('load', function() {
+        if (window.location.hash) {
+            const target = document.querySelector(window.location.hash);
+            if (target) {
+            // Small timeout ensures any final layout shifts are settled
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }, 10);
+            }
+        }
+        });
 
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav-btn');
@@ -2739,6 +2792,17 @@
         const playSections = document.querySelectorAll("section.mid-hero, section#features, section#gallery, section#join");
 
         if (videoMid) {
+            const mql = window.matchMedia("(max-width: 1024px)");
+            const updatePoster = (e) => {
+                if (e.matches) {
+                    videoMid.setAttribute('poster', 'video/temperate-island_nature_2160_portrait.webp');
+                } else {
+                    videoMid.setAttribute('poster', 'video/temperate-island_nature_1440.webp');
+                }
+            };
+            updatePoster(mql);
+            mql.addEventListener('change', updatePoster);
+
             const videoMidBlockers = playSections;//.filter(el => el);
             const blockerVisibility = new Map();
             
@@ -2818,6 +2882,155 @@
         animationSections.forEach(section => {
             pauseAnimationObserver.observe(section);
         });
+
+        /* ========================================
+           GLOBAL LANGUAGE UI
+           ========================================
+        */
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. The Native Name Dictionary (with Arabic added)
+            const languages = {
+                "en": "English",
+                "ar": "العربية",
+                "fr": "Français",
+                "it": "Italiano",
+                "de": "Deutsch",
+                "es": "Español (España)",
+                "es-419": "Español (Latinoamérica)",
+                "bg": "Български",
+                "cs": "Čeština",
+                "da": "Dansk",
+                "nl": "Nederlands",
+                "fi": "Suomi",
+                "el": "Ελληνικά",
+                "hu": "Magyar",
+                "id": "Bahasa Indonesia",
+                "ja": "日本語",
+                "ko": "한국어",
+                "no": "Norsk",
+                "pl": "Polski",
+                "pt-br": "Português (Brasil)",
+                "pt-pt": "Português (Portugal)",
+                "ro": "Română",
+                "ru": "Русский",
+                "zh-hans": "简体中文",
+                "zh-hant": "繁體中文",
+                "sv": "Svenska",
+                "th": "ไทย",
+                "tr": "Türkçe",
+                "uk": "Українська",
+                "vi": "Tiếng Việt"
+            };
+
+            // 2. Identify Current Language
+            // Gets the lang attribute from <html>, defaults to 'en' if missing
+            const currentIso = document.documentElement.lang.toLowerCase() || 'en';
+            const currentLangName = languages[currentIso] || languages['en'];
+
+            // Update the button visual
+            document.getElementById('current-lang-name').textContent = currentLangName;
+
+            // 3. UI Elements
+            const langBtn = document.getElementById('lang-switcher-btn');
+            const langModal = document.getElementById('lang-modal');
+            const closeBtn = document.getElementById('close-lang-modal');
+            const langGrid = document.getElementById('lang-grid');
+
+            // 4. Populate the Modal Grid
+            for (const [iso, name] of Object.entries(languages)) {
+                const btn = document.createElement('button');
+                btn.className = 'lang-option-btn';
+                if (iso === currentIso) btn.classList.add('active'); // Highlight current lang
+                btn.textContent = name;
+                
+                // Handle Routing on Click
+                btn.addEventListener('click', () => {
+                    const baseUrl = 'https://ohwow.games/palettopia/';
+                    
+                    // Your script builds English at the root, and others in folders
+                    if (iso === 'en') {
+                        window.location.href = baseUrl; 
+                    } else {
+                        window.location.href = `${baseUrl}${iso}/`;
+                    }
+                });
+
+                langGrid.appendChild(btn);
+            }
+
+            // 5. Modal Open/Close Logic
+            langBtn.addEventListener('click', () => {
+                langModal.hidden = false;
+                langBtn.setAttribute('aria-expanded', 'true');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                langModal.hidden = true;
+                langBtn.setAttribute('aria-expanded', 'false');
+            });
+
+            // Close modal if user clicks the darkened background outside the box
+            langModal.addEventListener('click', (e) => {
+                if (e.target === langModal) {
+                    langModal.hidden = true;
+                    langBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Setting page language parameters for Steam CTAs
+        function setSteamLanguage() {
+            var steamLangLibrary = {
+                "en":"english",
+                "fr":"french",
+                "it":"italian",
+                "de":"german",
+                "es":"spanish",
+                "bg":"bulgarian",
+                "cs":"czech",
+                "da":"danish",
+                "nl":"dutch",
+                "fi":"finnish",
+                "el":"greek",
+                "hu":"hungarian",
+                "id":"indonesian",
+                "ja":"japanese",
+                "ko":"koreana",
+                "no":"norwegian",
+                "pl":"polish",
+                "pt-br":"brazilian",
+                "pt-pt":"portuguese",
+                "ro":"romanian",
+                "ru":"russian",
+                "zh-hans":"schinese",
+                "es-419":"latam",
+                "sv":"swedish",
+                "th":"thai",
+                "zh-hant":"tchinese",
+                "tr":"turkish",
+                "uk":"ukrainian",
+                "vi":"vietnamese",
+                "ar": ""
+            };
+
+            var lang = document.documentElement.lang.toLowerCase();
+            var steamLang = steamLangLibrary[lang];
+
+            if (steamLang) {
+                var steamLinks = document.querySelectorAll('a[href*="steampowered.com"]');
+                steamLinks.forEach(function(link) {
+                    try {
+                        var url = new URL(link.href);
+                        url.searchParams.set('l', steamLang);
+                        link.href = url.href;
+                    } catch (e) {
+                        // Ignore invalid URLs
+                    }
+                });
+            }
+        }
+        setSteamLanguage();
+
     </script>
 </body>
 </html>
