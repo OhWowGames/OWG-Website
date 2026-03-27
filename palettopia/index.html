@@ -1350,6 +1350,7 @@
             .feature-row:hover .feature-critter { transform: translateY(-10px) scale(1.1) !important; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .item-lg, .item-wide, .item-tall { grid-column: span 1; grid-row: span 1; }
+            .gallery-item img { transform: scale(1.3) translate(0%, 0%) !important; }
             .form-row { flex-direction: column; }
             .roadmap-path { display: block; }
         }
@@ -2475,7 +2476,7 @@
             // Small timeout ensures any final layout shifts are settled
             setTimeout(() => {
                 target.scrollIntoView({ behavior: 'smooth' });
-            }, 10);
+            }, 50);
             }
         }
         });
