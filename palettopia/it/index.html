@@ -972,7 +972,7 @@
         }
 
         .gallery-item:hover { transform: scale(1.02); z-index: 2; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease; overflow: visible; }
         .gallery-item:hover img { filter: brightness(0.9); }
 
         .gallery-overlay {
@@ -1669,11 +1669,11 @@
                 <div class="feature-row">
                     <div class="feature-image-container">
                         <div class="feature-image">
-                            <video preload="none" muted="" loop="" playsinline="" poster="video/feature_puzzle_poster_720.webp">
-                                <source src="video/feature_puzzle_720-2mbps.webm" type="video/webm" media="(max-width: 1280px)">
-                                <source src="video/feature_puzzle_720-2mbps.mp4" type="video/mp4" media="(max-width: 1280px)">
-                                <source src="video/feature_puzzle_1080-3mbps.webm" type="video/webm">
-                                <source src="video/feature_puzzle_1080-3mbps.mp4" type="video/mp4">
+                            <video preload="none" muted="" loop="" playsinline="" poster="video/feature_puzzle_720.webp">
+                                <source src="video/feature_puzzle_720.webm" type="video/webm" media="(max-width: 1280px)">
+                                <source src="video/feature_puzzle_720.mp4" type="video/mp4" media="(max-width: 1280px)">
+                                <source src="video/feature_puzzle_1080.webm" type="video/webm">
+                                <source src="video/feature_puzzle_1080.mp4" type="video/mp4">
                             </video>                        </div>
                         <div class="feature-critter">
                             <img loading="lazy" src="images/palettopia/stickers/critter_armadillo.webp" style="height: 100%; transform: scalex(1) rotate(-1deg);">
@@ -1821,7 +1821,9 @@
                             sizes="
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
-                            40vw" alt="A Satisfied City">
+                            40vw" alt="A Satisfied City" style="
+                            transform: scale(1.1) translate(4%, 3%);
+                        ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_1">Una città soddisfatta</span></div>
                     </div>
                     <div class="gallery-item item-wide temperate"
@@ -1887,7 +1889,9 @@
                             sizes="
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
-                            40vw" alt="Arid City">
+                            40vw" alt="Arid City" style="
+                            transform: scale(2.1) translate(23%, -2%);
+                        ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_6">Città arida</span></div>
                     </div>
                     <div class="gallery-item arid"
@@ -1949,7 +1953,9 @@
                             sizes="
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
-                            40vw" alt="Tropical City">
+                            40vw" alt="Tropical City" style="
+                            transform: scale(1.05) translate(-62%, 2%);
+                        ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_11">Città tropicale</span></div>
                     </div>
                     <div class="gallery-item tropical"
@@ -1989,7 +1995,9 @@
                             sizes="
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
-                            40vw" alt="Arctic Biome">
+                            40vw" alt="Arctic Biome" style="
+                                transform: scale(1.2) translate(-6%, 0%);
+                            ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_14">Bioma artico</span></div>
                     </div>
                     <div class="gallery-item item-wide arctic"
@@ -2001,7 +2009,9 @@
                             sizes="
                             (max-width: 600px) 80vw,
                             (max-width: 1024px) 50vw,
-                            40vw" alt="Arctic City">
+                            40vw" alt="Arctic City" style="
+                            transform: scale(1.15) translate(0%, -15%);
+                        ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_15">Città artica</span></div>
                     </div>
                 </div>
