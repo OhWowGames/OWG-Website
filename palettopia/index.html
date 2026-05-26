@@ -1155,13 +1155,13 @@
 
         .news-grid {
             display: grid;
-            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 30px; margin-top: 60px;
             position: relative;
         }
 
         .news-card {
-            background: rgba(255, 255, 255, 0.7); border-radius: 32px; overflow: hidden; border: 1px solid rgba(255,255,255,0.5); transition: transform 0.3s var(--ease-bounce), box-shadow 0.3s ease; display: flex; flex-direction: row;
+            background: rgba(255, 255, 255, 0.7); border-radius: 32px; overflow: hidden; border: 1px solid rgba(255,255,255,0.5); transition: transform 0.3s var(--ease-bounce), box-shadow 0.3s ease; display: flex; flex-direction: column;
         }
 
         .news-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
@@ -2328,45 +2328,95 @@
 
                         <article class="news-card">
                             <div class="news-thumb">
-                                <img loading="lazy" src="images/palettopia/news/biome_annoucement_720.webp" alt="New Biomes Reveal">
+                                <a href="https://store.steampowered.com/news/app/3004170/view/678498647451631697" target="_blank">
+                                    <img loading="lazy" src="https://clan.fastly.steamstatic.com/images/45480610/20034ae875c64ab4ac23e7da6c1b004825e71736_400x225.png" alt="Dev Log #5: Fields of Green">
+                                </a>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag" data-i18n="news_card_6_tag">Dev Log</span>
+                                <span class="news-date" data-i18n="news_card_6_date">May 15, 2026</span>
+                                <h4 class="news-title" data-i18n="news_card_6_title">Dev Log #5: Fields of Green</h4>
+                                <p class="news-excerpt" data-i18n="news_card_6_excerpt">Feed your Palettopians and celebrate culture with the new Agricultural and updated Entertainment Districts.</p>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/678498647451631697" class="news-link" data-i18n="news_card_6_link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
+                                <a href="https://store.steampowered.com/news/app/3004170/view/659356977751654634" target="_blank">
+                                    <img loading="lazy" src="https://clan.fastly.steamstatic.com/images/45480610/189c0cd51857ac99c9da79aa24eef676fcc32bff_400x225.png" alt="Dev Log #4: Powering Up Your Districts">
+                                </a>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag" data-i18n="news_card_5_tag">Dev Log</span>
+                                <span class="news-date" data-i18n="news_card_5_date">May 01, 2026</span>
+                                <h4 class="news-title" data-i18n="news_card_5_title">Dev Log #4: Powering Up Your Districts</h4>
+                                <p class="news-excerpt" data-i18n="news_card_5_excerpt">Flip the switch on your utopia. Introducing the improved Utility District and the new Power Chaining mechanic.</p>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/659356977751654634" class="news-link" data-i18n="news_card_5_link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
+                                <a href="https://store.steampowered.com/news/app/3004170/view/534381453704692392" target="_blank">
+                                    <img loading="lazy" src="https://clan.fastly.steamstatic.com/images/45480610/1bc52d06e493da85a3a3d142ea2c331865d6a87c_400x225.png" alt="Dev Log #3: Introducing District Themes">
+                                </a>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag" data-i18n="news_card_4_tag">Dev Log</span>
+                                <span class="news-date" data-i18n="news_card_4_date">April 24, 2026</span>
+                                <h4 class="news-title" data-i18n="news_card_4_title">Dev Log #3: Introducing District Themes</h4>
+                                <p class="news-excerpt" data-i18n="news_card_4_excerpt">Introducing District Themes and a massive 352% upgrade to Palettopia's architectural library.</p>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/534381453704692392" class="news-link" data-i18n="news_card_4_link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
+                                <a href="https://store.steampowered.com/news/app/3004170/view/510736286715219364" target="_blank">
+                                    <img loading="lazy" src="https://clan.fastly.steamstatic.com/images/45480610/5db5e1b7a3a0ad440d72c99bce90407e25093e54_400x225.png" alt="Dev Log #2: The New Grid Block System">
+                                </a>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag" data-i18n="news_card_3_tag">Dev Log</span>
+                                <span class="news-date" data-i18n="news_card_3_date">April 10, 2026</span>
+                                <h4 class="news-title" data-i18n="news_card_3_title">Dev Log #2: The New Grid Block System</h4>
+                                <p class="news-excerpt" data-i18n="news_card_3_excerpt">Organic Painting Meets Structured Design</p>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/510736286715219364" class="news-link" data-i18n="news_card_3_link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
+                                <a href="https://store.steampowered.com/news/app/3004170/view/503979800071767253" target="_blank">
+                                    <img loading="lazy" src="https://clan.fastly.steamstatic.com/images/45480610/6f113dbeab378bdb358c6bf6f686c6f044a362ac_400x225.png" alt="The District Glow-Up Update">
+                                </a>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag" data-i18n="news_card_2_tag">Dev Log</span>
+                                <span class="news-date" data-i18n="news_card_2_date">April 04, 2026</span>
+                                <h4 class="news-title" data-i18n="news_card_2_title">The District Glow-Up Update</h4>
+                                <p class="news-excerpt" data-i18n="news_card_2_excerpt">A 352% asset increase, a new grid system, and introducing the new Agricultural District</p>
+                                <a href="https://steamcommunity.com/games/3004170/announcements/detail/503979800071767253" class="news-link" data-i18n="news_card_2_link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
+                                <a href="https://store.steampowered.com/news/app/3004170/view/506206686159048545" target="_blank">
+                                    <img loading="lazy" src="https://clan.fastly.steamstatic.com/images/45480610/af67b5161250654bd1d823a3dcdc793d7f938ecf_400x225.png" alt="New Biomes Reveal">
+                                </a>
                             </div>
                             <div class="news-body">
                                 <span class="news-tag" data-i18n="news_card_1_tag">Announcement</span>
                                 <span class="news-date" data-i18n="news_card_1_date">July 8, 2025</span>
-                                <h4 class="news-title" data-i18n="news_card_1_title">Discover our newest addition - Biomes</h4>
-                                <p class="news-excerpt" data-i18n="news_card_1_excerpt_1">We’ve been hard at work implementing lots of updates to both the game mechanics and game content after our first round of player testing. After hearing positive feedback around our cute critters and fun environment, we’ve expanded this aspect of our game while making improvements to the base mechanics.....</p>
-                                <p class="news-excerpt" data-i18n="news_card_1_excerpt_2">To add further variation with the new biomes we are introducing a new terrain type, wetlands! Wetlands is a low area that holds more moisture than the surrounding areas. These can take on the form of bogs, oasis and swamps depending on the biome....</p>
+                                <h4 class="news-title" data-i18n="news_card_1_title">Meet The Biomes + Our First Update!</h4>
+                                <p class="news-excerpt" data-i18n="news_card_1_excerpt_1">Our first Steam update for Palettopia is here! Discover our newest addition - Biomes</p>
                                 <a href="https://store.steampowered.com/news/app/3004170/view/506206686159048545" target="_blank" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
-                        <article class="news-card teaser"><h3 data-i18n="news_teaser"><a href="palettopia/#join">Join the Newsletter</a> to hear the next update.</h3></article>
-
-                        <article class="news-card" style="display: none;">
-                            <div class="news-thumb">
-                                <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Dev+Blog" alt="Developer Blog">
-                            </div>
-                            <div class="news-body">
-                                <span class="news-tag" data-i18n="news_card_2_tag">Dev Blog</span>
-                                <span class="news-date" data-i18n="news_card_2_date">January 24, 2026</span>
-                                <h4 class="news-title" data-i18n="news_card_2_title">The Art of the Stroke: Designing the Painting Mechanic</h4>
-                                <p class="news-excerpt" data-i18n="news_card_2_excerpt">Our lead developer dives into the technical wizardry behind turning a city builder into a digital canvas...</p>
-                                <a href="#" class="news-link" data-i18n="news_card_2_link">Read More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </article>
-
-                        <article class="news-card" style="display: none;">
-                            <div class="news-thumb">
-                                <img loading="lazy" src="https://placehold.co/400x250/e0ebf0/e19451?text=Critter+Spotlight" alt="Critter Spotlight">
-                            </div>
-                            <div class="news-body">
-                                <span class="news-tag" data-i18n="news_card_3_tag">Community</span>
-                                <span class="news-date" data-i18n="news_card_3_date">December 15, 2025</span>
-                                <h4 class="news-title" data-i18n="news_card_3_title">Critter Spotlight: Meet the Wobbly Sand-Fox</h4>
-                                <p class="news-excerpt" data-i18n="news_card_3_excerpt">The first of our biome-specific residents is here! Learn what attracts this elusive friend to your desert districts...</p>
-                                <a href="#" class="news-link" data-i18n="news_card_3_link">Read More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </article>
+                        <article class="news-card teaser" style="display:none;"><h3 data-i18n="news_teaser"><a href="palettopia/#join">Join the Newsletter</a> to hear the next update.</h3></article>
                     </div>
                 </div>
             </section>
