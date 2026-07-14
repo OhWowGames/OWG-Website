@@ -309,6 +309,11 @@
             width: 100%;
             position: relative;
             background-color: var(--ocean-blue);
+            background-color: white;
+            background: linear-gradient(160deg, hsl(192 41% 50% / 1), hsl(190 38% 59% / 1), hsl(166 43% 81% / 1), hsl(150 69% 86% / 1), hsl(162 70% 95% / 1));
+            background-size: 150% 100%;
+            /* animation: gradient 10s ease infinite; */
+            background-position: 50% 0%;
         }
 
         /* STICKY COLUMN & ISLAND SYSTEM */
@@ -326,11 +331,12 @@
 
         .island-wrapper {
             position: relative;
-            width: 90%;
-            height: 90%;
+            max-width: 90%;
+            max-height: 90%;
             display: flex;
             align-items: center;
             justify-content: center;
+            aspect-ratio: 1 / 1.19;
         }
 
         .capsule-art {
@@ -338,6 +344,9 @@
             height: 100%;
             object-fit: contain;
             position: relative;
+            border: #ffffff00 20px solid;
+            background-color: #ffffff75;
+            border-radius: 50px;
             /* animation: float-island 8s ease-in-out infinite; */
         }
 
@@ -348,8 +357,8 @@
 
         /* SCROLL COLUMN */
         .scroll-column {
-            flex: 0.9; /* Updated CSS */
-            padding: 40px 80px 80px 20px;
+            flex: 1; /* Updated CSS */
+            padding: 50px 80px 80px 20px;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -363,8 +372,8 @@
             background-image: radial-gradient(circle at 100% 0, rgb(255 255 255 / 12%), rgb(255 255 255 / 80%) 50%);
             backdrop-filter: blur(2px);
             -webkit-backdrop-filter: blur(15px);
-            border-radius: 80px;
-            padding: 60px;
+            border-radius: 60px;
+            padding: 45px;
             display: flex;
             flex-direction: column;
             gap: 24px;
@@ -384,7 +393,7 @@
 
         .video-box {
             width: 100%;
-            aspect-ratio: 1.9 / 1;
+            aspect-ratio: 1.7 / 1;
             background: #b8d2de;
             border-radius: 40px;
             position: relative;
@@ -423,7 +432,7 @@
         .status-text { font-family: var(--font-ui); font-weight: 600; color: #5a7d8f; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8em; }
         .main-tagline { 
             font-family: var(--font-logo);
-            font-size: 3em;
+            font-size: 2.8em;
             line-height: 1.15;
             color: var(--blue);
             text-transform: capitalize;
@@ -1038,7 +1047,7 @@
 
         #filmgrain-pattern {
             background-image: url(images/palettopia/texture/filmgrain_pattern.webp);
-            background-size: 390px;
+            background-size: 600px;
             width: 100vw;
             height: 100%;
         }
@@ -1319,15 +1328,14 @@
         /* Responsive */
         @media (max-width: 1200px) {
             .scroll-column { padding-right: 3%; }
-            .cloud-panel:first-child { padding: 7% !important; }
-            .cloud-panel { padding: 10%; }
+            .cloud-panel:first-child { }
             .cta-container { flex-direction: column; }
             .cta-btn { flex: auto; }
             .container { padding-right: 5%; padding-left: calc(100px + 3%); }
             .feature-row { gap: 5%; }
         }
         @media (max-width: 1024px) {
-            .top-section { flex-direction: column; margin-top: -500vh; }
+            .top-section { flex-direction: column; margin-top: -300vh; }
             #palettopia-logo { display: none; }
             #palettopia-logo-mobile { display: block; }
             .sticky-column { position: relative; padding-top: 40px; height: auto; }
@@ -1358,9 +1366,10 @@
         @media (max-width: 600px) {
             .nav-container { display: none; }
             #palettopia-logo-mobile { width: 85vw; left: 0; }
-            .island-wrapper { width: 100%; padding-top: 6vw; }
+            .island-wrapper { max-width: 100%; aspect-ratio: 1 / 1.175; transform: rotate(0.5deg); }
             .sticky-column { padding: 40px 5% 0; }
-            .scroll-column { padding: 15px 2% 60px; }
+            .scroll-column { padding: 15px 5% 60px; }
+            .video-box { aspect-ratio: 1.1 / 1; }
 
             clouds>.cloud,
             clouds>.extended,
@@ -1388,8 +1397,8 @@
             .swell:nth-child(3) { left: 74vw !important; top: 94vh !important; }
             .swell:nth-child(4) { left: 74vw !important; top: 67vw !important; }
 
-            .cloud-panel { font-size: 0.85rem; }
-            .cloud-panel:first-child { padding: 9% !important; margin: 0 -8% -2%; }
+            .cloud-panel { font-size: 0.85rem; padding: 9% 8%; }
+            .cloud-panel:first-child { margin-top: -12px; }
             .cloud-panel:nth-child(3) { margin-top: -30px !important; }
             .container { padding: 0 5%; }
             .mid-hero h2 { font-size: 2.5rem; }
@@ -1472,16 +1481,17 @@
     <main>
         <!-- TOP SECTION -->
         <section id="home" class="top-section">
-
-            <div class="animated-capsule" style="z-index: 11; mix-blend-mode: overlay;">
+            <!-- <div class="animated-capsule" style="z-index: 0;" data="BG-WHITE">
+                <div style="background-color: white; width: 100vw;height: 100%; background: linear-gradient(160deg, #4b9fb4, #4e9cac, #94d4c5, #98ecc2, #c0f4e4);background-size: 150% 100%;/* animation: gradient 10s ease infinite; */background-position: 50% 0%;opacity: 0.6;"></div>
+            </div> -->
+            <div class="animated-capsule" style="z-index: 0; mix-blend-mode: overlay;" data="FILMGRAIN">
                 <div id="filmgrain-pattern"></div>
             </div>
 
-            <div class="animated-capsule" style="z-index: 11;">
-                <!-- PALETTOPIA LOGO -->
+            <!-- <div class="animated-capsule" style="z-index: 11;">
                 <img src="images/palettopia/palettopia_new-logo_p3_lg.webp" alt="Palettopia Logo" id="palettopia-logo">
-            </div>
-            <div class="animated-capsule" style="z-index: 0;">
+            </div> -->
+            <div class="animated-capsule" style="z-index: 0; display: none;" data="WAVES">
                 <island class="bg">
                     <ocean>
                         <div class="bg swell" style="left: 5vw;top: 73vh;transform: scale(0.76261);">
@@ -1501,7 +1511,7 @@
                 </island>
             </div>
             
-            <div class="animated-capsule" style="z-index: 1;">
+            <div class="animated-capsule" style="z-index: 1;" data="BIRDS">
                 <island class="bg">
                     <flocks>
                         <flock class="bg">
@@ -1542,7 +1552,7 @@
                 </island>
             </div>
 
-            <div class="animated-capsule" style="z-index: 10;">
+            <div class="animated-capsule" style="z-index: 0; opacity: 0.7;" data="CLOUDS">
                 <island class="bg">
                     <clouds>
                         <div class="bg cloud"></div>
@@ -1561,13 +1571,13 @@
 
                 <div class="island-wrapper">
                     <!-- PALETTOPIA LOGO -->
-                    <img src="images/palettopia/palettopia_new-logo_p3_lg.webp" alt="Palettopia Logo" id="palettopia-logo-mobile">
-                    <img src="images/palettopia/palettopia_new-capsule.webp" alt="Palettopia Island" class="capsule-art">
+                    <!-- <img src="images/palettopia/palettopia_new-logo_p3_lg.webp" alt="Palettopia Logo" id="palettopia-logo-mobile"> -->
+                    <img src="images/palettopia/palettopia-vertical-capsule.png" alt="Palettopia Island" class="capsule-art">
                 </div>
             </div>
 
             <div class="scroll-column">
-                <div class="cloud-panel" style="padding: 40px; transform: rotate(2deg); background-image: radial-gradient(circle at 20% 0%, transparent, rgb(255 255 255 / 80%) 50%)">
+                <div class="cloud-panel" style="padding: 20px; transform: rotate(2deg); background-image: radial-gradient(circle at 20% 0%, transparent, rgb(255 255 255 / 80%) 50%)">
                     <div class="video-box">
                         <video id="video-hero" preload="none" muted="" loop="" playsinline="" poster="video/teaser_trailer_1080.webp" onclick="openLightbox('video-hero-fullscreen', document.querySelector('.video-announcement').textContent)">
                             <source src="video/teaser_trailer_720.webm" type="video/webm" media="(max-width: 1280px)">
@@ -1608,7 +1618,7 @@
 
                 <div class="cloud-panel" style="transform: rotate(-2deg); margin-top: -30px;">
                     <div class="summary-header">
-                        <div class="status-text" data-i18n="home_status">Wishlist Available • Coming Q3 2026</div>
+                        <div class="status-text" data-i18n="home_status">Wishlist Available • Coming Q4 2026</div>
                         <h1 class="main-tagline" data-i18n="home_tagline">Paint your paradise</h1>
                         <p class="main-description" data-i18n="home_desc">
                             Palettopia is a cozy, city building and puzzle game about creating minimalistic cities with the stroke of your paintbrush. Explore infinite islands and solve puzzles while building synergy between the serene landscapes and the urban districts. Discover vibrant biomes as you paint your way to paradise and create your dream utopia.
@@ -1670,11 +1680,11 @@
                 <h2 data-i18n="midhero_welcome">Welcome to Palettopia</h2>
             </div>
             
-            <video id="video-mid" preload="none" muted="" loop="" playsinline="" poster="video/temperate-island_nature_1440.webp">
-                <source src="video/temperate-island_nature_2160_portrait.webm" type="video/webm" media="(max-width: 1024px)">
-                <source src="video/temperate-island_nature_1440_portrait.mp4" type="video/mp4" media="(max-width: 1024px)">
-                <source src="video/temperate-island_nature_2160.webm" type="video/webm">
-                <source src="video/temperate-island_nature_1440.mp4" type="video/mp4">
+            <video id="video-mid" preload="none" muted="" loop="" playsinline="" poster="video/island_nature_1440.webp">
+                <source src="video/island_nature_2160_portrait.webm" type="video/webm" media="(max-width: 1024px)">
+                <source src="video/island_nature_1440_portrait.mp4" type="video/mp4" media="(max-width: 1024px)">
+                <source src="video/island_nature_2160.webm" type="video/webm">
+                <source src="video/island_nature_1440.mp4" type="video/mp4">
             </video>
         </section>
 
@@ -2206,7 +2216,7 @@
                             </div>
                         </div>
 
-                        <div class="milestone active" data-pos="0.858">
+                        <div class="milestone completed" data-pos="0.858">
                             <div class="milestone-marker"><i class="fas fa-puzzle-piece"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date" data-i18n="roadmap_milestone_15_date">Now</span>
@@ -2214,18 +2224,27 @@
                             </div>
                         </div>
 
-                        <div class="milestone" data-pos="0.62">
+                        <!-- <div class="milestone" data-pos="0.62">
                             <div class="milestone-marker"><i class="fa-solid fa-music"></i></div>
                             <div class="milestone-content">
                                 <span class="milestone-date" data-i18n="roadmap_milestone_16_date">April 2026</span>
                                 <p class="milestone-title" data-i18n="roadmap_milestone_16_title">New sounds and tunes,<br>time to boogie!</p>
+                            </div>
+                        </div> -->
+
+                        <div class="milestone active" data-pos="0.62">
+                            <div class="milestone-marker"><i class="fas fa-download"></i></div>
+                            <div class="milestone-content">
+                                <span class="milestone-date" data-i18n="roadmap_milestone_17-2_date">July 2026</span>
+                                <p class="milestone-title" data-i18n="roadmap_milestone_17-2_title">Playtest Available</p>
+                                <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" data-i18n="roadmap_milestone_17_cta">Signup to Play!</a></p>
                             </div>
                         </div>
 
                         <div class="milestone" data-pos="0.62">
                             <div class="milestone-marker"><i class="fas fa-download"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date" data-i18n="roadmap_milestone_17_date">June 2026</span>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_17_date">Aug 2026</span>
                                 <p class="milestone-title" data-i18n="roadmap_milestone_17_title">Demo Available</p>
                                 <p class="milestone-link"><a href="palettopia/#join" data-i18n="roadmap_milestone_17_cta">Signup to Play!</a></p>
                             </div>
@@ -2234,7 +2253,7 @@
                         <div class="milestone" data-pos="0.75">
                             <div class="milestone-marker"><i class="fa-solid fa-plane-departure"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date" data-i18n="roadmap_milestone_18_date">July 2026</span>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_18_date">Oct 2026</span>
                                 <p class="milestone-title" data-i18n="roadmap_milestone_18_title">Steam Next Fest debut</p>
                                 <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" data-i18n="roadmap_milestone_18_cta">Wishlist Now</a></p>
                             </div>
@@ -2243,7 +2262,7 @@
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-key"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date" data-i18n="roadmap_milestone_19_date">Sept 2026</span>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_19_date">Q4 2026</span>
                                 <p class="milestone-title" data-i18n="roadmap_milestone_19_title">Early Access on Steam</p>
                                 <p class="milestone-link"><a href="https://store.steampowered.com/app/3004170/Palettopia/" target="_blank" data-i18n="roadmap_milestone_19_cta">Wishlist Now</a></p>
                             </div>
@@ -2252,7 +2271,7 @@
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-hand-holding-heart"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date" data-i18n="roadmap_milestone_20_date">Q4 2026</span>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_20_date">Q1 2027</span>
                                 <p class="milestone-title" data-i18n="roadmap_milestone_20_title">Free content update no.1!</p>
                             </div>
                         </div>
@@ -2260,7 +2279,7 @@
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-gift"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date" data-i18n="roadmap_milestone_21_date">Q1 2027</span>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_21_date">Q2 2027</span>
                                 <p class="milestone-title" data-i18n="roadmap_milestone_21_title">Free content update no.2!</p>
                             </div>
                         </div>
@@ -2268,7 +2287,7 @@
                         <div class="milestone" data-pos="0.88">
                             <div class="milestone-marker"><i class="fa-solid fa-gifts"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date" data-i18n="roadmap_milestone_22_date">Q2 2027</span>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_22_date">Q3 2027</span>
                                 <p class="milestone-title" data-i18n="roadmap_milestone_22_title">Free content update no.3!</p>
                             </div>
                         </div>
@@ -2856,9 +2875,9 @@
             const mql = window.matchMedia("(max-width: 1024px)");
             const updatePoster = (e) => {
                 if (e.matches) {
-                    videoMid.setAttribute('poster', 'video/temperate-island_nature_2160_portrait.webp');
+                    videoMid.setAttribute('poster', 'video/island_nature_2160_portrait.webp');
                 } else {
-                    videoMid.setAttribute('poster', 'video/temperate-island_nature_1440.webp');
+                    videoMid.setAttribute('poster', 'video/island_nature_1440.webp');
                 }
             };
             updatePoster(mql);
@@ -2911,7 +2930,7 @@
                         if (rect.bottom > 0 && rect.top < windowHeight) {
                             const centerOffset = (rect.top + (rect.height / 2)) - (windowHeight / 2);
                             const translateY = centerOffset * factor;
-                            videoMid.style.transform = `scale(1.2) translateY(${translateY}px) translateX(-8%)`;
+                            videoMid.style.transform = `translateY(${translateY}px)`;
                         }
                         ticking = false;
                     });

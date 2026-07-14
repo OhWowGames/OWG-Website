@@ -1654,11 +1654,11 @@
                 <h2 data-i18n="midhero_welcome">Ласкаво просимо до Palettopia</h2>
             </div>
             
-            <video id="video-mid" preload="none" muted="" loop="" playsinline="" poster="video/temperate-island_nature_1440.webp">
-                <source src="video/temperate-island_nature_2160_portrait.webm" type="video/webm" media="(max-width: 1024px)">
-                <source src="video/temperate-island_nature_1440_portrait.mp4" type="video/mp4" media="(max-width: 1024px)">
-                <source src="video/temperate-island_nature_2160.webm" type="video/webm">
-                <source src="video/temperate-island_nature_1440.mp4" type="video/mp4">
+            <video id="video-mid" preload="none" muted="" loop="" playsinline="" poster="video/island_nature_1440.webp">
+                <source src="video/island_nature_2160_portrait.webm" type="video/webm" media="(max-width: 1024px)">
+                <source src="video/island_nature_1440_portrait.mp4" type="video/mp4" media="(max-width: 1024px)">
+                <source src="video/island_nature_2160.webm" type="video/webm">
+                <source src="video/island_nature_1440.mp4" type="video/mp4">
             </video>
         </section>
 
@@ -2784,9 +2784,9 @@
             const mql = window.matchMedia("(max-width: 1024px)");
             const updatePoster = (e) => {
                 if (e.matches) {
-                    videoMid.setAttribute('poster', 'video/temperate-island_nature_2160_portrait.webp');
+                    videoMid.setAttribute('poster', 'video/island_nature_2160_portrait.webp');
                 } else {
-                    videoMid.setAttribute('poster', 'video/temperate-island_nature_1440.webp');
+                    videoMid.setAttribute('poster', 'video/island_nature_1440.webp');
                 }
             };
             updatePoster(mql);
