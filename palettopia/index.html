@@ -25,14 +25,12 @@
     <meta name="twitter:creator" content="@oh_wow_games">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="dns-prefetch" href="https://assets.mailerlite.com/" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="images/site.webmanifest">
-    <!-- <meta name="theme-color" content="#cfe0ea">
-        <meta name="msapplication-TileColor" content="#cfe0ea"> -->
-    <!-- P3 Color -->
-    <meta name="theme-color" content="#cae0eb">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/palettopia/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/palettopia/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/palettopia/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="images/palettopia/favicon.ico">
+    <link rel="manifest" href="images/palettopia/site.webmanifest">
+    <meta name="theme-color" content="#bae3da">
     <meta name="msapplication-TileColor" content="#cae0eb">
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -183,7 +181,7 @@
         }
 
         body {
-            background-color: var(--ocean-blue);
+            background-color: #bae3da;
             color: var(--black);
             font-family: var(--font-body);
             overflow-x: hidden !important;
@@ -1335,7 +1333,7 @@
             .feature-row { gap: 5%; }
         }
         @media (max-width: 1024px) {
-            .top-section { flex-direction: column; margin-top: -300vh; }
+            .top-section { flex-direction: column; margin-top: -300vh; background-size: 100% 50%; background-position: bottom; }
             #palettopia-logo { display: none; }
             #palettopia-logo-mobile { display: block; }
             .sticky-column { position: relative; padding-top: 40px; height: auto; }
@@ -2244,7 +2242,7 @@
                         <div class="milestone" data-pos="0.62">
                             <div class="milestone-marker"><i class="fas fa-download"></i></div>
                             <div class="milestone-content">
-                                <span class="milestone-date" data-i18n="roadmap_milestone_17_date">Aug 2026</span>
+                                <span class="milestone-date" data-i18n="roadmap_milestone_17_date">Sept 2026</span>
                                 <p class="milestone-title" data-i18n="roadmap_milestone_17_title">Demo Available</p>
                                 <p class="milestone-link"><a href="palettopia/#join" data-i18n="roadmap_milestone_17_cta">Signup to Play!</a></p>
                             </div>
@@ -2347,16 +2345,31 @@
 
                         <article class="news-card">
                             <div class="news-thumb">
+                                <a href="https://store.steampowered.com/news/app/3004170/view/681880049901639892" target="_blank">
+                                    <img loading="lazy" src="images/palettopia/news/be-the-first-to-play-palettopia_450.webp" alt="Be The First To Play Palettopia">
+                                </a>
+                            </div>
+                            <div class="news-body">
+                                <span class="news-tag" data-i18n="news_card_1_tag">Announcement</span>
+                                <span class="news-date" data-i18n="news_card_7_date">July 9, 2026</span>
+                                <h4 class="news-title" data-i18n="news_card_7_title">Be The First To Play Palettopia</h4>
+                                <p class="news-excerpt" data-i18n="news_card_7_excerpt">The Palettopia Beta Playtest is Coming Soon + See You at Secret Sauce</p>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/681880049901639892" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <div class="news-thumb">
                                 <a href="https://store.steampowered.com/news/app/3004170/view/678498647451631697" target="_blank">
                                     <img loading="lazy" src="images/palettopia/news/fields-of-green_450.webp" alt="Dev Log #5: Fields of Green">
                                 </a>
                             </div>
                             <div class="news-body">
-                                <span class="news-tag" data-i18n="news_card_6_tag">Dev Log</span>
+                                <span class="news-tag" data-i18n="news_card_2_tag">Dev Log</span>
                                 <span class="news-date" data-i18n="news_card_6_date">May 15, 2026</span>
                                 <h4 class="news-title" data-i18n="news_card_6_title">Dev Log #5: Fields of Green</h4>
                                 <p class="news-excerpt" data-i18n="news_card_6_excerpt">Feed your Palettopians and celebrate culture with the new Agricultural and updated Entertainment Districts.</p>
-                                <a href="https://store.steampowered.com/news/app/3004170/view/678498647451631697" class="news-link" data-i18n="news_card_6_link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/678498647451631697" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
@@ -2367,11 +2380,11 @@
                                 </a>
                             </div>
                             <div class="news-body">
-                                <span class="news-tag" data-i18n="news_card_5_tag">Dev Log</span>
+                                <span class="news-tag" data-i18n="news_card_2_tag">Dev Log</span>
                                 <span class="news-date" data-i18n="news_card_5_date">May 01, 2026</span>
                                 <h4 class="news-title" data-i18n="news_card_5_title">Dev Log #4: Powering Up Your Districts</h4>
                                 <p class="news-excerpt" data-i18n="news_card_5_excerpt">Flip the switch on your utopia. Introducing the improved Utility District and the new Power Chaining mechanic.</p>
-                                <a href="https://store.steampowered.com/news/app/3004170/view/659356977751654634" class="news-link" data-i18n="news_card_5_link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/659356977751654634" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
@@ -2382,11 +2395,11 @@
                                 </a>
                             </div>
                             <div class="news-body">
-                                <span class="news-tag" data-i18n="news_card_4_tag">Dev Log</span>
+                                <span class="news-tag" data-i18n="news_card_2_tag">Dev Log</span>
                                 <span class="news-date" data-i18n="news_card_4_date">April 24, 2026</span>
                                 <h4 class="news-title" data-i18n="news_card_4_title">Dev Log #3: Introducing District Themes</h4>
                                 <p class="news-excerpt" data-i18n="news_card_4_excerpt">Introducing District Themes and a massive 352% upgrade to Palettopia's architectural library.</p>
-                                <a href="https://store.steampowered.com/news/app/3004170/view/534381453704692392" class="news-link" data-i18n="news_card_4_link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/534381453704692392" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
@@ -2397,11 +2410,11 @@
                                 </a>
                             </div>
                             <div class="news-body">
-                                <span class="news-tag" data-i18n="news_card_3_tag">Dev Log</span>
+                                <span class="news-tag" data-i18n="news_card_2_tag">Dev Log</span>
                                 <span class="news-date" data-i18n="news_card_3_date">April 10, 2026</span>
                                 <h4 class="news-title" data-i18n="news_card_3_title">Dev Log #2: The New Grid Block System</h4>
                                 <p class="news-excerpt" data-i18n="news_card_3_excerpt">Organic Painting Meets Structured Design</p>
-                                <a href="https://store.steampowered.com/news/app/3004170/view/510736286715219364" class="news-link" data-i18n="news_card_3_link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://store.steampowered.com/news/app/3004170/view/510736286715219364" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
@@ -2416,11 +2429,11 @@
                                 <span class="news-date" data-i18n="news_card_2_date">April 04, 2026</span>
                                 <h4 class="news-title" data-i18n="news_card_2_title">The District Glow-Up Update</h4>
                                 <p class="news-excerpt" data-i18n="news_card_2_excerpt">A 352% asset increase, a new grid system, and introducing the new Agricultural District</p>
-                                <a href="https://steamcommunity.com/games/3004170/announcements/detail/503979800071767253" class="news-link" data-i18n="news_card_2_link">Read More <i class="fas fa-arrow-right"></i></a>
+                                <a href="https://steamcommunity.com/games/3004170/announcements/detail/503979800071767253" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </article>
 
-                        <article class="news-card">
+                        <!-- <article class="news-card">
                             <div class="news-thumb">
                                 <a href="https://store.steampowered.com/news/app/3004170/view/506206686159048545" target="_blank">
                                     <img loading="lazy" src="images/palettopia/news/meet-the-biomes_450.webp" alt="New Biomes Reveal">
@@ -2433,7 +2446,7 @@
                                 <p class="news-excerpt" data-i18n="news_card_1_excerpt_1">Our first Steam update for Palettopia is here! Discover our newest addition - Biomes</p>
                                 <a href="https://store.steampowered.com/news/app/3004170/view/506206686159048545" target="_blank" class="news-link" data-i18n="news_card_1_link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
-                        </article>
+                        </article> -->
 
                         <article class="news-card teaser" style="display:none;"><h3 data-i18n="news_teaser"><a href="palettopia/#join">Join the Newsletter</a> to hear the next update.</h3></article>
                     </div>
