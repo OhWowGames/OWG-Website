@@ -13,17 +13,19 @@ if ($total -eq 0) {
     Write-Host "Make sure the images are in the SAME folder as this script." -ForegroundColor Gray
 } else {
     foreach ($file in $images) {
-        $output = Join-Path $PSScriptRoot "$($file.BaseName)_720.webp"
         
         Write-Host "`n--------------------------------------------------" -ForegroundColor Cyan
         Write-Host "Processing ($current of $total): $($file.Name)" -ForegroundColor Yellow
         
         # FFmpeg Command for Images:
         # -q:v 2 (High quality Jpeg, scale is 1-31, lower is better)
+        $output = Join-Path $PSScriptRoot "\output\$($file.BaseName)_720.webp"
         ffmpeg -i "$($file.FullName)" `
-               -q:v 82 `
-	       -vf "scale=-1:720" `
-               -y `
+               -q:v 82 -vf "scale=-2:720" -y `
+               "$output"
+        $output = Join-Path $PSScriptRoot "\output\$($file.BaseName)_1440.webp"
+        ffmpeg -i "$($file.FullName)" `
+               -q:v 82 -vf "scale=-2:1440" -y `
                "$output"
                
         $current++
