@@ -340,7 +340,7 @@
         .capsule-art {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             position: relative;
             border: #ffffff00 20px solid;
             background-color: #ffffff75;
@@ -981,7 +981,7 @@
         }
 
         .gallery-item:hover { transform: scale(1.02); z-index: 2; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease; overflow: visible; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: filter 0.3s ease; }
         .gallery-item:hover img { filter: brightness(0.9); }
 
         .gallery-overlay {
@@ -1000,7 +1000,8 @@
 
         .item-lg { grid-column: span 2; grid-row: span 2; }
         .item-wide { grid-column: span 2; }
-        .item-tall { grid-row: span 2; }
+        .item-ultra-wide { grid-column: span 4; }
+        .item-tall { grid-row: span 3; }
 
         /* Lightbox Modal */
         .lightbox {
@@ -1356,7 +1357,8 @@
             .feature-row:hover .feature-critter { transform: translateY(-10px) scale(1.1) !important; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .item-lg, .item-wide, .item-tall { grid-column: span 1; grid-row: span 1; }
-            .gallery-item img { transform: scale(1.3) translate(0%, 0%) !important; }
+            .item-ultra-wide { grid-column: span 2; }
+            .gallery-item img { transform: scale(1.3) translate(0) !important; object-position: center !important;}
             .form-row { flex-direction: column; }
             .roadmap-path { display: block; }
         }
@@ -1408,7 +1410,8 @@
             .gallery-section {
                 padding: 60px 0 90px;
             }
-            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }            
+            .item-ultra-wide { grid-column: span 1; }
             .gallery-header h2 { font-size: 2.5rem; }
             #roadmap {
                 padding: 60px 0 0;
@@ -1569,8 +1572,7 @@
 
                 <div class="island-wrapper">
                     <!-- PALETTOPIA LOGO -->
-                    <!-- <img src="images/palettopia/palettopia_new-logo_p3_lg.webp" alt="Palettopia Logo" id="palettopia-logo-mobile"> -->
-                    <img src="images/palettopia/palettopia-vertical-capsule.webp" alt="Palettopia Island" class="capsule-art">
+                    <img loading="lazy" src="images/palettopia/palettopia-vertical-capsule_2000.webp" alt="Palettopia Island" class="capsule-art" />
                 </div>
             </div>
 
@@ -1838,213 +1840,245 @@
                     <!-- Critter 4: Bottom Right -->
                     <div class="gallery-critter-wrapper pos-4">
                         <div class="feature-critter">
-                            <img loading="lazy" src="images/palettopia/stickers/critter_penguin.webp" style="height: 210%; transform: scalex(-1) rotate(2deg) translate(-64%, -16%);">
-                            <img loading="lazy" src="images/palettopia/stickers/critter_penguinyoung.webp" style="height: 110%; transform: scalex(-1) rotate(-1deg) translate(110%, 13%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_penguin.webp"
+                                style="height: 210%; transform: scalex(-1) rotate(2deg) translate(-64%, -16%);">
+                            <img loading="lazy" src="images/palettopia/stickers/critter_penguinyoung.webp"
+                                style="height: 110%; transform: scalex(-1) rotate(-1deg) translate(110%, 13%);">
                         </div>
                     </div>
 
-                    <div class="gallery-item item-lg temperate"
-                        onclick="openLightbox('images/palettopia/gallery/temperate-city_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/temperate-city_720.webp" srcset="
-                            images/palettopia/gallery/temperate-city_720.webp 720w,
-                            images/palettopia/gallery/temperate-city_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="A Satisfied City" style="
-                            transform: scale(1.1) translate(4%, 3%);
-                        ">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_1">A Satisfied City</span></div>
-                    </div>
-                    <div class="gallery-item item-wide temperate"
-                        onclick="openLightbox('images/palettopia/gallery/temperate-mid-zoom_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/temperate-mid-zoom_720.webp" srcset="
-                            images/palettopia/gallery/temperate-mid-zoom_720.webp 720w,
-                            images/palettopia/gallery/temperate-mid-zoom_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Temperate Biome" style="
-                            transform: scale(1.2) translate(0%, -7%);
-                        ">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_2">Temperate Biome</span></div>
-                    </div>
-                    <div class="gallery-item temperate"
+                    <div class="gallery-item item-tall temperate"
                         onclick="openLightbox('images/palettopia/gallery/temperate-close-up_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/temperate-close-up_720.webp" srcset="
-                            images/palettopia/gallery/temperate-close-up_720.webp 720w,
-                            images/palettopia/gallery/temperate-close-up_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Turkey Trot" style="
-                            transform: scale(1.7) translate(-20%, -6%);
-                        ">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_3">Turkey Trot</span></div>
+                                            images/palettopia/gallery/temperate-close-up_720.webp 720w,
+                                            images/palettopia/gallery/temperate-close-up_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Temperate Wildlife" style="
+                                            transform: scale(1) translate(0%, 0%);
+                                            object-position: right 47% bottom 0px;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_3">Temperate Wildlife</span></div>
                     </div>
-                    <div class="gallery-item item-tall arid"
-                        onclick="openLightbox('images/palettopia/gallery/arid-close-up_1440.webp', this.querySelector('span').textContent)"
+                    <div class="gallery-item item-lg arid"
+                        onclick="openLightbox('images/palettopia/gallery/arid-zoom-out-city_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/arid-close-up_720.webp" srcset="
-                            images/palettopia/gallery/arid-close-up_720.webp 720w,
-                            images/palettopia/gallery/arid-close-up_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Arid Close-up">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_4">Arid Close-up</span></div>
+                        <img loading="lazy" src="images/palettopia/gallery/arid-zoom-out-city_720.webp" srcset="
+                                            images/palettopia/gallery/arid-zoom-out-city_720.webp 720w,
+                                            images/palettopia/gallery/arid-zoom-out-city_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Puzzle Gameplay" style="
+                                            transform: scale(1.0) translate(0%, 0%); object-position: center;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_6">Puzzle Gameplay</span></div>
+                    </div>
+                    <div class="gallery-item temperate"
+                        onclick="openLightbox('images/palettopia/gallery/arid-zoom-out_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;">
+                        <img loading="lazy" src="images/palettopia/gallery/arid-zoom-out_720.webp" srcset="
+                                            images/palettopia/gallery/arid-zoom-out_720.webp 720w,
+                                            images/palettopia/gallery/arid-zoom-out_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Temperate Biome Diversity" style="
+                                            transform: scale(2.8) translate(0%, 0%);
+                                            object-position: right -162px top 50%;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_7">Temperate Biome Diversity</span></div>
+                    </div>
+                    <div class="gallery-item temperate"
+                        onclick="openLightbox('images/palettopia/gallery/temperate-city_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;">
+                        <img loading="lazy" src="images/palettopia/gallery/temperate-city_720.webp" srcset="
+                                            images/palettopia/gallery/temperate-city_720.webp 720w,
+                                            images/palettopia/gallery/temperate-city_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="A Satisfied City" style="
+                                            transform: scale(1.7) translate(-10%, 19%);
+                                            object-position: center;
+                                            filter: contrast(1.1);
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_1">A Satisfied City</span></div>
+                    </div>
+                    <div class="gallery-item item-tall arctic"
+                        onclick="openLightbox('images/palettopia/gallery/elephants_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;">
+                        <img loading="lazy" src="images/palettopia/gallery/elephants_720.webp" srcset="
+                                            images/palettopia/gallery/elephants_720.webp 720w,
+                                            images/palettopia/gallery/elephants_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Marine District" style="
+                                            transform: scale(1.0) translate(0%, 0%); object-position: center;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_9">Marine District</span></div>
                     </div>
                     <div class="gallery-item item-lg arid"
                         onclick="openLightbox('images/palettopia/gallery/arid-zoom_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/arid-zoom_720.webp" srcset="
-                            images/palettopia/gallery/arid-zoom_720.webp 720w,
-                            images/palettopia/gallery/arid-zoom_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Arid Biome" style="
-                            transform: scale(1.2) translate(-8%, 8%);
-                        ">
+                                            images/palettopia/gallery/arid-zoom_720.webp 720w,
+                                            images/palettopia/gallery/arid-zoom_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Arid Biome" style="
+                                            transform: scale(1.2) translate(0%, 0%);
+                                            object-position: left 37% top 36px;
+                                        ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_5">Arid Biome</span></div>
-                    </div>
-                    <div class="gallery-item arid"
-                        onclick="openLightbox('images/palettopia/gallery/arid-zoom-out-city_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/arid-zoom-out-city_720.webp" srcset="
-                            images/palettopia/gallery/arid-zoom-out-city_720.webp 720w,
-                            images/palettopia/gallery/arid-zoom-out-city_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Arid City" style="
-                            transform: scale(2.1) translate(23%, -2%);
-                        ">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_6">Arid City</span></div>
-                    </div>
-                    <div class="gallery-item arid"
-                        onclick="openLightbox('images/palettopia/gallery/arid-zoom-out_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/arid-zoom-out_720.webp" srcset="
-                            images/palettopia/gallery/arid-zoom-out_720.webp 720w,
-                            images/palettopia/gallery/arid-zoom-out_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Arid Island Diversity">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_7">Arid Island Diversity</span></div>
                     </div>
                     <div class="gallery-item tropical"
                         onclick="openLightbox('images/palettopia/gallery/tropical-generate_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/tropical-generate_720.webp" srcset="
-                            images/palettopia/gallery/tropical-generate_720.webp 720w,
-                            images/palettopia/gallery/tropical-generate_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="A Giraffe Wonders" style="
-                            transform: scale(1.7) translate(2%, 9%);
-                        ">
+                                            images/palettopia/gallery/tropical-generate_720.webp 720w,
+                                            images/palettopia/gallery/tropical-generate_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="A Giraffe Wonders" style="
+                                            transform: scale(2.1) translate(26%, 11%);
+                                            object-position: center;
+                                        ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_8">A Giraffe Wonders</span></div>
                     </div>
-                    <div class="gallery-item tropical"
-                        onclick="openLightbox('images/palettopia/gallery/elephants_1440.webp', this.querySelector('span').textContent)"
+                    <div class="gallery-item arid"
+                        onclick="openLightbox('images/palettopia/gallery/game-ui_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/elephants_720.webp" srcset="
-                            images/palettopia/gallery/elephants_720.webp 720w,
-                            images/palettopia/gallery/elephants_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Herd of Elephants">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_9">Herd of Elephants</span></div>
+                        <img loading="lazy" src="images/palettopia/gallery/game-ui_1440.webp" srcset="
+                                            images/palettopia/gallery/game-ui_720.webp 720w,
+                                            images/palettopia/gallery/game-ui_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Satisfying Districts" style="
+                                            transform: scale(1.9) translate(0%, 11%);
+                                            object-position: center;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_8">Satisfying Districts</span></div>
                     </div>
                     <div class="gallery-item item-lg tropical"
-                        onclick="openLightbox('images/palettopia/gallery/tropical-zoom-out-city_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/tropical-zoom-out-city_720.webp" srcset="
-                            images/palettopia/gallery/tropical-zoom-out-city_720.webp 720w,
-                            images/palettopia/gallery/tropical-zoom-out-city_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Tropical Biome">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_10">Tropical Biome</span></div>
-                    </div>        
-                    <div class="gallery-item item-tall tropical"
-                        onclick="openLightbox('images/palettopia/gallery/tropical-city_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/tropical-city_720.webp" srcset="
-                            images/palettopia/gallery/tropical-city_720.webp 720w,
-                            images/palettopia/gallery/tropical-city_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Tropical City" style="
-                            transform: scale(1.05) translate(-62%, 2%);
-                        ">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_11">Tropical City</span></div>
-                    </div>
-                    <div class="gallery-item tropical"
                         onclick="openLightbox('images/palettopia/gallery/tropical-close_1440.webp', this.querySelector('span').textContent)"
                         style="display: block;">
                         <img loading="lazy" src="images/palettopia/gallery/tropical-close_720.webp" srcset="
-                            images/palettopia/gallery/tropical-close_720.webp 720w,
-                            images/palettopia/gallery/tropical-close_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Bloat of Hippos" style="
-                            transform: scale(1.3) translate(1%, 8%);
-                        ">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_12">Bloat of Hippos</span></div>
+                                            images/palettopia/gallery/tropical-close_720.webp 720w,
+                                            images/palettopia/gallery/tropical-close_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Checking Required Districts" style="
+                                            transform: scale(1.4) translate(0%, 0%);
+                                            object-position: left 50% top 75px;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_12">Checking Required Districts</span></div>
                     </div>
-                    <div class="gallery-item item-wide arctic"
-                        onclick="openLightbox('images/palettopia/gallery/penguins-2_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
-                        <img loading="lazy" src="images/palettopia/gallery/penguins-2_720.webp" srcset="
-                            images/palettopia/gallery/penguins-2_720.webp 720w,
-                            images/palettopia/gallery/penguins-2_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Family of Penguins" style="
-                            transform: scale(1.7) translate(-14%, 15%);
-                        ">
-                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_13">Family of Penguins</span></div>
+                    <div onclick="openLightbox('images/palettopia/gallery/tropical-zoom-out-city_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;" class="gallery-item item-tall tropical">
+                        <img loading="lazy" src="images/palettopia/gallery/tropical-zoom-out-city_720.webp" srcset="
+                                            images/palettopia/gallery/tropical-zoom-out-city_720.webp 720w,
+                                            images/palettopia/gallery/tropical-zoom-out-city_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Tropical Biome" style="
+                                            transform: scale(1) translate(0%, 0%); object-position: left 33% top 0px;
+                                            filter: contrast(1.15);
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_10">Tropical Biome</span></div>
                     </div>
-                    <div class="gallery-item item-lg arctic"
-                        onclick="openLightbox('images/palettopia/gallery/arctic-zoom-out_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
+                    <div onclick="openLightbox('images/palettopia/gallery/tropical-city_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;" class="gallery-item tropical">
+                        <img loading="lazy" src="images/palettopia/gallery/tropical-city_720.webp" srcset="
+                                            images/palettopia/gallery/tropical-city_720.webp 720w,
+                                            images/palettopia/gallery/tropical-city_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Successfully completed a puzzle" style="
+                                            transform: scale(1.4) translate(0%, 0%);
+                                            object-position: center;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_11">Successfully completed a puzzle</span></div>
+                    </div>
+                    <div onclick="openLightbox('images/palettopia/gallery/arctic-zoom-out_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;" class="gallery-item item-lg arctic">
                         <img loading="lazy" src="images/palettopia/gallery/arctic-zoom-out_720.webp" srcset="
-                            images/palettopia/gallery/arctic-zoom-out_720.webp 720w,
-                            images/palettopia/gallery/arctic-zoom-out_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Arctic Biome" style="
-                                transform: scale(1.2) translate(-6%, 0%);
-                            ">
+                                            images/palettopia/gallery/arctic-zoom-out_720.webp 720w,
+                                            images/palettopia/gallery/arctic-zoom-out_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Arctic Biome" style="
+                                            transform: scale(1.2) translate(0%, 0%);
+                                            object-position: right 50% bottom -30px;
+                                            filter: contrast(1.1);
+                                        ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_14">Arctic Biome</span></div>
                     </div>
-                    <div class="gallery-item item-wide arctic"
-                        onclick="openLightbox('images/palettopia/gallery/arctic-lights_game-development_1440.webp', this.querySelector('span').textContent)"
-                        style="display: block;">
+                    <div onclick="openLightbox('images/palettopia/gallery/temperate-mid-zoom_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;/*! grid-row: span 2; */" class="gallery-item item-tall temperate">
+                        <img loading="lazy" src="images/palettopia/gallery/temperate-mid-zoom_720.webp" srcset="
+                                            images/palettopia/gallery/temperate-mid-zoom_720.webp 720w,
+                                            images/palettopia/gallery/temperate-mid-zoom_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Temperate Biome" style="
+                                            transform: scale(1.1) translate(0%, 0%);
+                                            object-position: left 10% bottom 0px;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_2">Temperate Biome</span></div>
+                    </div>
+                    <div onclick="openLightbox('images/palettopia/gallery/arid-close-up_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;" class="gallery-item item-lg arid">
+                        <img loading="lazy" src="images/palettopia/gallery/arid-close-up_720.webp" srcset="
+                                            images/palettopia/gallery/arid-close-up_720.webp 720w,
+                                            images/palettopia/gallery/arid-close-up_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Arid Island Diversity" style="
+                                            transform: scale(1) translate(0%, 0%);
+                                            object-position: left 50% bottom 30%;
+                                            filter: contrast(1.0);
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_4">Arid Island Diversity</span></div>
+                    </div>
+                    <div onclick="openLightbox('images/palettopia/gallery/penguins-2_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;/*! grid-row: span 2; */" class="gallery-item arctic">
+                        <img loading="lazy" src="images/palettopia/gallery/penguins-2_720.webp" srcset="
+                                            images/palettopia/gallery/penguins-2_720.webp 720w,
+                                            images/palettopia/gallery/penguins-2_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Family of Penguins" style="
+                                            transform: scale(1.5) translate(0%, 0%);
+                                            object-position: right -193px bottom -28px;
+                                        ">
+                        <div class="gallery-overlay"><span data-i18n="gallery_img_desc_13">Family of Penguins</span></div>
+                    </div>
+                    <div onclick="openLightbox('images/palettopia/gallery/arctic-lights_game-development_1440.webp', this.querySelector('span').textContent)"
+                        style="display: block;" class="gallery-item item-wide arctic">
                         <img loading="lazy" src="images/palettopia/gallery/arctic-lights_game-development_720.webp" srcset="
-                            images/palettopia/gallery/arctic-lights_game-development_720.webp 720w,
-                            images/palettopia/gallery/arctic-lights_game-development_1440.webp 1440w"
-                            sizes="
-                            (max-width: 600px) 80vw,
-                            (max-width: 1024px) 50vw,
-                            40vw" alt="Arctic City" style="
-                            transform: scale(1.15) translate(0%, -15%);
-                        ">
+                                            images/palettopia/gallery/arctic-lights_game-development_720.webp 720w,
+                                            images/palettopia/gallery/arctic-lights_game-development_1440.webp 1440w" sizes="
+                                            (max-width: 600px) 80vw,
+                                            (max-width: 1024px) 50vw,
+                                            40vw" alt="Arctic City" style="
+                                            transform: scale(1.5) translate(0%, 0);
+                                            object-position: right 0 bottom 70%;
+                                            filter: contrast(1.05);
+                                        ">
                         <div class="gallery-overlay"><span data-i18n="gallery_img_desc_15">Arctic City</span></div>
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
         </section>
